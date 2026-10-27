@@ -6,6 +6,146 @@ const WORKS_BASE = "https://kr.object.ncloudstorage.com/riha/works";
 // 배열 순서 = 보여줄 순서 (포트폴리오 목록·홈 공통)
 export const projects: Project[] = [
   {
+    id: "wemade",
+    title: "위메이드 오피셜 사이트 리뉴얼",
+    summary:
+      "게임을 넘어 블록체인·메타버스·NFT로 사업을 넓혀 가는 위메이드의 기업 사이트 리뉴얼. 기획·PMO는 W2R GROUP, 디자인은 리메인, 개발은 웹아이가 Java로 맡았습니다.",
+    year: "[연도]",
+    role: "개발",
+    stack: ["Java", "HTML5", "CSS", "웹 접근성"],
+    featured: true,
+    coverColor: "#7b3fe4",
+    coverSrc: `${WORKS_BASE}/wemade/wemade-hero.jpg`,
+    links: [
+      { label: "자세히 보기", href: "/works/wemade" },
+      { label: "사이트", href: "https://www.wemade.com" },
+    ],
+    caseStudy: {
+      hero: {
+        src: `${WORKS_BASE}/wemade/wemade-hero.jpg`,
+        width: 1600,
+        height: 929,
+        alt: "노트북과 휴대폰에 띄운 리뉴얼된 위메이드 사이트",
+      },
+      credits: [
+        { label: "클라이언트", value: "위메이드 (WEMADE)" },
+        { label: "PMO·기획", value: "W2R GROUP" },
+        { label: "디자인", value: "리메인 — Creative Director Junu Kim, Project Leader Ji Lee" },
+        { label: "개발", value: "웹아이 — Java [맡은 범위]" },
+        { label: "기술", value: "Java · HTML5 · CSS(전처리기) · 웹 접근성" },
+      ],
+      sections: [
+        {
+          title: "방대한 사업을 한눈에",
+          body: [
+            "위메이드는 게임과 위믹스(WEMIX) 블록체인, 메타버스, NFT를 아우르는 기업입니다. 사업이 넓어진 만큼 사이트에 담을 정보도 많아져, 기업의 정체성을 분명히 하면서 방대한 콘텐츠를 쉽게 찾아볼 수 있게 하는 것이 리뉴얼의 목표였습니다.",
+            "W2R GROUP이 프로젝트를 이끌고, 리메인이 디자인 시스템과 화면을 만들었으며, 웹아이는 이를 Java 기반으로 개발했습니다. [개발 범위와 구조 한두 줄: 관리자, CMS, 다국어 등]",
+          ],
+        },
+        {
+          title: "메인: 키비주얼부터 채용까지",
+          body: [
+            "맨 위에는 위메이드의 정체성을 보여 주는 키비주얼을, 그 아래에는 회사의 움직임을 전하는 뉴스와 강조하고 싶은 사업 정보를 두었습니다. 맨 아래 채용 정보까지 한 흐름으로 이어져, 처음 들어온 사람도 회사의 성장성을 느낄 수 있게 했습니다.",
+          ],
+          images: [
+            {
+              src: `${WORKS_BASE}/wemade/wemade-main.jpg`,
+              width: 1600,
+              height: 2584,
+              alt: "위메이드 메인 페이지 전체 화면",
+              caption: "Main",
+            },
+          ],
+        },
+        {
+          title: "게임: 목록에서 바로 상세로",
+          body: [
+            "여러 게임을 빠르게 훑어볼 수 있도록 목록 페이지에서 상세 정보를 팝업으로 띄우는 방식을 썼습니다. 페이지를 옮기지 않고도 필요한 게임의 정보를 바로 확인할 수 있습니다.",
+          ],
+          images: [
+            {
+              src: `${WORKS_BASE}/wemade/wemade-game-list.jpg`,
+              width: 1344,
+              height: 2449,
+              alt: "장르별로 정리된 게임 목록 페이지",
+              caption: "Game 목록",
+              maxWidth: 720,
+            },
+            {
+              src: `${WORKS_BASE}/wemade/wemade-game-popup.jpg`,
+              width: 1344,
+              height: 756,
+              alt: "게임 목록 위에 뜬 나이트 크로우 상세 팝업",
+              caption: "Game 상세 팝업",
+            },
+          ],
+        },
+        {
+          title: "회사 소개·투자 정보·ESG",
+          body: [
+            "비전, 국내외 사업 현황, 연혁처럼 성격이 다른 정보는 페이지를 나누고 각 페이지에 맞는 레이아웃을 썼습니다. 위믹스 생태계 같은 기술적인 내용은 인포그래픽으로, 기업지배구조와 ESG 추진체계는 차트와 도식으로 풀어 보여 줍니다.",
+          ],
+          images: [
+            {
+              src: `${WORKS_BASE}/wemade/wemade-about.jpg`,
+              width: 1344,
+              height: 1543,
+              alt: "위믹스 3.0을 소개하는 사업 영역 페이지",
+              caption: "사업 영역 · 위믹스",
+              maxWidth: 720,
+            },
+            {
+              src: `${WORKS_BASE}/wemade/wemade-page-1.jpg`,
+              width: 1600,
+              height: 1343,
+              alt: "주식·주주 현황을 도넛 차트로 보여 주는 기업지배구조 페이지",
+              caption: "투자정보 · 기업지배구조",
+            },
+            {
+              src: `${WORKS_BASE}/wemade/wemade-page-2.jpg`,
+              width: 1600,
+              height: 2119,
+              alt: "ESG 위원회 조직도와 로드맵이 있는 추진체계 페이지",
+              caption: "지속가능경영 · ESG 추진체계",
+            },
+          ],
+        },
+        {
+          title: "채용: 원하는 공고를 빠르게",
+          body: [
+            "채용은 인사제도, 채용안내, 채용공고로 나눴습니다. 공고는 같은 카테고리로 정리하고 직군·직무별 필터를 두어, 구직자가 원하는 공고를 쉽게 비교하고 찾을 수 있게 했습니다.",
+          ],
+        },
+        {
+          title: "디자인 시스템과 컴포넌트",
+          body: [
+            "색상·서체·키비주얼 같은 디자인 요소와 버튼·탭·드롭다운 같은 UI 컴포넌트를 규격화한 디자인 시스템을 바탕으로, 어느 페이지에서도 같은 위메이드다운 경험이 이어지도록 구현했습니다. 앞으로 콘텐츠나 서비스가 늘어도 같은 규칙으로 쌓아 갈 수 있습니다.",
+          ],
+          images: [
+            {
+              src: `${WORKS_BASE}/wemade/wemade-element.jpg`,
+              width: 1600,
+              height: 478,
+              alt: "위메이드 디자인 요소: 브랜드 컬러, 서체 Pretendard, 로고",
+              caption: "Design Element",
+            },
+            {
+              src: `${WORKS_BASE}/wemade/wemade-component.jpg`,
+              width: 1600,
+              height: 1591,
+              alt: "버튼, 드롭다운, 탭, 페이지네이션 등 UI 컴포넌트 모음",
+              caption: "Design Component",
+            },
+          ],
+        },
+      ],
+      source: {
+        label: "W2R GROUP의 프로젝트 소개 보기",
+        href: "https://w2rgroup.kr/wemade",
+      },
+    },
+  },
+  {
     id: "holeman",
     title: "LG U+ 홀맨 구독형 이벤트 웹앱",
     summary:
