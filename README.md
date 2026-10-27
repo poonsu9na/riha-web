@@ -31,6 +31,20 @@ npm run build
 
 배열 순서가 화면에 나오는 순서다. 최근 것을 앞에 둔다.
 
+## 포트폴리오 상세 페이지 추가
+
+`projects.ts` 의 프로젝트에 `caseStudy` 를 넣으면 `/works/<id>` 상세 페이지가 생긴다.
+
+1. 이미지를 NCP 에 올린다 (가로 1600px JPEG, `works/<id>/` 아래).
+
+   ```bash
+   npm run upload-work-images -- <id> ~/Desktop/이미지폴더
+   ```
+
+2. 출력된 `{ src, width, height, alt }` 줄을 `caseStudy` 의 `hero`·`sections[].images` 에 넣고 설명을 고친다.
+   세로가 가로의 1.8배를 넘는 전체 화면 캡처는 상세 페이지에서 안에서 스크롤하는 틀로 보인다.
+3. 목록에서 들어갈 수 있게 `links` 에 `{ label: "자세히 보기", href: "/works/<id>" }` 를 넣는다.
+
 ## 사진 추가
 
 사진 파일은 저장소에 넣지 않고 NCP Object Storage(`riha` 버킷 `photos/`)에 올린다.

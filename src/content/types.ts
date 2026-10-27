@@ -40,6 +40,31 @@ export type Photo = {
   tone: string;
 };
 
+export type WorkImage = {
+  src: string;
+  width: number;
+  height: number;
+  alt: string;
+  /** 이미지 아래 짧은 설명 */
+  caption?: string;
+};
+
+/** 포트폴리오 상세 페이지(/works/<id>) 내용 */
+export type CaseStudy = {
+  /** 맨 위 큰 이미지 */
+  hero: WorkImage;
+  /** 클라이언트·디자인·개발 같은 정보 표 */
+  credits: { label: string; value: string }[];
+  sections: {
+    title: string;
+    /** 문단 단위 */
+    body: string[];
+    images?: WorkImage[];
+  }[];
+  /** 원문(디자인 파트너 사이트 등) 링크 */
+  source?: { label: string; href: string };
+};
+
 export type Project = {
   id: string;
   title: string;
@@ -55,4 +80,6 @@ export type Project = {
   coverColor: string;
   coverSrc?: string;
   links: { label: string; href: string }[];
+  /** 있으면 /works/<id> 상세 페이지가 생긴다 */
+  caseStudy?: CaseStudy;
 };

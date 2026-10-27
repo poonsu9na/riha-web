@@ -8,7 +8,8 @@
     "start": "next start",
     "lint": "eslint",
     "upload-photos": "node scripts/upload-photos.mjs",
-    "upload-covers": "node scripts/upload-covers.mjs"
+    "upload-covers": "node scripts/upload-covers.mjs",
+    "upload-work-images": "node scripts/upload-work-images.mjs"
   },
   "dependencies": {
     "next": "16.4.3",

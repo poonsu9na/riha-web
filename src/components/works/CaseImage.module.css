@@ -1,0 +1,32 @@
+.figure {
+  margin: 0;
+}
+
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* 긴 화면 캡처: 화면 높이의 80% 안에서 스크롤 */
+.scroller {
+  max-height: 80vh;
+  overflow-y: auto;
+  border: 1px solid var(--line);
+  background: var(--card);
+  overscroll-behavior: contain;
+}
+
+.caption {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 8px 16px;
+  padding-top: 12px;
+  font-size: 14px;
+  color: var(--muted);
+}
+
+.hint {
+  font-size: 13px;
+}
