@@ -6,6 +6,135 @@ const WORKS_BASE = "https://kr.object.ncloudstorage.com/riha/works";
 // 배열 순서 = 보여줄 순서 (포트폴리오 목록·홈 공통)
 export const projects: Project[] = [
   {
+    id: "ncrc",
+    title: "NAVER CONNECT Robotics Cup 대회 포털",
+    summary:
+      "네이버 커넥트재단이 고등학생을 대상으로 연 Physical AI 로보틱스 대회의 웹 포털. 참가 신청부터 예선·본선·결과 발표까지 대회 전 과정을 담는 사이트와 운영자 콘솔, 참가팀에 GPU 서버를 나눠 주는 인프라까지 PMO W2R GROUP과 함께 웹아이가 개발했습니다.",
+    year: "2026",
+    role: "개발",
+    stack: ["Next.js", "Spring Boot", "Python", "STOMP", "GPU 서버 관리"],
+    featured: true,
+    coverColor: "#111111",
+    coverSrc: `${WORKS_BASE}/ncrc/ncrc-main.jpg`,
+    links: [
+      { label: "자세히 보기", href: "/works/ncrc" },
+      { label: "사이트", href: "https://robotics.connect.or.kr/" },
+    ],
+    caseStudy: {
+      hero: {
+        src: `${WORKS_BASE}/ncrc/ncrc-main.jpg`,
+        width: 1440,
+        height: 900,
+        alt: "로봇 손이 피아노를 치는 NAVER CONNECT Robotics Cup 2026 메인 화면",
+      },
+      credits: [
+        { label: "클라이언트", value: "네이버 커넥트재단" },
+        { label: "기획·디자인", value: "네이버 커넥트재단" },
+        { label: "PMO", value: "W2R GROUP" },
+        { label: "개발", value: "웹아이 — 포털·운영자 콘솔·API·GPU 서버 에이전트" },
+        { label: "기술", value: "Next.js · Spring Boot · MySQL · STOMP(WebSocket) · Python(FastAPI) · Caddy · NCP" },
+      ],
+      sections: [
+        {
+          title: "고등학생이 Physical AI를 만나는 대회",
+          body: [
+            "NVIDIA Isaac Sim 안에서 로봇을 직접 움직이며 강화학습으로 문제를 푸는 고등학생 대상 로보틱스 대회입니다. 로봇을 처음 다뤄 보는 학생도 브라우저만으로 시뮬레이터에 접속해 학습하고, 결과를 제출하고, 순위를 확인할 수 있어야 했습니다.",
+            "웹아이는 대회 안내·참가 신청 사이트와 팀별 운영보드, 운영자 콘솔, 이를 받치는 API 서버를 만들고, 참가팀마다 GPU 서버를 배정하고 관리하는 에이전트까지 개발했습니다. 2026년 7월 참가 신청을 시작으로 예선과 본선을 거쳐 결과 발표까지 대회와 함께 운영했습니다.",
+          ],
+          images: [
+            {
+              src: `${WORKS_BASE}/ncrc/ncrc-vision.jpg`,
+              width: 1440,
+              height: 900,
+              alt: "‘꿈을 가진 학생이라면 누구에게나 기회의 문이 열려야 합니다’ 대회 비전 페이지",
+              caption: "대회 비전",
+            },
+            {
+              src: `${WORKS_BASE}/ncrc/ncrc-mobile.jpg`,
+              width: 1170,
+              height: 1992,
+              alt: "모바일 메인 화면",
+              caption: "Mobile",
+              maxWidth: 300,
+            },
+          ],
+        },
+        {
+          title: "대회 일정에 맞춰 바뀌는 화면",
+          body: [
+            "참가 신청, 신청 마감, 예선 시작, 예선 종료, 본선 시작, 대회 종료까지 여섯 번의 오픈 단계를 나눠, 같은 주소에서도 시점마다 보여 줄 내용이 달라지도록 설계했습니다. 진행 현황 페이지는 예선 순위표에서 본선 대진표와 경기 영상으로 이어집니다.",
+          ],
+          images: [
+            {
+              src: `${WORKS_BASE}/ncrc/ncrc-status.jpg`,
+              width: 1440,
+              height: 2620,
+              alt: "본선 32강 대진표와 예선 최종 TOP 32 순위표가 있는 진행 현황 페이지",
+              caption: "진행 현황",
+              maxWidth: 960,
+            },
+          ],
+        },
+        {
+          title: "팀마다 다른 운영보드",
+          body: [
+            "로그인한 팀은 운영보드에서 GPU 서버 접속, 예선 제출, 심사 결과와 세부 점수, 공지와 학습 자료를 한곳에서 봅니다. 예선 미제출·본선 진출·수상 여부와 대회 단계에 따라 카드 구성과 문구가 달라지도록 경우를 나눠 구현했습니다.",
+          ],
+          items: [
+            "예선 결과 파일 제출(.pt·.yaml 형식 검증)과 라운드별 심사 결과·시뮬레이션 세부 점수",
+            "동점일 때 먼저 제출한 팀을 앞에 두는 순위 산정",
+            "팀 정보·프로필 수정, 임시 계정 로그인과 자동 로그인",
+            "GA4로 강의 단계별 도달·이탈과 운영보드 이용 행동 수집",
+          ],
+          images: [
+            {
+              src: `${WORKS_BASE}/ncrc/ncrc-board-cases.jpg`,
+              width: 1600,
+              height: 911,
+              alt: "예선 종료·본선 중·대회 종료 시점과 팀 결과에 따라 달라지는 운영보드 시안",
+              caption: "운영보드 케이스별 화면 (기획안)",
+            },
+          ],
+        },
+        {
+          title: "참가팀에 GPU 서버를 나눠 주는 일",
+          body: [
+            "참가팀마다 Isaac Sim이 돌아가는 GPU 서버를 한 대씩 배정했습니다. 서버마다 Python 에이전트를 두고 STOMP over WebSocket으로 상태를 매니저 서버에 보내, 사용 중인 서버와 빈 서버, 학습이 끝나 놀고 있는 서버를 운영자가 실시간으로 볼 수 있게 했습니다.",
+          ],
+          items: [
+            "GPU·컨테이너·Isaac Sim 스트리밍 준비 상태를 보내는 헬스체크 에이전트",
+            "서버 할당 대기열과 유휴 서버 자동 회수(할당 해제 후 재부팅)",
+            "Caddy forward_auth로 배정된 팀만 자기 서버에 접속하도록 인증",
+            "학습 외 프로세스 감지 등 학생 서버 오남용 모니터링",
+            "본선 서버 복제·배포 자동화 스크립트와 CI/CD",
+          ],
+        },
+        {
+          title: "운영자 콘솔",
+          body: [
+            "운영자는 콘솔에서 대회와 라운드 상태를 바꾸고, 팀과 계정을 관리하고, 서버 현황과 이상 행동 로그를 확인합니다. 본선 진출팀을 정하고 토너먼트 대진과 점수를 입력하면 사이트의 진행 현황에 바로 반영됩니다.",
+          ],
+          items: [
+            "대시보드, 실시간 서버 현황, 팀별 사용량·할당량 관리",
+            "예선 랭킹·제출 파일 통합 다운로드, 본선 진출팀 선정과 순서 변경",
+            "토너먼트 대진·경기 링크·점수 등록(3·4위전 포함)",
+            "공지사항(첨부파일), 이메일 템플릿·발송, AI 튜터 데이터 조회",
+          ],
+          images: [
+            {
+              src: `${WORKS_BASE}/ncrc/ncrc-prize.jpg`,
+              width: 1440,
+              height: 1770,
+              alt: "총 2억 원 규모의 시상 및 지원 안내 영역",
+              caption: "시상 및 지원",
+              maxWidth: 720,
+            },
+          ],
+        },
+      ],
+    },
+  },
+  {
     id: "caremedi",
     title: "케어메디 의료진 웹 구축",
     summary:
