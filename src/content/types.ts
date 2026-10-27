@@ -3,6 +3,8 @@ export type BookStatus = "reading" | "done" | "want";
 export type Book = {
   id: string;
   title: string;
+  /** 부제. 목록에는 쓰지 않고 남겨만 둔다 */
+  subtitle?: string;
   author: string;
   publisher?: string;
   status: BookStatus;

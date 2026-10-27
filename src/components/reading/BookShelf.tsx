@@ -60,7 +60,8 @@ export default function BookShelf({ books, quoteCounts }: Props) {
               ) : (
                 <>
                   <Stars rating={book.rating} />
-                  {book.rating ? " · " : ""}밑줄 {quoteCounts[book.id] ?? 0}
+                  {book.rating && quoteCounts[book.id] ? " · " : ""}
+                  {quoteCounts[book.id] ? `밑줄 ${quoteCounts[book.id]}` : ""}
                 </>
               )}
             </span>

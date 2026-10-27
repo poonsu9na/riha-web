@@ -14,99 +14,18 @@
 // 같은 id 가 이미 NCP 에 있거나 이번에 올릴 파일끼리 id 가 겹치면 아무것도 올리지 않고 멈춘다.
 // 일부러 바꿔 올릴 때만 --overwrite 를 붙인다.
 
-import { existsSync, readdirSync, readFileSync, statSync } from "node:fs";
-import path from "node:path";
-import { HeadObjectCommand, PutObjectCommand, S3Client } from "@aws-sdk/client-s3";
+import { readFileSync } from "node:fs";
 import sharp from "sharp";
-
-if (existsSync(".env.local")) process.loadEnvFile(".env.local");
-
-const {
-  NCP_ACCESS_KEY,
-  NCP_SECRET_KEY,
-  NCP_BUCKET,
-  NCP_ENDPOINT = "https://kr.object.ncloudstorage.com",
-  NCP_REGION = "kr-standard",
-} = process.env;
+import { assertNoDuplicates, parseArgs, putJpeg, toId } from "./lib/ncp.mjs";
 
 const PREFIX = "photos";
 const SIZES = [
   { suffix: "800", width: 800, quality: 78 },
   { suffix: "1600", width: 1600, quality: 82 },
 ];
-const IMAGE_EXT = new Set([".jpg", ".jpeg", ".png", ".webp", ".heic", ".tif", ".tiff"]);
 
-function fail(message) {
-  console.error(`✖ ${message}`);
-  process.exit(1);
-}
-
-if (!NCP_ACCESS_KEY || !NCP_SECRET_KEY || !NCP_BUCKET) {
-  fail(".env.local 에 NCP_ACCESS_KEY, NCP_SECRET_KEY, NCP_BUCKET 을 넣어 주세요.");
-}
-
-const args = process.argv.slice(2);
-const overwrite = args.includes("--overwrite");
-const inputs = args.filter((arg) => arg !== "--overwrite");
-if (inputs.length === 0) fail("올릴 사진 파일이나 폴더를 넘겨 주세요. 예: npm run upload-photos -- ~/Desktop/새사진");
-
-const files = inputs.flatMap((input) => {
-  if (!existsSync(input)) fail(`'${input}' 이(가) 없어요.`);
-  if (statSync(input).isDirectory()) {
-    return readdirSync(input)
-      .filter((f) => IMAGE_EXT.has(path.extname(f).toLowerCase()))
-      .sort()
-      .map((f) => path.join(input, f));
-  }
-  return [input];
-});
-
-function toId(file) {
-  return path
-    .basename(file, path.extname(file))
-    .toLowerCase()
-    .replace(/[^\w가-힣]+/g, "-")
-    .replace(/^-+|-+$/g, "");
-}
-
-const s3 = new S3Client({
-  region: NCP_REGION,
-  endpoint: NCP_ENDPOINT,
-  credentials: { accessKeyId: NCP_ACCESS_KEY, secretAccessKey: NCP_SECRET_KEY },
-  forcePathStyle: true,
-});
-
-// 이번에 올릴 파일끼리 id 가 겹치는지 (예: "a.jpg" 와 "A.jpeg")
-const idOwners = new Map();
-for (const file of files) {
-  const id = toId(file);
-  if (idOwners.has(id)) fail(`'${idOwners.get(id)}' 와 '${file}' 의 id 가 '${id}' 로 겹쳐요. 파일명을 바꿔 주세요.`);
-  idOwners.set(id, file);
-}
-
-async function existsOnNcp(key) {
-  try {
-    await s3.send(new HeadObjectCommand({ Bucket: NCP_BUCKET, Key: key }));
-    return true;
-  } catch (error) {
-    if (error?.$metadata?.httpStatusCode === 404) return false;
-    throw error;
-  }
-}
-
-// NCP 에 같은 id 가 이미 있는지 (하나라도 있으면 아무것도 올리지 않는다)
-if (!overwrite) {
-  const taken = [];
-  for (const id of idOwners.keys()) {
-    if (await existsOnNcp(`${PREFIX}/${id}-800.jpg`)) taken.push(id);
-  }
-  if (taken.length > 0) {
-    fail(
-      `NCP 에 이미 같은 이름의 사진이 있어요: ${taken.join(", ")}\n` +
-        "  파일명을 바꾸거나, 정말 바꿔 올리려면 --overwrite 를 붙여 주세요.",
-    );
-  }
-}
+const { files, overwrite } = parseArgs("올릴 사진 파일이나 폴더를 넘겨 주세요. 예: npm run upload-photos -- ~/Desktop/새사진");
+await assertNoDuplicates(files, (id) => `${PREFIX}/${id}-800.jpg`, overwrite);
 
 const lines = [];
 for (const file of files) {
@@ -122,16 +41,7 @@ for (const file of files) {
       .jpeg({ quality, mozjpeg: true })
       .toBuffer({ resolveWithObject: true });
 
-    await s3.send(
-      new PutObjectCommand({
-        Bucket: NCP_BUCKET,
-        Key: `${PREFIX}/${id}-${suffix}.jpg`,
-        Body: data,
-        ContentType: "image/jpeg",
-        ACL: "public-read",
-        CacheControl: "public, max-age=31536000, immutable",
-      }),
-    );
+    await putJpeg(`${PREFIX}/${id}-${suffix}.jpg`, data);
     size = info;
     console.log(`  ✓ ${PREFIX}/${id}-${suffix}.jpg  ${info.width}×${info.height}  ${(data.length / 1024).toFixed(0)}KB`);
   }

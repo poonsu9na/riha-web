@@ -49,13 +49,21 @@ export default function ReadingPage() {
                   <span className={styles.byline}>
                     {[book.author, book.publisher].filter(Boolean).join(" · ")}
                   </span>
-                  <span aria-hidden="true" className={styles.track}>
-                    <span className={styles.bar} style={{ width: `${percent}%` }} />
-                  </span>
-                  <span className={styles.progress}>
-                    {book.progress ? `${book.progress.current} / ${book.progress.total}쪽 · ` : ""}
-                    밑줄 {quoteCounts[book.id] ?? 0}개
-                  </span>
+                  {book.progress && (
+                    <span aria-hidden="true" className={styles.track}>
+                      <span className={styles.bar} style={{ width: `${percent}%` }} />
+                    </span>
+                  )}
+                  {(book.progress || quoteCounts[book.id]) && (
+                    <span className={styles.progress}>
+                      {[
+                        book.progress && `${book.progress.current} / ${book.progress.total}쪽`,
+                        quoteCounts[book.id] && `밑줄 ${quoteCounts[book.id]}개`,
+                      ]
+                        .filter(Boolean)
+                        .join(" · ")}
+                    </span>
+                  )}
                 </span>
               </Link>
             );
