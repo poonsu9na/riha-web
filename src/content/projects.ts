@@ -9,7 +9,7 @@ export const projects: Project[] = [
     id: "s2w",
     title: "S2W 기업 사이트 리뉴얼",
     summary:
-      "AI·데이터 인텔리전스 기업 S2W의 한국어·영어·일본어 기업 사이트 리뉴얼. 산업과 솔루션별 40여 개 페이지와 이를 직접 고쳐 쓰는 CMS 관리자까지 PMO W2R GROUP과 함께 웹아이가 개발했습니다.",
+      "AI·데이터 인텔리전스 기업 S2W의 한국어·영어·일본어 기업 사이트 리뉴얼. 산업과 솔루션별 40여 개 페이지와 이를 직접 고쳐 쓰는 CMS 관리자까지, 디자인은 리메인, 개발은 웹아이가 맡았습니다.",
     year: "2026",
     role: "개발",
     stack: ["Next.js", "next-intl", "Spring Boot", "CMS", "다국어"],
@@ -29,7 +29,7 @@ export const projects: Project[] = [
       },
       credits: [
         { label: "클라이언트", value: "S2W (에스투더블유)" },
-        { label: "PMO", value: "W2R GROUP" },
+        { label: "디자인", value: "리메인" },
         { label: "개발", value: "웹아이 — 사이트·CMS 관리자·API" },
         { label: "기술", value: "Next.js · next-intl · Framer Motion · Spring Boot · MySQL" },
         { label: "언어", value: "한국어 · English · 日本語" },
