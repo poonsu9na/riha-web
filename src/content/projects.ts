@@ -9,7 +9,7 @@ export const projects: Project[] = [
     id: "tmoney",
     title: "티머니 둥근바람 폰트 소개 사이트",
     summary:
-      "티머니 전용서체 ‘티머니 둥근바람’이 만들어진 배경부터 브랜딩까지를 소개하는 반응형 홍보 사이트. 디자인은 리메인, 개발은 우리가 맡았습니다.",
+      "티머니 전용서체 ‘티머니 둥근바람’이 만들어진 배경부터 브랜딩까지를 소개하는 반응형 홍보 사이트. 디자인은 리메인, 개발은 웹아이가 맡았습니다.",
     year: "[연도]",
     role: "개발",
     stack: ["반응형 웹", "웹폰트", "스크롤 인터랙션"],
@@ -27,7 +27,7 @@ export const projects: Project[] = [
       credits: [
         { label: "클라이언트", value: "윤디자인그룹 · 티머니" },
         { label: "디자인", value: "리메인 — Creative Director kim junu, UX/UI Designer Lee ji" },
-        { label: "개발", value: "RIHA — [맡은 범위: 퍼블리싱·프론트엔드 등]" },
+        { label: "개발", value: "웹아이 — [맡은 범위: 퍼블리싱·프론트엔드 등]" },
         { label: "대응 기기", value: "Desktop · Tablet · Mobile" },
       ],
       sections: [
