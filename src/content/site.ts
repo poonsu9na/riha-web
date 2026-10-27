@@ -7,7 +7,7 @@ export const site = {
   intro: "[직무] 개발자 [이름]입니다. [어떤 걸 만드는 사람인지 한두 줄.]",
   email: "",
   links: [
-    { label: "GitHub", href: "https://github.com/poonsu9na" },
+    { label: "Threads", href: "https://www.threads.com/@l.riha_" },
     { label: "Instagram", href: "" },
   ],
 } as const;
