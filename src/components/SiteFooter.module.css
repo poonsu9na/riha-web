@@ -1,0 +1,28 @@
+.footer {
+  margin-top: 140px;
+  padding: 56px 0 64px;
+  border-top: 1px solid var(--ink);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 32px;
+}
+
+.name {
+  margin: 0 0 8px;
+  font-family: var(--font-serif);
+  font-weight: 800;
+  font-size: 22px;
+}
+
+.description {
+  margin: 0;
+  color: var(--muted);
+}
+
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  font-size: 15px;
+}

@@ -1,0 +1,28 @@
+.grid {
+  columns: 3 300px;
+  column-gap: 16px;
+  border-top: 1px solid var(--line);
+  padding-top: 40px;
+}
+
+.item {
+  break-inside: avoid;
+  margin-bottom: 16px;
+}
+
+.more {
+  padding: 40px 0 0;
+  text-align: center;
+}
+
+.moreButton {
+  padding: 14px 28px;
+  border: 1px solid var(--ink);
+  background: transparent;
+  cursor: pointer;
+}
+
+.moreButton:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+}

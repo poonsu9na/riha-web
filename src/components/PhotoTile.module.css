@@ -1,0 +1,10 @@
+.tile {
+  position: relative;
+  display: block;
+  width: 100%;
+  overflow: hidden;
+}
+
+.image {
+  object-fit: cover;
+}

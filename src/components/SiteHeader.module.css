@@ -1,0 +1,28 @@
+.header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  padding: 28px 0;
+  border-bottom: 1px solid var(--ink);
+}
+
+.logo {
+  font-family: var(--font-serif);
+  font-weight: 800;
+  font-size: 26px;
+  letter-spacing: 0.04em;
+}
+
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 28px;
+  font-size: 15px;
+}
+
+.active {
+  color: var(--accent);
+  font-weight: 700;
+}

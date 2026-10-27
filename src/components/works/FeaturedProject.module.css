@@ -1,0 +1,84 @@
+.project {
+  padding: 88px 0 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(340px, 100%), 1fr));
+  gap: 56px;
+  align-items: start;
+  scroll-margin-top: 24px;
+}
+
+.cover {
+  position: relative;
+  overflow: hidden;
+  height: 440px;
+  box-shadow: 8px 8px 0 var(--line);
+  display: flex;
+  align-items: flex-end;
+  padding: 20px;
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.coverDark {
+  color: var(--bg);
+}
+
+.coverImage {
+  object-fit: cover;
+}
+
+.eyebrow {
+  margin: 0 0 8px;
+  font-size: 13px;
+  color: var(--accent);
+  font-weight: 700;
+}
+
+.title {
+  margin: 0 0 16px;
+  font-family: var(--font-serif);
+  font-weight: 800;
+  font-size: 40px;
+  line-height: 1.25;
+  overflow-wrap: anywhere;
+}
+
+.details {
+  margin: 0 0 24px;
+  font-size: 16px;
+}
+
+.term {
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.description {
+  margin: 0 0 14px;
+}
+
+.summary {
+  margin: 0 0 24px;
+  font-size: 17px;
+  color: var(--ink-soft);
+}
+
+.meta {
+  margin: 0 0 24px;
+  font-size: 14px;
+  color: var(--accent);
+}
+
+@media (max-width: 600px) {
+  .project {
+    gap: 40px;
+  }
+
+  .cover {
+    height: 280px;
+  }
+
+  .title {
+    font-size: 32px;
+  }
+}

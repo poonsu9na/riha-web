@@ -1,0 +1,14 @@
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.button {
+  padding: 12px 22px;
+  border: 1px solid var(--ink);
+}
+
+.button:hover {
+  border-color: var(--accent);
+}

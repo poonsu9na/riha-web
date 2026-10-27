@@ -1,0 +1,4 @@
+/* PageIntro 아래 여백(56px)을 시안의 40px 로 맞춘다 */
+.body {
+  margin-top: -16px;
+}

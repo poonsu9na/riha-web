@@ -1,0 +1,23 @@
+.tabs {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 40px;
+  border-bottom: 1px solid var(--line);
+  font-size: 15px;
+}
+
+.tab {
+  padding: 12px 20px;
+  color: var(--muted);
+}
+
+.tab:first-child {
+  padding-left: 0;
+}
+
+.active {
+  margin-bottom: -1px;
+  border-bottom: 2px solid var(--ink);
+  color: var(--ink);
+  font-weight: 700;
+}

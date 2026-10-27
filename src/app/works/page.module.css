@@ -1,0 +1,50 @@
+/* PageIntro 는 자체 상하 여백(88/56)이 있어서, 옆 표는 그 아래 여백만큼 띄워 글줄 끝을 맞춘다 */
+.intro {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(320px, 100%), 1fr));
+  column-gap: 48px;
+  align-items: end;
+  padding-bottom: 8px;
+}
+
+.skills {
+  margin: 0 0 56px;
+  display: grid;
+  grid-template-columns: 96px minmax(0, 1fr);
+  gap: 10px 16px;
+  font-size: 15px;
+  padding: 24px 0;
+  border-top: 1px solid var(--ink);
+  border-bottom: 1px solid var(--ink);
+}
+
+/* dt/dd 를 div 로 묶어도 바깥 grid 의 두 칸을 그대로 쓰게 한다 */
+.skill {
+  display: contents;
+}
+
+.skillLabel {
+  color: var(--muted);
+}
+
+.skillValue {
+  margin: 0;
+  overflow-wrap: anywhere;
+}
+
+.textLink {
+  color: var(--accent);
+  border-bottom: 1px solid currentColor;
+}
+
+/* 바로 아래 SiteFooter 가 위 구분선을 가지므로 여기엔 선을 두지 않는다 */
+.contact {
+  margin-top: 120px;
+}
+
+.contactTitle {
+  margin: 0 0 8px;
+  font-family: var(--font-serif);
+  font-weight: 800;
+  font-size: 22px;
+}

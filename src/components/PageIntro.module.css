@@ -1,0 +1,24 @@
+.intro {
+  padding: 88px 0 56px;
+}
+
+.eyebrow {
+  margin: 0 0 16px;
+  font-size: 13px;
+  letter-spacing: 0.2em;
+  color: var(--muted);
+}
+
+.title {
+  margin: 0;
+  font-family: var(--font-serif);
+  font-weight: 800;
+  font-size: clamp(40px, 6vw, 64px);
+  line-height: 1.2;
+}
+
+.description {
+  margin: 16px 0 0;
+  font-size: 18px;
+  color: var(--ink-soft);
+}
