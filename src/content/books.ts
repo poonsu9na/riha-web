@@ -192,7 +192,6 @@ export const books: Book[] = [
   { id: "9791191891492", title: "똑똑한 사람은 어떻게 생각하고 질문하는가", subtitle: "사고력 실종의 시대, 앞서가는 사람의 생존 전략", author: "이시한", publisher: "북플레저", status: "want", coverColor: COVER_COLOR, coverSrc: `${COVER_BASE}9791191891492.jpg` },
   { id: "9788933871676", title: "리더 디퍼런트", subtitle: "사람과 숫자 모두를 얻는, 이 시대의 다른 리더", author: "사이먼 사이넥", publisher: "세계사", status: "want", coverColor: COVER_COLOR, coverSrc: `${COVER_BASE}9788933871676.jpg` },
   { id: "9791162541968", title: "마지막 몰입: 나를 넘어서는 힘", subtitle: "내 안의 잠재력을 200% 끌어올리는 마인드셋", author: "짐 퀵", publisher: "비즈니스북스", status: "want", coverColor: COVER_COLOR, coverSrc: `${COVER_BASE}9791162541968.jpg` },
-  { id: "9791160506808", title: "모두의 알고리즘 with 자바스크립트", subtitle: "세상을 움직이는 기초 알고리즘", author: "스즈키 코이치", publisher: "길벗", status: "want", coverColor: COVER_COLOR, coverSrc: `${COVER_BASE}9791160506808.jpg` },
   { id: "9788990220127", title: "부모와 아이 사이", author: "하임 기너트", publisher: "양철북", status: "want", coverColor: COVER_COLOR, coverSrc: `${COVER_BASE}9788990220127.jpg` },
   { id: "9788982732508", title: "부자 아빠 가난한 아빠 2", subtitle: "‘현금흐름 사분면’과 돈을 관리하는 7가지 방법", author: "로버트 기요사키", publisher: "민음인", status: "want", coverColor: COVER_COLOR, coverSrc: `${COVER_BASE}9788982732508.jpg` },
   { id: "9791130633619", title: "부자의 그릇", subtitle: "돈을 다루는 능력을 키우는 법", author: "IZUMI MASATO", publisher: "다산북스", status: "want", coverColor: COVER_COLOR, coverSrc: `${COVER_BASE}9791130633619.jpg` },
