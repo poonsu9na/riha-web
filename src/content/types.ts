@@ -61,6 +61,8 @@ export type CaseStudy = {
     title: string;
     /** 문단 단위 */
     body: string[];
+    /** 작업 항목처럼 나열할 것들. 문단 아래 목록으로 보인다 */
+    items?: string[];
     images?: WorkImage[];
     /** "row" 면 이미지들을 가로로 나란히 놓는다(폰 화면 여러 장 등). 기본은 위아래로 쌓기 */
     layout?: "stack" | "row";

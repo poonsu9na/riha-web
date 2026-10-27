@@ -101,6 +101,26 @@
   word-break: keep-all;
 }
 
+.links {
+  margin-top: 28px;
+}
+
+.items {
+  margin: 8px 0 0;
+  padding-left: 1.2em;
+  font-size: 16px;
+  color: var(--ink-soft);
+  word-break: keep-all;
+}
+
+.items li {
+  padding: 3px 0;
+}
+
+.items li::marker {
+  color: var(--accent);
+}
+
 /* 폰 화면 여러 장을 나란히. 좁은 화면에서는 아래로 넘어간다 */
 .imageRow {
   display: flex;

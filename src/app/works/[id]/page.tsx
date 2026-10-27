@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import CaseImage from "@/components/works/CaseImage";
+import ProjectLinks from "@/components/works/ProjectLinks";
 import { getProject, projects } from "@/content/projects";
 import styles from "./page.module.css";
 
@@ -25,6 +26,8 @@ export default async function WorkDetailPage({ params }: PageProps<"/works/[id]"
   const project = getProject(id);
   if (!project?.caseStudy) notFound();
   const { hero, credits, sections, source } = project.caseStudy;
+  // 목록용 "자세히 보기"(이 페이지 자신)는 빼고 사이트 주소 같은 외부 링크만 보여준다
+  const externalLinks = project.links.filter((link) => !link.href.startsWith("/"));
 
   return (
     <article className={styles.article}>
@@ -43,6 +46,11 @@ export default async function WorkDetailPage({ params }: PageProps<"/works/[id]"
             </div>
           ))}
         </dl>
+        {externalLinks.length > 0 && (
+          <div className={styles.links}>
+            <ProjectLinks links={externalLinks} />
+          </div>
+        )}
       </header>
 
       <div className={styles.hero}>
@@ -59,6 +67,13 @@ export default async function WorkDetailPage({ params }: PageProps<"/works/[id]"
                 {paragraph}
               </p>
             ))}
+            {section.items && (
+              <ul className={styles.items}>
+                {section.items.map((item) => (
+                  <li key={item}>{item}</li>
+                ))}
+              </ul>
+            )}
           </div>
           {section.images && section.layout === "row" ? (
             <div className={styles.imageRow}>
