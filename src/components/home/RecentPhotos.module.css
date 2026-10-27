@@ -16,4 +16,9 @@
   .grid {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  /* 5장을 2열에 놓으면 한 칸이 비어서, 모바일에서는 4장만 보여 준다 */
+  .grid > :nth-child(n + 5) {
+    display: none;
+  }
 }

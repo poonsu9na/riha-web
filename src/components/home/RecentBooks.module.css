@@ -68,8 +68,13 @@
 }
 
 .title {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
   font-size: 14px;
   font-weight: 500;
+  line-height: 1.5;
   overflow-wrap: anywhere;
 }
 
@@ -96,6 +101,16 @@
 
   .grid {
     flex-basis: 100%;
-    grid-template-columns: repeat(auto-fit, minmax(96px, 1fr));
+    /* 다 읽은 책 4권을 한 줄에 작게 놓아 세로로 길어지지 않게 한다 */
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px 12px;
+  }
+
+  .currentTitle {
+    font-size: 20px;
+  }
+
+  .title {
+    font-size: 12px;
   }
 }

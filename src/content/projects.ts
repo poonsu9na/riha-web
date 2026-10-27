@@ -262,7 +262,7 @@ export const projects: Project[] = [
       "개인용 헬스케어 서비스를 의료진 영역으로 넓힌 케어메디의 의료진 전용 웹. 헬스케어 디바이스로 모은 생체 데이터를 대시보드로 보여 주는 화면을 기획·PMO W2R GROUP과 함께 웹아이가 개발했습니다.",
     year: "2025",
     role: "개발",
-    stack: ["Chart.js", "Canvas", "의료진 대시보드", "[기술 스택]"],
+    stack: ["Spring Boot", "Thymeleaf", "Chart.js", "JPA·QueryDSL", "의료진 대시보드"],
     featured: true,
     coverColor: "#4caf6a",
     coverSrc: `${WORKS_BASE}/caremedi/caremedi-compare.jpg`,
@@ -277,7 +277,7 @@ export const projects: Project[] = [
       credits: [
         { label: "클라이언트", value: "케어메디" },
         { label: "PMO·기획", value: "W2R GROUP" },
-        { label: "개발", value: "웹아이 — Chart.js 기반 데이터 시각화, [사용 기술·맡은 범위]" },
+        { label: "개발", value: "웹아이 — Spring Boot·Thymeleaf 웹, Chart.js 데이터 시각화" },
         { label: "범위", value: "Web · Admin" },
       ],
       sections: [
@@ -285,7 +285,7 @@ export const projects: Project[] = [
           title: "개인용 서비스에서 의료진의 도구로",
           body: [
             "케어메디는 개인용 헬스케어 서비스를 운영해 왔습니다. 의료진 웹은 이 서비스를 전문가 영역으로 넓혀, 자사 헬스케어 디바이스가 모은 생체 데이터를 의료진 대시보드에서 바로 보고 환자 관리와 진단에 쓸 수 있도록 만든 플랫폼입니다.",
-            "웹아이는 디바이스 데이터를 의료진 화면에 동기화해 보여 주는 대시보드와, 환자별로 데이터를 살펴보는 화면들을 개발했습니다. [데이터 연동 방식·구조 한두 줄]",
+            "웹아이는 디바이스 데이터를 의료진 화면에 동기화해 보여 주는 대시보드와, 환자별로 데이터를 살펴보는 화면들을 개발했습니다. Spring Boot로 케어메디 플랫폼 API의 혈당·인슐린·패치 데이터를 받아 Thymeleaf 화면에 내려 주고, 요약·AGP·중첩·월간 차트는 Chart.js에 날짜 축과 목표 범위 표시를 더해 그렸습니다. 의료진 계정은 토큰으로 인증하고 30분 동안 쓰지 않으면 자동으로 로그아웃되게 했고, 태블릿 화면도 맞췄습니다.",
           ],
         },
         {
@@ -372,7 +372,7 @@ export const projects: Project[] = [
       "여러 개의 개별 사이트로 나뉘어 있던 미국대두협회(USSEC)의 페이지를 하나의 공식 홈페이지와 통합 관리자로 합친 프로젝트. 기획·PMO는 W2R GROUP, 개발은 웹아이가 맡았습니다.",
     year: "2025",
     role: "개발",
-    stack: ["[기술 스택]", "통합 관리자", "CMS"],
+    stack: ["Spring Boot", "Thymeleaf", "JPA·QueryDSL", "MySQL", "통합 관리자"],
     featured: true,
     coverColor: "#1f6b3a",
     coverSrc: `${WORKS_BASE}/ussec/ussec-main.jpg`,
@@ -387,7 +387,7 @@ export const projects: Project[] = [
       credits: [
         { label: "클라이언트", value: "미국대두협회 (U.S. Soybean Export Council)" },
         { label: "PMO·기획", value: "W2R GROUP" },
-        { label: "개발", value: "웹아이 — [사용 기술], 웹·통합 관리자 [맡은 범위]" },
+        { label: "개발", value: "웹아이 — Spring Boot·Thymeleaf, PC·모바일 웹과 통합 관리자" },
         { label: "범위", value: "Web · Admin" },
       ],
       sections: [
@@ -410,7 +410,7 @@ export const projects: Project[] = [
         {
           title: "PC와 모바일에서 같은 구조로",
           body: [
-            "메인, 협회 소개, 소이오일 마스터 프로그램처럼 성격이 다른 페이지도 같은 틀 안에서 보이도록 공통 구조로 만들었습니다. [반응형 대응 범위 한 줄]",
+            "메인, 협회 소개, 소이오일 마스터 프로그램처럼 성격이 다른 페이지도 같은 틀 안에서 보이도록 공통 구조로 만들었습니다. PC와 모바일은 화면을 따로 두고 같은 API를 쓰게 했으며, 관리자에서는 배너·팝업·게시판·문의와 메뉴별 쓰기·조회 권한을 다룹니다.",
           ],
           images: [
             {
@@ -484,7 +484,7 @@ export const projects: Project[] = [
       credits: [
         { label: "클라이언트", value: "스튜디오C1 (StudioC1)" },
         { label: "PMO·기획", value: "W2R GROUP" },
-        { label: "개발", value: "웹아이 — [사용 기술], 웹·관리자 시스템 [맡은 범위]" },
+        { label: "개발", value: "웹아이 — Next.js 웹·관리자, Spring Boot API, 결제·VOD·채팅 연동" },
         { label: "범위", value: "Web · Admin" },
       ],
       sections: [
@@ -492,7 +492,7 @@ export const projects: Project[] = [
           title: "우리 채널에서 보는 불꽃야구",
           body: [
             "스튜디오C1에는 직접 만든 프로그램을 내보낼 자체 유통 채널이 없었습니다. 영상 업로드와 라이브, 도네이션, 팬 커뮤니티를 하나의 플랫폼에 담아 콘텐츠 유통과 팬덤 활동이 자연스럽게 이어지도록 하는 것이 목표였습니다.",
-            "운영 중인 플랫폼 없이 처음부터 런칭해야 하는 프로젝트라, 스튜디오C1의 콘텐츠 운영 방식과 비즈니스 모델에 맞춰 서비스 화면부터 관리자 시스템까지 새로 만들었습니다. [개발 범위 한두 줄]",
+            "운영 중인 플랫폼 없이 처음부터 런칭해야 하는 프로젝트라, 스튜디오C1의 콘텐츠 운영 방식과 비즈니스 모델에 맞춰 서비스 화면부터 관리자 시스템까지 새로 만들었습니다. 서비스 웹과 관리자는 Next.js(React Query·Zustand)로, API는 Spring Boot로 만들었고, BytePlus VOD 플레이어와 TalkPlus 채팅, 나이스페이 이용권 결제를 붙였습니다. 라이브 방송이 몰리는 시간에 맞춰 서버를 늘리고 줄이며 운영했습니다.",
           ],
           images: [
             {
@@ -601,7 +601,7 @@ export const projects: Project[] = [
       "필터 같은 소모품을 꾸준히 갈아 줘야 하는 가전 브랜드 위닉스의 자사몰 리뉴얼. 구매 이력에 맞춘 소모품 추천과 구독·케어 멤버십 관리를 갖춘 커머스로, 기획·PMO는 W2R GROUP, 디자인은 리메인, 개발은 웹아이가 맡았습니다.",
     year: "2024",
     role: "개발",
-    stack: ["C#", "RESTful API", "HTML5", "CSS", "웹 접근성", "Swift", "Objective-C"],
+    stack: ["Spring Boot", "Thymeleaf", "JPA·QueryDSL", "MyBatis", "배치", "하이브리드 앱"],
     featured: true,
     coverColor: "#8a2a8c",
     coverSrc: `${WORKS_BASE}/winix/winix-main.jpg`,
@@ -617,7 +617,7 @@ export const projects: Project[] = [
         { label: "클라이언트", value: "위닉스 (WINIX)" },
         { label: "PMO·기획", value: "W2R GROUP" },
         { label: "디자인", value: "리메인" },
-        { label: "개발", value: "웹아이 — [사용 기술], 웹·앱·관리자 [맡은 범위]" },
+        { label: "개발", value: "웹아이 — Spring Boot 쇼핑몰·관리자·API·배치, 하이브리드 앱 연동" },
         { label: "기술", value: "C# · RESTful API · HTML5 · CSS(전처리기) · 웹/앱 접근성 · Swift · Objective-C" },
         { label: "범위", value: "Web · App · Admin · E-Commerce" },
       ],
@@ -626,7 +626,7 @@ export const projects: Project[] = [
           title: "소모품까지 이어지는 자사몰",
           body: [
             "위닉스는 제습기·공기청정기·가습기처럼 필터와 소모품을 주기적으로 바꿔야 하는 가전을 만드는 브랜드입니다. 리뉴얼의 목표는 고객이 가진 제품을 기준으로 필요한 소모품과 서비스를 바로 찾을 수 있는, 데이터 기반의 개인화된 쇼핑 경험이었습니다.",
-            "W2R GROUP이 프로젝트를 이끌고 리메인이 고객 인터뷰와 페르소나 분석을 거쳐 화면을 설계했으며, 웹아이는 이를 메인·목록·상세·마이페이지와 관리자 시스템까지 개발했습니다. [개발 범위 한두 줄]",
+            "W2R GROUP이 프로젝트를 이끌고 리메인이 고객 인터뷰와 페르소나 분석을 거쳐 화면을 설계했으며, 웹아이는 이를 메인·목록·상세·마이페이지와 관리자 시스템까지 개발했습니다. Spring Boot로 쇼핑몰 화면(Thymeleaf), 관리자, API, 배치를 모듈로 나누고, 정기결제와 할인코드·타임세일, CJ대한통운 택배 연동, 브이리뷰, 샵라이브 라이브커머스, 앱 푸시(FCM)와 애플 로그인까지 붙였습니다. 오픈 뒤에도 유지보수를 맡아 어린이 콘텐츠 공모전 같은 이벤트를 이어서 만들었습니다.",
           ],
           images: [
             {
@@ -732,7 +732,7 @@ export const projects: Project[] = [
       "브랜드와 고객이 콘텐츠와 피드로 소통하고, 그 취향 공유가 구매로 이어지는 커뮤니티형 라이브커머스 플랫폼. 기획·PMO는 W2R GROUP, 디자인은 리메인, 개발은 웹아이가 웹·앱·관리자를 맡았습니다.",
     year: "2024",
     role: "개발",
-    stack: ["C#", "RESTful API", "Swift", "Objective-C", "HTML5", "CSS"],
+    stack: ["Spring Boot", "Thymeleaf", "MyBatis·QueryDSL", "Spring Security", "하이브리드 앱"],
     featured: true,
     coverColor: "#111111",
     coverSrc: `${WORKS_BASE}/wattup/wattup-main.jpg`,
@@ -748,7 +748,7 @@ export const projects: Project[] = [
         { label: "클라이언트", value: "WATTZ Creative" },
         { label: "PMO·기획", value: "W2R GROUP" },
         { label: "디자인", value: "리메인 — Creative Director Junu Kim, Project Leader Ji Lee" },
-        { label: "개발", value: "웹아이 — 웹·앱·관리자 [맡은 범위]" },
+        { label: "개발", value: "웹아이 — Spring Boot 쇼핑몰·CMS·API, 웹·앱 연동" },
         { label: "기술", value: "C# · RESTful API · Swift · Objective-C · HTML5 · CSS(전처리기) · 웹/앱 접근성" },
         { label: "범위", value: "Web · App · Admin · E-Commerce" },
       ],
@@ -757,7 +757,7 @@ export const projects: Project[] = [
           title: "취향 공유가 구매로 이어지는 구조",
           body: [
             "와츠업은 2030세대를 겨냥한 라이브커머스 플랫폼입니다. 가격 비교 위주로 상품을 늘어놓는 방식으로는 브랜드의 정체성을 전하기 어렵고, 일방적인 정보 제공만으로는 사용자가 오래 머물지 않는다는 점이 출발점이었습니다.",
-            "그래서 브랜드 콘텐츠와 커머스, SNS형 커뮤니티를 한 서비스 안에 묶었습니다. 사용자가 콘텐츠를 보다가 바로 관련 상품을 찾아 살 수 있고, 다른 사용자의 후기와 스타일링이 다시 구매로 이어지도록 웹·앱과 커머스 관리자를 함께 개발했습니다. [개발 범위와 구조 한두 줄]",
+            "그래서 브랜드 콘텐츠와 커머스, SNS형 커뮤니티를 한 서비스 안에 묶었습니다. 사용자가 콘텐츠를 보다가 바로 관련 상품을 찾아 살 수 있고, 다른 사용자의 후기와 스타일링이 다시 구매로 이어지도록 웹·앱과 커머스 관리자를 함께 개발했습니다. Spring Boot로 쇼핑몰과 CMS, 각각의 API를 모듈로 나눠 만들고, SNS 로그인, 팝빌 카카오 알림톡, 앱 연결 페이지, GA4 이커머스 이벤트를 붙였습니다.",
           ],
           images: [
             {
@@ -848,7 +848,7 @@ export const projects: Project[] = [
       "새로 시장에 들어서는 파라타항공의 철학과 비전을 감성적으로 전하는 브랜드 랜딩 페이지. 기획·PMO는 W2R GROUP, 디자인은 리메인, 개발은 웹아이가 맡아 스크롤 인터랙션 중심의 화면을 구현했습니다.",
     year: "2024",
     role: "개발",
-    stack: ["브랜드 랜딩 페이지", "스크롤 인터랙션", "Java"],
+    stack: ["Spring Boot", "Thymeleaf", "스크롤 인터랙션", "국문·영문"],
     featured: true,
     coverColor: "#1d34c4",
     coverSrc: `${WORKS_BASE}/parata-air/parata-air-main.jpg`,
@@ -867,7 +867,7 @@ export const projects: Project[] = [
           label: "디자인",
           value: "리메인 — Creative Director Junu Kim, Project Leader Ji Lee, UX/UI Designer Chaeyeon Park · Hyewon Shin",
         },
-        { label: "개발", value: "웹아이 — [사용 기술], 스크롤 인터랙션 구현 [맡은 범위]" },
+        { label: "개발", value: "웹아이 — Spring Boot·Thymeleaf, 국·영문 페이지와 스크롤 인터랙션" },
         { label: "범위", value: "Web · Branding" },
       ],
       sections: [
@@ -875,7 +875,7 @@ export const projects: Project[] = [
           title: "첫인상을 남기는 마이크로 사이트",
           body: [
             "파라타항공이 시장에 처음 내딛는 걸음을 알리는 홍보용 마이크로 사이트입니다. 서비스를 나열하기보다 고객에게 차별화된 가치를 전하고, 첫 만남에서부터 신뢰와 기대감을 심어 오래 이어질 관계의 시작점이 되는 것을 목표로 했습니다.",
-            "W2R GROUP이 프로젝트를 이끌고 리메인이 브랜드 경험과 화면을 디자인했으며, 웹아이는 이를 실제로 움직이는 페이지로 개발했습니다. [개발 범위·구조 한두 줄: 반응형, 퍼블리싱 방식 등]",
+            "W2R GROUP이 프로젝트를 이끌고 리메인이 브랜드 경험과 화면을 디자인했으며, 웹아이는 이를 실제로 움직이는 페이지로 개발했습니다. Spring Boot·Thymeleaf로 국문과 영문 페이지를 만들고, 마우스 휠에 맞춰 섹션과 영상이 넘어가는 스크롤 인터랙션을 여러 차례 다듬었습니다. 검색 노출을 위한 메타 태그와 네이버·구글 사이트 등록, 배포 자동화(CI/CD)까지 맡았습니다.",
           ],
           images: [
             {
@@ -967,7 +967,7 @@ export const projects: Project[] = [
       "국내 여러 브랜드의 일본 판매를 대행하는 벡터컴을 위한 통합 관리 시스템. 라쿠텐·큐텐 상품 등록부터 주문 수집, 재고, 3PL 물류 연동, 매출 리포트까지 한곳에서 다루며, 기획·PMO는 W2R GROUP, 개발은 웹아이가 맡았습니다.",
     year: "2024",
     role: "개발",
-    stack: ["[기술 스택]", "B2B SaaS", "API 연동", "관리자 시스템"],
+    stack: ["Spring Boot", "Python", "채널 데이터 연동", "관리자 시스템"],
     featured: true,
     coverColor: "#4757f5",
     coverSrc: `${WORKS_BASE}/vectorcom/vectorcom-main.jpg`,
@@ -982,7 +982,7 @@ export const projects: Project[] = [
       credits: [
         { label: "클라이언트", value: "벡터컴 (VECTORCOM)" },
         { label: "PMO·기획", value: "W2R GROUP" },
-        { label: "개발", value: "웹아이 — [사용 기술], 관리 시스템·채널 API 연동 [맡은 범위]" },
+        { label: "개발", value: "웹아이 — Spring Boot 관리 시스템, Python 채널 데이터 가공·API" },
         { label: "범위", value: "B2B SaaS · E-Commerce" },
       ],
       sections: [
@@ -990,7 +990,7 @@ export const projects: Project[] = [
           title: "여러 브랜드, 여러 채널을 한곳에서",
           body: [
             "벡터컴은 국내 여러 브랜드의 해외 마케팅과 유통을 대신 맡는 회사입니다. 같은 상품이라도 라쿠텐, 큐텐 같은 일본 판매 채널마다 관리자에 따로 들어가 등록하고 고쳐야 했고, 채널별로 옵션명과 세트 구성이 달라 재고를 한 번에 보기 어려웠습니다.",
-            "상품 관리부터 주문 수집, 재고 관리, 3PL 물류 연동, 매출 분석까지 해외 유통에 필요한 과정을 하나의 시스템으로 묶었습니다. [개발 범위 한두 줄]",
+            "상품 관리부터 주문 수집, 재고 관리, 3PL 물류 연동, 매출 분석까지 해외 유통에 필요한 과정을 하나의 시스템으로 묶었습니다. 채널별 주문·출고 데이터를 Python으로 모아 가공하고, 매일 정해진 형식으로 올리브영 등 채널에 넘기는 API를 Spring Boot로 만들었으며, 상품 마스터 리스트도 운영하며 계속 맞췄습니다.",
           ],
         },
         {
@@ -1183,7 +1183,7 @@ export const projects: Project[] = [
         { label: "클라이언트", value: "위메이드 (WEMADE)" },
         { label: "PMO·기획", value: "W2R GROUP" },
         { label: "디자인", value: "리메인 — Creative Director Junu Kim, Project Leader Ji Lee" },
-        { label: "개발", value: "웹아이 — Java [맡은 범위]" },
+        { label: "개발", value: "웹아이 — Spring Boot 기반 웹·관리자, 다국어" },
         { label: "기술", value: "Java · HTML5 · CSS(전처리기) · 웹 접근성" },
       ],
       sections: [
@@ -1191,7 +1191,7 @@ export const projects: Project[] = [
           title: "방대한 사업을 한눈에",
           body: [
             "위메이드는 게임과 위믹스(WEMIX) 블록체인, 메타버스, NFT를 아우르는 기업입니다. 사업이 넓어진 만큼 사이트에 담을 정보도 많아져, 기업의 정체성을 분명히 하면서 방대한 콘텐츠를 쉽게 찾아볼 수 있게 하는 것이 리뉴얼의 목표였습니다.",
-            "W2R GROUP이 프로젝트를 이끌고, 리메인이 디자인 시스템과 화면을 만들었으며, 웹아이는 이를 Java 기반으로 개발했습니다. [개발 범위와 구조 한두 줄: 관리자, CMS, 다국어 등]",
+            "W2R GROUP이 프로젝트를 이끌고, 리메인이 디자인 시스템과 화면을 만들었으며, 웹아이는 이를 Java 기반으로 개발했습니다. Spring Boot로 사이트와 관리자를 함께 만들어 배너·연혁·채용공고·보도자료를 관리자에서 고칠 수 있게 했고, 국문·영문 번역, 코스콤 연동 주가 차트, 접속 통계까지 구현했습니다.",
           ],
         },
         {
@@ -1294,6 +1294,116 @@ export const projects: Project[] = [
       source: {
         label: "W2R GROUP의 프로젝트 소개 보기",
         href: "https://w2rgroup.kr/wemade",
+      },
+    },
+  },
+  {
+    id: "ulthera",
+    title: "울쎄라 정품인증 앱 리뉴얼",
+    summary:
+      "멀츠의 리프팅 시술 울쎄라가 정품 시술인지 확인하고 혜택까지 받는 정품인증 앱 리뉴얼. 디자인은 리메인, 개발은 웹아이가 iOS·Android 앱과 관리자·API까지 맡았습니다.",
+    year: "2023",
+    role: "개발",
+    stack: ["Swift", "Kotlin", "PHP", "관리자·API", "QR 정품인증"],
+    featured: true,
+    coverColor: "#f6c343",
+    coverSrc: `${WORKS_BASE}/ulthera/ulthera-hero.jpg`,
+    links: [{ label: "자세히 보기", href: "/works/ulthera" }],
+    caseStudy: {
+      hero: {
+        src: `${WORKS_BASE}/ulthera/ulthera-hero.jpg`,
+        width: 1600,
+        height: 900,
+        alt: "‘EASY ULTHERA, TRENDY ULTHERA’ 문구와 미소 짓는 얼굴의 키비주얼",
+      },
+      credits: [
+        { label: "클라이언트", value: "멀츠 (Ulthera)" },
+        { label: "디자인", value: "리메인 — Project Director Junu Kim, Project Leader Ji Lee" },
+        { label: "개발", value: "웹아이 — iOS(Swift)·Android(Kotlin) 앱, PHP 관리자·API" },
+        { label: "범위", value: "App · Admin · API" },
+      ],
+      sections: [
+        {
+          title: "정품 시술을 확인하는 가장 쉬운 방법",
+          body: [
+            "시술 문턱이 낮아지면서 울쎄라를 찾는 사람이 늘었고, 멀츠는 안전한 시술을 위해 정품인증 서비스를 운영해 왔습니다. 이용자가 늘수록 앱을 쓰는 사람은 사용성에서, 데이터를 보는 내부 담당자는 관리 기능에서 아쉬움이 커졌습니다.",
+            "리뉴얼은 정품인증 한 번으로 끝나던 경험을, 인증 이후의 혜택과 다음 시술 관리까지 이어지는 흐름으로 바꾸는 작업이었습니다. 웹아이는 iOS(Swift)와 Android(Kotlin) 앱을 새로 만들고, 병원과 이용자의 인증 데이터를 다루는 관리자와 API를 PHP로 개발했습니다.",
+          ],
+          images: [
+            {
+              src: `${WORKS_BASE}/ulthera/ulthera-main.jpg`,
+              width: 1600,
+              height: 1639,
+              alt: "정품 인증하기 버튼과 받을 수 있는 혜택이 보이는 앱 메인 화면",
+              caption: "Main",
+              maxWidth: 720,
+            },
+          ],
+        },
+        {
+          title: "QR 한 번으로 끝나는 정품인증",
+          body: [
+            "시술에 쓰인 팁 포장의 QR 코드를 앱으로 찍으면 바로 정품 여부와 인증 결과를 보여 줍니다. 단계를 줄이고 결과를 한눈에 이해할 수 있도록 화면 흐름을 단순하게 구현했습니다.",
+          ],
+          images: [
+            {
+              src: `${WORKS_BASE}/ulthera/ulthera-certification.jpg`,
+              width: 1600,
+              height: 578,
+              alt: "QR 코드 스캔부터 인증 완료까지 이어지는 정품인증 화면들",
+              caption: "Certification Process",
+            },
+          ],
+        },
+        {
+          title: "인증 데이터를 읽는 대시보드",
+          body: [
+            "관리자에서는 정품인증 현황과 가입자 추이를 대시보드로 보고, 병원과 이용자의 인증 이력, 이후 서비스 이용까지 관리할 수 있습니다. 앱과 관리자가 같은 API를 쓰도록 PHP로 묶었습니다.",
+          ],
+          images: [
+            {
+              src: `${WORKS_BASE}/ulthera/ulthera-dashboard.jpg`,
+              width: 1600,
+              height: 1936,
+              alt: "정품인증 수와 가입자 현황을 차트로 보여 주는 관리자 대시보드",
+              caption: "Dashboard",
+              maxWidth: 960,
+            },
+          ],
+        },
+        {
+          title: "이벤트·고객지원과 개인화",
+          body: [
+            "시술 이벤트와 Tip·FAQ·문의하기를 앱 안에 두어 이용자가 스스로 답을 찾게 했고, 정품인증 리워드 포인트와 시술 주기 알림으로 다음 시술까지 관계가 이어지도록 했습니다.",
+          ],
+          items: [
+            "이벤트 목록·상세와 참여",
+            "Tip·FAQ·1:1 문의 고객지원",
+            "정품인증 리워드 포인트 적립·사용",
+            "원하는 시점에 받는 시술 주기 알림(푸시)",
+          ],
+          images: [
+            {
+              src: `${WORKS_BASE}/ulthera/ulthera-event-cs.jpg`,
+              width: 1600,
+              height: 2033,
+              alt: "이벤트와 고객지원 화면",
+              caption: "Event & CS",
+              maxWidth: 720,
+            },
+            {
+              src: `${WORKS_BASE}/ulthera/ulthera-personal.jpg`,
+              width: 1600,
+              height: 1044,
+              alt: "리워드 포인트와 시술 주기 알림 설정 화면",
+              caption: "Personalization",
+            },
+          ],
+        },
+      ],
+      source: {
+        label: "리메인의 프로젝트 소개 보기",
+        href: "https://remainlayer.com/work/%EC%89%BD%EA%B3%A0%EB%B9%A0%EB%A5%B8%EC%A0%95%ED%92%88%EC%9D%B8%EC%A6%9D%EB%94%94%EC%A7%80%ED%84%B8%EC%84%9C%EB%B9%84%EC%8A%A4%EB%A1%9C%EA%B5%AC%ED%98%84%ED%95%9C%EC%9A%B8%EC%8E%84%EB%9D%BC%EC%95%B1.html",
       },
     },
   },
