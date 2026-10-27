@@ -42,7 +42,7 @@ npm run build
    ```
 
 2. 출력된 `{ src, width, height, alt }` 줄을 `caseStudy` 의 `hero`·`sections[].images` 에 넣고 설명을 고친다.
-   세로가 가로의 1.8배를 넘는 전체 화면 캡처는 상세 페이지에서 안에서 스크롤하는 틀로 보인다.
+   긴 전체 화면 캡처도 잘라내지 않고 원본 비율 그대로 펼쳐서 보인다.
 3. 목록에서 들어갈 수 있게 `links` 에 `{ label: "자세히 보기", href: "/works/<id>" }` 를 넣는다.
 
 ## 사진 추가
