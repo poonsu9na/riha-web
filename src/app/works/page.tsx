@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
 import PageIntro from "@/components/PageIntro";
 import FeaturedProject from "@/components/works/FeaturedProject";
-import ProjectList from "@/components/works/ProjectList";
-import ProjectToc from "@/components/works/ProjectToc";
 import { profile, projects } from "@/content/projects";
 import { site } from "@/content/site";
 import styles from "./page.module.css";
@@ -12,11 +10,6 @@ export const metadata: Metadata = {
 };
 
 export default function WorksPage() {
-  // 목차 번호를 전체 순서 기준으로 유지하려고 index 를 붙여 둔다
-  const indexed = projects.map((project, index) => ({ project, index }));
-  const featured = indexed.filter(({ project }) => project.featured);
-  const others = indexed.filter(({ project }) => !project.featured);
-
   return (
     <>
       <div className={styles.intro}>
@@ -41,13 +34,9 @@ export default function WorksPage() {
         </dl>
       </div>
 
-      <ProjectToc projects={projects} />
-
-      {featured.map(({ project, index }) => (
+      {projects.map((project, index) => (
         <FeaturedProject key={project.id} project={project} index={index} />
       ))}
-
-      <ProjectList items={others} />
 
       <section aria-labelledby="works-contact" className={styles.contact}>
         <h2 id="works-contact" className={styles.contactTitle}>

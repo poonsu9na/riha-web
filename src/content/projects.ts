@@ -3,220 +3,8 @@ import type { Project } from "./types";
 // 포트폴리오 이미지는 NCP(riha 버킷 works/<id>/)에 있다. scripts/upload-work-images.mjs 로 올린다
 const WORKS_BASE = "https://kr.object.ncloudstorage.com/riha/works";
 
-// 배열 순서 = 보여줄 순서. 최근에 추가한 프로젝트를 앞에 둔다
+// 배열 순서 = 보여줄 순서 (포트폴리오 목록·홈 공통)
 export const projects: Project[] = [
-  {
-    id: "zipbanchan",
-    title: "집반찬연구소 쇼핑몰",
-    summary:
-      "2018년부터 지금까지 웹아이가 개발과 유지보수를 이어 오고 있는 프리미엄 반찬 쇼핑몰. 리뉴얼부터 정기결제, 하이브리드 앱, 외부 판매처 연동, 사내 운영 시스템까지 함께 만들어 왔습니다.",
-    year: "2018–",
-    period: "2018 ~ 현재",
-    role: "개발 · 유지보수",
-    stack: ["고도몰 이나무4 독립형", "PHP", "MySQL", "하이브리드 앱"],
-    featured: true,
-    coverColor: "#2f4a3a",
-    coverSrc: `${WORKS_BASE}/zipbanchan/zipbanchan-hero.jpg`,
-    links: [
-      { label: "자세히 보기", href: "/works/zipbanchan" },
-      { label: "사이트", href: "https://www.zipbanchan.co.kr" },
-    ],
-    caseStudy: {
-      hero: {
-        src: `${WORKS_BASE}/zipbanchan/zipbanchan-hero.jpg`,
-        width: 1600,
-        height: 1000,
-        alt: "뚝배기 국과 반찬들이 차려진 식탁",
-      },
-      credits: [
-        { label: "클라이언트", value: "집반찬연구소" },
-        { label: "기간", value: "2018 ~ 현재 (개발·유지보수)" },
-        { label: "개발", value: "웹아이 — 퍼블리싱, 백엔드, 하이브리드 앱, 유지보수" },
-        { label: "리뉴얼 디자인", value: "리메인 (2022, 웹·모바일 UX/UI)" },
-        { label: "솔루션", value: "고도몰 이나무4 독립형" },
-        { label: "개발 환경", value: "LAMP (Linux · Apache · MySQL · PHP)" },
-      ],
-      sections: [
-        {
-          title: "2018년부터 이어 온 쇼핑몰",
-          body: [
-            "집반찬연구소는 “식사 준비하는 데 얼마나 걸려요?”라는 사소한 질문에서 시작된 반찬 브랜드입니다. 50년 동안 식사 준비에만 6.25년이 걸린다는 계산에서 출발해, 그 시간을 더 행복한 곳에 쓸 수 있도록 프리미엄 반찬을 만듭니다.",
-            "웹아이는 2018년부터 지금까지 이 쇼핑몰의 개발과 유지보수를 이어 오고 있습니다. 기능 개발, SEO, 통계, 외부 API 연동까지 쇼핑몰이 자라는 동안 필요한 일을 함께해 왔습니다.",
-          ],
-          images: [
-            {
-              src: `${WORKS_BASE}/zipbanchan/zipbanchan-hand.jpg`,
-              width: 1600,
-              height: 1800,
-              alt: "손에 든 휴대폰에 집반찬연구소 모바일 화면이 떠 있는 모습",
-              maxWidth: 560,
-            },
-          ],
-        },
-        {
-          title: "PC·모바일 웹 리뉴얼",
-          body: [
-            "2022년에는 리메인이 사용자 인지 과정을 기준으로 기존 화면의 문제를 분석해 UX/UI와 브랜드 가이드를 새로 만들었습니다. 주문·결제처럼 흐름이 복잡했던 기능을 정리하고, 누를 수 있는 것과 읽기만 하는 것이 분명히 구분되도록 비주얼 패턴을 다듬은 리뉴얼입니다.",
-            "웹아이는 이 디자인을 고도몰 위에 PC와 모바일 웹으로 옮기고, 처음 쓰는 사람을 위한 모바일 튜토리얼 기능을 더했습니다. 주 고객층인 중장년층이 주문할 때 필요한 정보를 한눈에 보고 쉽게 입력할 수 있도록 주문서 흐름도 함께 손봤습니다.",
-          ],
-          images: [
-            {
-              src: `${WORKS_BASE}/zipbanchan/zipbanchan-main.jpg`,
-              width: 1600,
-              height: 900,
-              alt: "리뉴얼된 집반찬연구소 모바일 메인 화면",
-            },
-          ],
-        },
-        {
-          title: "리뉴얼된 화면들",
-          body: ["홈, 상품 상세, 카테고리, 신규 반찬 목록까지 새 브랜드 가이드에 맞춰 같은 규칙으로 구현했습니다."],
-          layout: "row",
-          images: [
-            {
-              src: `${WORKS_BASE}/zipbanchan/zipbanchan-home.jpg`,
-              width: 1040,
-              height: 2116,
-              alt: "모바일 홈 화면",
-              caption: "홈",
-              maxWidth: 260,
-            },
-            {
-              src: `${WORKS_BASE}/zipbanchan/zipbanchan-detail.jpg`,
-              width: 720,
-              height: 1600,
-              alt: "상품 상세 화면",
-              caption: "상품 상세",
-              maxWidth: 260,
-            },
-            {
-              src: `${WORKS_BASE}/zipbanchan/zipbanchan-category.jpg`,
-              width: 720,
-              height: 1600,
-              alt: "카테고리 화면",
-              caption: "카테고리",
-              maxWidth: 260,
-            },
-            {
-              src: `${WORKS_BASE}/zipbanchan/zipbanchan-new.jpg`,
-              width: 720,
-              height: 1600,
-              alt: "신규 반찬 목록 화면",
-              caption: "신규 반찬",
-              maxWidth: 260,
-            },
-          ],
-        },
-        {
-          title: "주문과 결제",
-          body: [
-            "반찬은 한 번 사고 끝나는 상품이 아니라서, 정기배송과 횟수 결제처럼 반복 구매를 다루는 기능이 많습니다. 결제 모듈 연동부터 배송 방법별 규칙까지 쇼핑몰 운영 방식에 맞춰 직접 만들었습니다.",
-          ],
-          items: [
-            "이니시스 빌링 모듈을 이용한 정기결제 시스템 구축",
-            "카카오페이 간편결제 모듈 연동",
-            "정기배송 식단 관리 개발",
-            "횟수 결제 상품의 주문서 자동 분리",
-            "새벽배송·택배배송 방법별 수령 가능일 지정과 배송비 설정",
-            "기존 상품을 묶어 구성하는 세트 상품 개발",
-            "엑셀로 대량 수기 주문을 등록하는 기능",
-          ],
-          images: [
-            {
-              src: `${WORKS_BASE}/zipbanchan/zipbanchan-order-flow.jpg`,
-              width: 1600,
-              height: 1640,
-              alt: "주문서 작성부터 결제까지의 화면 흐름",
-              caption: "주문서 작성 흐름",
-            },
-          ],
-        },
-        {
-          title: "회원과 마케팅 자동화",
-          body: ["반복되는 마케팅 작업은 스케줄러로 자동화해, 운영자가 손대지 않아도 조건에 맞게 쿠폰과 등급이 돌아가도록 했습니다."],
-          items: [
-            "신규 회원 자동 쿠폰 발행",
-            "스케줄러를 이용한 조건별 쿠폰 자동 발행",
-            "스케줄러를 이용한 매월 회원 등급 자동 변경",
-            "상품별 차등 할인 쿠폰, 쿠폰번호 임의 지정 생성",
-            "친구 추천 기능",
-            "카카오싱크 로그인, OK캐쉬백 적립·사용 API 연동",
-          ],
-        },
-        {
-          title: "외부 판매처·물류 연동",
-          body: ["홈쇼핑 판매처와 택배사를 API로 연결해, 여러 곳에서 들어오는 상품·주문·문의와 송장 처리를 쇼핑몰 안에서 이어 받도록 했습니다."],
-          items: [
-            "롯데홈쇼핑 상품·주문 API 연동",
-            "GS홈쇼핑 상품·주문·문의 API 연동",
-            "CJ GLS 자동 송장 발급과 배송 상태 변경 API 연동",
-            "협력사 자동 등록 코드 개발",
-          ],
-        },
-        {
-          title: "검색 노출과 측정",
-          body: ["검색에 잘 걸리고 빨리 열리는 쇼핑몰이 되도록 상세페이지 구조와 속도를 다듬고, 광고·분석 도구를 연결했습니다."],
-          items: [
-            "검색 노출을 위한 상품 상세페이지 퍼블리싱과 상품·페이지 SEO 최적화",
-            "스키마 마크업으로 구글 검색 결과에 상품 가격과 리뷰 정보 노출",
-            "속도 향상을 위한 이미지 Lazy Load",
-            "Google Tag Manager를 이용한 Google Analytics 4 연동",
-            "Facebook 픽셀 서버 전환 API(Conversions API) 연동",
-          ],
-        },
-        {
-          title: "하이브리드 앱",
-          body: ["모바일 웹을 바탕으로 하이브리드 앱을 만들고, 앱에서만 필요한 기능을 웹과 연동했습니다."],
-          items: [
-            "하이브리드 앱 개발과 자동 로그인",
-            "FCM 푸시 발송",
-            "로딩 이미지, 메뉴 활성 상태, 앱 설정 연동",
-            "모바일 튜토리얼 기능",
-          ],
-        },
-        {
-          title: "사내 운영 시스템",
-          body: [
-            "쇼핑몰 바깥의 일도 함께 만들었습니다. 포장 현장, 주문 관리, 경영 정보를 위한 사내 시스템을 직접 개발해 쇼핑몰과 이어 쓰고 있습니다.",
-          ],
-          items: [
-            "Z-PPS 피킹·패킹 시스템: 스캐너로 포장을 확인하고 송장 출력",
-            "Z-OMS 주문 통합 관리 시스템: 여러 곳에 흩어진 주문을 한곳에 모아 관리",
-            "Z-MIS 경영정보 시스템",
-            "재구매율, 시계열, 후기, 문자 발송 등 각종 통계 페이지",
-            "조리법 관리, ‘이야기’ 게시판 커스터마이징(상품 등록, 탭별 콘텐츠)",
-            "Slack API로 사이트 오류 알림",
-          ],
-          images: [
-            {
-              src: `${WORKS_BASE}/zipbanchan/zipbanchan-order-done.jpg`,
-              width: 1600,
-              height: 1233,
-              alt: "주문 완료 화면",
-            },
-          ],
-        },
-        {
-          title: "오래 쓰는 쇼핑몰을 위한 유지보수",
-          body: ["오래 운영되는 쇼핑몰인 만큼 기반도 꾸준히 손봅니다. 솔루션의 주요 보안 패치를 적용하고, PHP와 MySQL 버전을 올려 지금도 안정적으로 운영되고 있습니다."],
-          items: ["고도몰 주요 보안 패치 적용", "PHP·MySQL 버전 업그레이드"],
-          images: [
-            {
-              src: `${WORKS_BASE}/zipbanchan/zipbanchan-guide.jpg`,
-              width: 1600,
-              height: 450,
-              alt: "온라인용 브랜드 가이드: 색상, 서체, 아이콘",
-              caption: "리뉴얼 때 만든 온라인 브랜드 가이드",
-            },
-          ],
-        },
-      ],
-      source: {
-        label: "리메인의 리뉴얼 소개 보기",
-        href: "https://remainlayer.com/work/%EB%B9%84%EC%A3%BC%EC%96%BC%ED%8C%A8%ED%84%B4%EA%B0%9C%EC%84%A0%EC%9D%84%ED%86%B5%ED%95%B4%EC%8B%9C%EC%9D%B8%EC%84%B1%EA%B3%BC%EC%82%AC%EC%9A%A9%EC%84%B1%EC%9D%84%EB%86%92%EC%9D%B8%EC%A7%91%EB%B0%98%EC%B0%AC%EC%97%B0%EA%B5%AC%EC%86%8C.html",
-      },
-    },
-  },
   {
     id: "holeman",
     title: "LG U+ 홀맨 구독형 이벤트 웹앱",
@@ -588,35 +376,216 @@ export const projects: Project[] = [
     },
   },
   {
-    id: "riha-web",
-    title: "riha-web",
-    summary: "지금 보고 있는 이 사이트. 책에서 주운 문장과 일상 사진, 만든 것들을 한곳에 모았습니다.",
-    year: "2026",
-    role: "기획·디자인·개발",
-    stack: ["Next.js", "TypeScript"],
+    id: "zipbanchan",
+    title: "집반찬연구소 쇼핑몰",
+    summary:
+      "2018년부터 지금까지 웹아이가 개발과 유지보수를 이어 오고 있는 프리미엄 반찬 쇼핑몰. 리뉴얼부터 정기결제, 하이브리드 앱, 외부 판매처 연동, 사내 운영 시스템까지 함께 만들어 왔습니다.",
+    year: "2018–",
+    period: "2018 ~ 현재",
+    role: "개발 · 유지보수",
+    stack: ["고도몰 이나무4 독립형", "PHP", "MySQL", "하이브리드 앱"],
     featured: true,
-    coverColor: "#2f5d50",
-    links: [{ label: "GitHub", href: "https://github.com/poonsu9na/riha-web" }],
-  },
-  {
-    id: "project-3",
-    title: "[프로젝트 이름]",
-    summary: "[무엇을 왜 만들었는지 한 줄]",
-    year: "[연도]",
-    role: "[역할]",
-    stack: ["[기술 스택]"],
-    coverColor: "#dcd8ce",
-    links: [],
-  },
-  {
-    id: "project-4",
-    title: "[프로젝트 이름]",
-    summary: "[무엇을 왜 만들었는지 한 줄]",
-    year: "[연도]",
-    role: "[역할]",
-    stack: ["[기술 스택]"],
-    coverColor: "#dcd8ce",
-    links: [],
+    coverColor: "#2f4a3a",
+    coverSrc: `${WORKS_BASE}/zipbanchan/zipbanchan-hero.jpg`,
+    links: [
+      { label: "자세히 보기", href: "/works/zipbanchan" },
+      { label: "사이트", href: "https://www.zipbanchan.co.kr" },
+    ],
+    caseStudy: {
+      hero: {
+        src: `${WORKS_BASE}/zipbanchan/zipbanchan-hero.jpg`,
+        width: 1600,
+        height: 1000,
+        alt: "뚝배기 국과 반찬들이 차려진 식탁",
+      },
+      credits: [
+        { label: "클라이언트", value: "집반찬연구소" },
+        { label: "기간", value: "2018 ~ 현재 (개발·유지보수)" },
+        { label: "개발", value: "웹아이 — 퍼블리싱, 백엔드, 하이브리드 앱, 유지보수" },
+        { label: "리뉴얼 디자인", value: "리메인 (2022, 웹·모바일 UX/UI)" },
+        { label: "솔루션", value: "고도몰 이나무4 독립형" },
+        { label: "개발 환경", value: "LAMP (Linux · Apache · MySQL · PHP)" },
+      ],
+      sections: [
+        {
+          title: "2018년부터 이어 온 쇼핑몰",
+          body: [
+            "집반찬연구소는 “식사 준비하는 데 얼마나 걸려요?”라는 사소한 질문에서 시작된 반찬 브랜드입니다. 50년 동안 식사 준비에만 6.25년이 걸린다는 계산에서 출발해, 그 시간을 더 행복한 곳에 쓸 수 있도록 프리미엄 반찬을 만듭니다.",
+            "웹아이는 2018년부터 지금까지 이 쇼핑몰의 개발과 유지보수를 이어 오고 있습니다. 기능 개발, SEO, 통계, 외부 API 연동까지 쇼핑몰이 자라는 동안 필요한 일을 함께해 왔습니다.",
+          ],
+          images: [
+            {
+              src: `${WORKS_BASE}/zipbanchan/zipbanchan-hand.jpg`,
+              width: 1600,
+              height: 1800,
+              alt: "손에 든 휴대폰에 집반찬연구소 모바일 화면이 떠 있는 모습",
+              maxWidth: 560,
+            },
+          ],
+        },
+        {
+          title: "PC·모바일 웹 리뉴얼",
+          body: [
+            "2022년에는 리메인이 사용자 인지 과정을 기준으로 기존 화면의 문제를 분석해 UX/UI와 브랜드 가이드를 새로 만들었습니다. 주문·결제처럼 흐름이 복잡했던 기능을 정리하고, 누를 수 있는 것과 읽기만 하는 것이 분명히 구분되도록 비주얼 패턴을 다듬은 리뉴얼입니다.",
+            "웹아이는 이 디자인을 고도몰 위에 PC와 모바일 웹으로 옮기고, 처음 쓰는 사람을 위한 모바일 튜토리얼 기능을 더했습니다. 주 고객층인 중장년층이 주문할 때 필요한 정보를 한눈에 보고 쉽게 입력할 수 있도록 주문서 흐름도 함께 손봤습니다.",
+          ],
+          images: [
+            {
+              src: `${WORKS_BASE}/zipbanchan/zipbanchan-main.jpg`,
+              width: 1600,
+              height: 900,
+              alt: "리뉴얼된 집반찬연구소 모바일 메인 화면",
+            },
+          ],
+        },
+        {
+          title: "리뉴얼된 화면들",
+          body: ["홈, 상품 상세, 카테고리, 신규 반찬 목록까지 새 브랜드 가이드에 맞춰 같은 규칙으로 구현했습니다."],
+          layout: "row",
+          images: [
+            {
+              src: `${WORKS_BASE}/zipbanchan/zipbanchan-home.jpg`,
+              width: 1040,
+              height: 2116,
+              alt: "모바일 홈 화면",
+              caption: "홈",
+              maxWidth: 260,
+            },
+            {
+              src: `${WORKS_BASE}/zipbanchan/zipbanchan-detail.jpg`,
+              width: 720,
+              height: 1600,
+              alt: "상품 상세 화면",
+              caption: "상품 상세",
+              maxWidth: 260,
+            },
+            {
+              src: `${WORKS_BASE}/zipbanchan/zipbanchan-category.jpg`,
+              width: 720,
+              height: 1600,
+              alt: "카테고리 화면",
+              caption: "카테고리",
+              maxWidth: 260,
+            },
+            {
+              src: `${WORKS_BASE}/zipbanchan/zipbanchan-new.jpg`,
+              width: 720,
+              height: 1600,
+              alt: "신규 반찬 목록 화면",
+              caption: "신규 반찬",
+              maxWidth: 260,
+            },
+          ],
+        },
+        {
+          title: "주문과 결제",
+          body: [
+            "반찬은 한 번 사고 끝나는 상품이 아니라서, 정기배송과 횟수 결제처럼 반복 구매를 다루는 기능이 많습니다. 결제 모듈 연동부터 배송 방법별 규칙까지 쇼핑몰 운영 방식에 맞춰 직접 만들었습니다.",
+          ],
+          items: [
+            "이니시스 빌링 모듈을 이용한 정기결제 시스템 구축",
+            "카카오페이 간편결제 모듈 연동",
+            "정기배송 식단 관리 개발",
+            "횟수 결제 상품의 주문서 자동 분리",
+            "새벽배송·택배배송 방법별 수령 가능일 지정과 배송비 설정",
+            "기존 상품을 묶어 구성하는 세트 상품 개발",
+            "엑셀로 대량 수기 주문을 등록하는 기능",
+          ],
+          images: [
+            {
+              src: `${WORKS_BASE}/zipbanchan/zipbanchan-order-flow.jpg`,
+              width: 1600,
+              height: 1640,
+              alt: "주문서 작성부터 결제까지의 화면 흐름",
+              caption: "주문서 작성 흐름",
+            },
+          ],
+        },
+        {
+          title: "회원과 마케팅 자동화",
+          body: ["반복되는 마케팅 작업은 스케줄러로 자동화해, 운영자가 손대지 않아도 조건에 맞게 쿠폰과 등급이 돌아가도록 했습니다."],
+          items: [
+            "신규 회원 자동 쿠폰 발행",
+            "스케줄러를 이용한 조건별 쿠폰 자동 발행",
+            "스케줄러를 이용한 매월 회원 등급 자동 변경",
+            "상품별 차등 할인 쿠폰, 쿠폰번호 임의 지정 생성",
+            "친구 추천 기능",
+            "카카오싱크 로그인, OK캐쉬백 적립·사용 API 연동",
+          ],
+        },
+        {
+          title: "외부 판매처·물류 연동",
+          body: ["홈쇼핑 판매처와 택배사를 API로 연결해, 여러 곳에서 들어오는 상품·주문·문의와 송장 처리를 쇼핑몰 안에서 이어 받도록 했습니다."],
+          items: [
+            "롯데홈쇼핑 상품·주문 API 연동",
+            "GS홈쇼핑 상품·주문·문의 API 연동",
+            "CJ GLS 자동 송장 발급과 배송 상태 변경 API 연동",
+            "협력사 자동 등록 코드 개발",
+          ],
+        },
+        {
+          title: "검색 노출과 측정",
+          body: ["검색에 잘 걸리고 빨리 열리는 쇼핑몰이 되도록 상세페이지 구조와 속도를 다듬고, 광고·분석 도구를 연결했습니다."],
+          items: [
+            "검색 노출을 위한 상품 상세페이지 퍼블리싱과 상품·페이지 SEO 최적화",
+            "스키마 마크업으로 구글 검색 결과에 상품 가격과 리뷰 정보 노출",
+            "속도 향상을 위한 이미지 Lazy Load",
+            "Google Tag Manager를 이용한 Google Analytics 4 연동",
+            "Facebook 픽셀 서버 전환 API(Conversions API) 연동",
+          ],
+        },
+        {
+          title: "하이브리드 앱",
+          body: ["모바일 웹을 바탕으로 하이브리드 앱을 만들고, 앱에서만 필요한 기능을 웹과 연동했습니다."],
+          items: [
+            "하이브리드 앱 개발과 자동 로그인",
+            "FCM 푸시 발송",
+            "로딩 이미지, 메뉴 활성 상태, 앱 설정 연동",
+            "모바일 튜토리얼 기능",
+          ],
+        },
+        {
+          title: "사내 운영 시스템",
+          body: [
+            "쇼핑몰 바깥의 일도 함께 만들었습니다. 포장 현장, 주문 관리, 경영 정보를 위한 사내 시스템을 직접 개발해 쇼핑몰과 이어 쓰고 있습니다.",
+          ],
+          items: [
+            "Z-PPS 피킹·패킹 시스템: 스캐너로 포장을 확인하고 송장 출력",
+            "Z-OMS 주문 통합 관리 시스템: 여러 곳에 흩어진 주문을 한곳에 모아 관리",
+            "Z-MIS 경영정보 시스템",
+            "재구매율, 시계열, 후기, 문자 발송 등 각종 통계 페이지",
+            "조리법 관리, ‘이야기’ 게시판 커스터마이징(상품 등록, 탭별 콘텐츠)",
+            "Slack API로 사이트 오류 알림",
+          ],
+          images: [
+            {
+              src: `${WORKS_BASE}/zipbanchan/zipbanchan-order-done.jpg`,
+              width: 1600,
+              height: 1233,
+              alt: "주문 완료 화면",
+            },
+          ],
+        },
+        {
+          title: "오래 쓰는 쇼핑몰을 위한 유지보수",
+          body: ["오래 운영되는 쇼핑몰인 만큼 기반도 꾸준히 손봅니다. 솔루션의 주요 보안 패치를 적용하고, PHP와 MySQL 버전을 올려 지금도 안정적으로 운영되고 있습니다."],
+          items: ["고도몰 주요 보안 패치 적용", "PHP·MySQL 버전 업그레이드"],
+          images: [
+            {
+              src: `${WORKS_BASE}/zipbanchan/zipbanchan-guide.jpg`,
+              width: 1600,
+              height: 450,
+              alt: "온라인용 브랜드 가이드: 색상, 서체, 아이콘",
+              caption: "리뉴얼 때 만든 온라인 브랜드 가이드",
+            },
+          ],
+        },
+      ],
+      source: {
+        label: "리메인의 리뉴얼 소개 보기",
+        href: "https://remainlayer.com/work/%EB%B9%84%EC%A3%BC%EC%96%BC%ED%8C%A8%ED%84%B4%EA%B0%9C%EC%84%A0%EC%9D%84%ED%86%B5%ED%95%B4%EC%8B%9C%EC%9D%B8%EC%84%B1%EA%B3%BC%EC%82%AC%EC%9A%A9%EC%84%B1%EC%9D%84%EB%86%92%EC%9D%B8%EC%A7%91%EB%B0%98%EC%B0%AC%EC%97%B0%EA%B5%AC%EC%86%8C.html",
+      },
+    },
   },
 ];
 
