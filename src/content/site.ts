@@ -3,8 +3,7 @@ export const site = {
   url: "https://riha.kr",
   domain: "riha.kr",
   description: "읽고, 찍고, 만드는 사람의 기록",
-  // TODO: 실제 소개 문구와 연락처로 바꾸기
-  intro: "[직무] 개발자 [이름]입니다. [어떤 걸 만드는 사람인지 한두 줄.]",
+  intro: "웹아이에서 웹 개발을 맡고 있습니다. 디자인 파트너 리메인과 함께 브랜드 사이트, 이벤트 웹앱, 쇼핑몰을 만들고, 오픈한 뒤에도 오래 고쳐 가며 키웁니다.",
   email: "yh@webi.kr",
   links: [
     { label: "Threads", href: "https://www.threads.com/@l.riha_" },

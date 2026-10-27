@@ -590,11 +590,10 @@ export const projects: Project[] = [
 ];
 
 export const profile = {
-  // TODO: 실제 정보로 바꾸기
   skills: [
-    { label: "주력", value: "TypeScript · React · Next.js" },
-    { label: "다룰 줄 앎", value: "[기술 1] · [기술 2] · [기술 3]" },
-    { label: "경력", value: "[회사] · [기간]" },
+    { label: "주력", value: "PHP · MySQL · 고도몰(이나무·샵바이)" },
+    { label: "다룰 줄 앎", value: "TypeScript · React · Next.js · 하이브리드 앱" },
+    { label: "경력", value: "웹아이 · 2018 ~ 현재" },
   ],
   resumeHref: "",
 };
