@@ -197,7 +197,6 @@ export const books: Book[] = [
   { id: "9788982732508", title: "부자 아빠 가난한 아빠 2", subtitle: "‘현금흐름 사분면’과 돈을 관리하는 7가지 방법", author: "로버트 기요사키", publisher: "민음인", status: "want", coverColor: COVER_COLOR, coverSrc: `${COVER_BASE}9788982732508.jpg` },
   { id: "9791130633619", title: "부자의 그릇", subtitle: "돈을 다루는 능력을 키우는 법", author: "IZUMI MASATO", publisher: "다산북스", status: "want", coverColor: COVER_COLOR, coverSrc: `${COVER_BASE}9791130633619.jpg` },
   { id: "9788966260997", title: "생각하는 프로그래밍", subtitle: "프로그래밍 본질에 관한 15가지 에세이", author: "존 벤틀리", publisher: "인사이트", status: "want", coverColor: COVER_COLOR, coverSrc: `${COVER_BASE}9788966260997.jpg` },
-  { id: "9791163030478", title: "스위프트로 아이폰 앱 만들기: 입문", subtitle: "Swift 4.2 버전 반영! 개정3판", author: "송호정", publisher: "이지스퍼블리싱", status: "want", coverColor: COVER_COLOR, coverSrc: `${COVER_BASE}9791163030478.jpg` },
   { id: "9788994797298", title: "스타트업 시대에 PM, 프로덕트 매니저로 사는 법", author: "최기훤", publisher: "비팬북스", status: "want", coverColor: COVER_COLOR, coverSrc: `${COVER_BASE}9788994797298.jpg` },
   { id: "book-아주-보통의-결혼", title: "아주 보통의 결혼", author: "정보라", publisher: "", status: "want", coverColor: COVER_COLOR, coverSrc: `${COVER_BASE}book-아주-보통의-결혼.jpg` },
   { id: "9791161753430", title: "업무 시각화", subtitle: "효율적으로 업무를 처리하는 시간 관리 비법", author: "도미니카 드그란디스", publisher: "에이콘출판", status: "want", coverColor: COVER_COLOR, coverSrc: `${COVER_BASE}9791161753430.jpg` },
@@ -209,10 +208,8 @@ export const books: Book[] = [
   { id: "9791156759201", title: "잔류 인구", author: "엘리자베스 문", publisher: "푸른숲", status: "want", coverColor: COVER_COLOR, coverSrc: `${COVER_BASE}9791156759201.jpg` },
   { id: "9788934989790", title: "좋은 기업을 넘어 위대한 기업으로(20주년 뉴에디션)", subtitle: "위대한 기업과 괜찮은 기업을 가르는 결정적 차이는 무엇인가", author: "짐 콜린스", publisher: "김영사", status: "want", coverColor: COVER_COLOR, coverSrc: `${COVER_BASE}9788934989790.jpg` },
   { id: "9788901249599", title: "질서 너머", subtitle: "인생의 다음 단계로 나아가는 12가지 법칙", author: "조던 피터슨", publisher: "웅진지식하우스", status: "want", coverColor: COVER_COLOR, coverSrc: `${COVER_BASE}9788901249599.jpg` },
-  { id: "9791198140852", title: "챗GPT 개발자 핸드북", subtitle: "마이크로소프트 AI 개발자가 알려주는 GPT 활용 노하우", author: "주한나", publisher: "디코딩", status: "want", coverColor: COVER_COLOR, coverSrc: `${COVER_BASE}9791198140852.jpg` },
   { id: "9788992814591", title: "초등 고전읽기 혁명: 실천편", subtitle: "내 아이에게 맞는 실천적 읽기법과 고전읽기의 핵심", author: "송재환", publisher: "글담출판", status: "want", coverColor: COVER_COLOR, coverSrc: `${COVER_BASE}9788992814591.jpg` },
   { id: "9788901217666", title: "최고들의 일머리 법칙", subtitle: "글로벌 엘리트들에게 혼나면서 배운 성공 일습관", author: "김무귀", publisher: "리더스북", status: "want", coverColor: COVER_COLOR, coverSrc: `${COVER_BASE}9788901217666.jpg` },
-  { id: "9788966261789", title: "프로 Git 2판", subtitle: "그림으로 이해하는 Git의 작동 원리와 사용법", author: "스캇 샤콘, 벤 스트라웁", publisher: "인사이트", status: "want", coverColor: COVER_COLOR, coverSrc: `${COVER_BASE}9788966261789.jpg` },
   { id: "9791186358788", title: "현업 기획자 도그냥이 알려주는 서비스 기획 스쿨", subtitle: "사수 없이 시작하는 웹/앱 프로덕트 실전 입문서", author: "이미준", publisher: "초록비책공방", status: "want", coverColor: COVER_COLOR, coverSrc: `${COVER_BASE}9791186358788.jpg` },
   { id: "9788965962502", title: "히트 리프레시", subtitle: "마이크로소프트의 영혼을 되찾은 사티아 나델라의 위대한 도전", author: "사티아 나델라", publisher: "흐름출판", status: "want", coverColor: COVER_COLOR, coverSrc: `${COVER_BASE}9788965962502.jpg` },
 ];
