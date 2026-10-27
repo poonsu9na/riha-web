@@ -6,7 +6,8 @@ import type { Photo } from "@/content/types";
 import PhotoLightbox from "./PhotoLightbox";
 import styles from "./PhotoGrid.module.css";
 
-const PAGE_SIZE = 12;
+// 3단 기준 한 단에 10장 정도. "더 보기"도 같은 수만큼 늘어난다
+const PAGE_SIZE = 30;
 
 // 화면 폭별 단 수와 각 단의 이미지 sizes. 어떤 레이아웃을 보일지는 CSS 미디어 쿼리가 고른다
 const LAYOUTS = [
@@ -39,7 +40,7 @@ type Props = {
   photos: Photo[];
 };
 
-/** 마소니 사진 그리드. 12장씩 더 보여주고, 누르면 크게 본다 */
+/** 마소니 사진 그리드. 30장씩 더 보여주고, 누르면 크게 본다 */
 export default function PhotoGrid({ photos }: Props) {
   const [visible, setVisible] = useState(PAGE_SIZE);
   const [openIndex, setOpenIndex] = useState<number | null>(null);
