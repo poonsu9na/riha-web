@@ -49,4 +49,24 @@
   .section {
     padding-top: 80px;
   }
+
+  /* 모바일은 세로로 쌓여 길어지므로 두 문장만, 글자도 줄이고 3줄에서 자른다 */
+  .grid > :nth-child(n + 3) {
+    display: none;
+  }
+
+  .item {
+    padding: 20px 0;
+  }
+
+  .quote {
+    font-size: 17px;
+    line-height: 1.75;
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+  }
+
+  .source {
+    font-size: 13px;
+  }
 }

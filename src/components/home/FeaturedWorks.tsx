@@ -39,6 +39,13 @@ export default function FeaturedWorks({ projects }: Props) {
           </Link>
         ))}
       </div>
+      {projects.length > HOME_LIMIT && (
+        <div className={styles.moreRow}>
+          <Link href="/works" className={styles.moreButton}>
+            프로젝트 모두 보기 →
+          </Link>
+        </div>
+      )}
     </section>
   );
 }
