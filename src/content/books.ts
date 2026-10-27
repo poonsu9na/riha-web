@@ -25,6 +25,7 @@ export const books: Book[] = [
   { id: "9791191587425", title: "독서의 기록", author: "안예진", status: "done", coverColor: COVER_COLOR, coverSrc: `${COVER_BASE}9791191587425.jpg` },
   { id: "9791194383437", title: "요즘 바이브 코딩 클로드 코드 완벽 가이드", author: "최지호(코드팩토리)", status: "done", coverColor: COVER_COLOR, coverSrc: `${COVER_BASE}9791194383437.jpg` },
 
+  { id: "9791188331888", title: "사장학개론", author: "김승호", status: "done", coverColor: COVER_COLOR, coverSrc: `${COVER_BASE}9791188331888.jpg` },
   { id: "480d240444310", title: "AI아트 수익화 미드저니 사용법", author: "트렌드파이", status: "done", coverColor: COVER_COLOR, coverSrc: `${COVER_BASE}480d240444310.jpg` },
   { id: "9791198809940", title: "탕비실", author: "이미예", status: "done", coverColor: COVER_COLOR, coverSrc: `${COVER_BASE}9791198809940.jpg` },
   { id: "9791170612759", title: "가공범", author: "히가시노 게이고", status: "done", coverColor: COVER_COLOR, coverSrc: `${COVER_BASE}9791170612759.jpg` },
