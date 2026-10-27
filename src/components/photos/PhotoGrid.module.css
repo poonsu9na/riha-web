@@ -1,40 +1,53 @@
-/*
- * 줄 단위 정렬(justified rows): 사진마다 원본 비율(--ratio)만큼 늘어나게 해서
- * 한 줄의 사진 높이가 같아지고, 순서는 왼쪽→오른쪽, 위→아래로 이어진다.
- */
 .grid {
-  --row-height: 260px;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
   border-top: 1px solid var(--line);
   padding-top: 40px;
 }
 
-/* 마지막 줄이 화면 끝까지 억지로 늘어나지 않게 남는 자리를 채운다 */
-.grid::after {
-  content: "";
-  flex-grow: 999;
+/* 1·2·3단 레이아웃을 모두 그려 두고 화면 폭에 맞는 하나만 보인다 (숨긴 쪽 이미지는 lazy 라 받지 않음) */
+.layout {
+  display: none;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+.column {
+  flex: 1 1 0;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.one {
+  display: flex;
+}
+
+@media (min-width: 640px) {
+  .one {
+    display: none;
+  }
+  .two {
+    display: flex;
+  }
+}
+
+@media (min-width: 960px) {
+  .two {
+    display: none;
+  }
+  .three {
+    display: flex;
+  }
 }
 
 .item {
   position: relative;
   display: block;
-  flex-grow: var(--ratio);
-  flex-basis: calc(var(--ratio) * var(--row-height));
-  min-width: 0;
+  width: 100%;
   padding: 0;
   border: 0;
   background: none;
   cursor: zoom-in;
-}
-
-@media (max-width: 640px) {
-  .grid {
-    /* 375px 폭에서 가로 사진 2장이 한 줄에 들어가는 높이 */
-    --row-height: 110px;
-    gap: 8px;
-  }
 }
 
 /* 마우스를 올리면 아래쪽에 제목이 떠오른다 */
