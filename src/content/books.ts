@@ -186,7 +186,6 @@ export const books: Book[] = [
   { id: "9791158391744", title: "개발자의 글쓰기", subtitle: "변수 네이밍부터 릴리스 노트, 장애 보고서, 기술 블로그까지!", author: "김철수", publisher: "위키북스", status: "want", coverColor: COVER_COLOR, coverSrc: `${COVER_BASE}9791158391744.jpg` },
   { id: "9791162242728", title: "고객이 보이는 구글 애널리틱스", subtitle: "실습 사이트 무상 완벽 제공", author: "문준영(피터)", publisher: "한빛미디어", status: "want", coverColor: COVER_COLOR, coverSrc: `${COVER_BASE}9791162242728.jpg` },
   { id: "9788992975179", title: "관점 다르게 보는 힘", subtitle: "결정적인 차이, 어제와 다른 나는 어떻게 만들어지는가", author: "최윤규", publisher: "고즈윈", status: "want", coverColor: COVER_COLOR, coverSrc: `${COVER_BASE}9788992975179.jpg` },
-  { id: "9791158393038", title: "그림과 실습으로 배우는 도커 & 쿠버네티스", subtitle: "개념과 작동 원리가 쏙쏙 이해되는 완벽 입문서", author: "오가사와라 시게타카", publisher: "위키북스", status: "want", coverColor: COVER_COLOR, coverSrc: `${COVER_BASE}9791158393038.jpg` },
   { id: "9788901249605", title: "뉴 맵 양장본 Hardcover", subtitle: "에너지·기후·지정학이 바꾸는 새로운 패권 지도", author: "대니얼 예긴", publisher: "리더스북", status: "want", coverColor: COVER_COLOR, coverSrc: `${COVER_BASE}9788901249605.jpg` },
   { id: "9791188167708", title: "느긋하게 웃으면서 짜증내지 않고 살아가는 법", subtitle: "괴짜 심리학자의 스트레스 관리 기술", author: "브라이언 킹", publisher: "프롬북스", status: "want", coverColor: COVER_COLOR, coverSrc: `${COVER_BASE}9791188167708.jpg` },
   { id: "9791188102051", title: "더 시스템(The System)", subtitle: "거의 모든 일에 실패하던 자가 결국 큰 성공을 이루어낸 방법", author: "스콧 애덤스", publisher: "베리북", status: "want", coverColor: COVER_COLOR, coverSrc: `${COVER_BASE}9791188102051.jpg` },
