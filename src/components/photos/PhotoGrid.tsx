@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { type CSSProperties, useState } from "react";
 import PhotoTile from "@/components/PhotoTile";
 import type { Photo } from "@/content/types";
 import PhotoLightbox from "./PhotoLightbox";
@@ -12,7 +12,7 @@ type Props = {
   photos: Photo[];
 };
 
-/** 비율이 섞인 사진을 세로 단으로 이어 붙인 그리드. 12장씩 더 보여주고, 누르면 크게 본다 */
+/** 비율이 섞인 사진을 왼쪽→오른쪽 줄 단위로 채우는 그리드. 12장씩 더 보여주고, 누르면 크게 본다 */
 export default function PhotoGrid({ photos }: Props) {
   const [visible, setVisible] = useState(PAGE_SIZE);
   const [openIndex, setOpenIndex] = useState<number | null>(null);
@@ -26,6 +26,7 @@ export default function PhotoGrid({ photos }: Props) {
             key={photo.id}
             type="button"
             className={styles.item}
+            style={{ "--ratio": photo.width / photo.height } as CSSProperties}
             onClick={() => setOpenIndex(i)}
             aria-label={`${photo.title ?? photo.alt} 크게 보기`}
           >
