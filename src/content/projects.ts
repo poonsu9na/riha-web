@@ -6,6 +6,949 @@ const WORKS_BASE = "https://kr.object.ncloudstorage.com/riha/works";
 // 배열 순서 = 보여줄 순서 (포트폴리오 목록·홈 공통)
 export const projects: Project[] = [
   {
+    id: "winix",
+    title: "위닉스 D2C 자사몰 리뉴얼",
+    summary:
+      "필터 같은 소모품을 꾸준히 갈아 줘야 하는 가전 브랜드 위닉스의 자사몰 리뉴얼. 구매 이력에 맞춘 소모품 추천과 구독·케어 멤버십 관리를 갖춘 커머스로, 기획·PMO는 W2R GROUP, 디자인은 리메인, 개발은 웹아이가 맡았습니다.",
+    year: "[연도]",
+    role: "개발",
+    stack: ["C#", "RESTful API", "HTML5", "CSS", "웹 접근성", "Swift", "Objective-C"],
+    featured: true,
+    coverColor: "#8a2a8c",
+    coverSrc: `${WORKS_BASE}/winix/winix-main.jpg`,
+    links: [{ label: "자세히 보기", href: "/works/winix" }],
+    caseStudy: {
+      hero: {
+        src: `${WORKS_BASE}/winix/winix-main.jpg`,
+        width: 1600,
+        height: 1093,
+        alt: "노트북 화면에 띄운 리뉴얼된 위닉스 자사몰 메인",
+      },
+      credits: [
+        { label: "클라이언트", value: "위닉스 (WINIX)" },
+        { label: "PMO·기획", value: "W2R GROUP" },
+        { label: "디자인", value: "리메인" },
+        { label: "개발", value: "웹아이 — [사용 기술], 웹·앱·관리자 [맡은 범위]" },
+        { label: "기술", value: "C# · RESTful API · HTML5 · CSS(전처리기) · 웹/앱 접근성 · Swift · Objective-C" },
+        { label: "범위", value: "Web · App · Admin · E-Commerce" },
+      ],
+      sections: [
+        {
+          title: "소모품까지 이어지는 자사몰",
+          body: [
+            "위닉스는 제습기·공기청정기·가습기처럼 필터와 소모품을 주기적으로 바꿔야 하는 가전을 만드는 브랜드입니다. 리뉴얼의 목표는 고객이 가진 제품을 기준으로 필요한 소모품과 서비스를 바로 찾을 수 있는, 데이터 기반의 개인화된 쇼핑 경험이었습니다.",
+            "W2R GROUP이 프로젝트를 이끌고 리메인이 고객 인터뷰와 페르소나 분석을 거쳐 화면을 설계했으며, 웹아이는 이를 메인·목록·상세·마이페이지와 관리자 시스템까지 개발했습니다. [개발 범위 한두 줄]",
+          ],
+          images: [
+            {
+              src: `${WORKS_BASE}/winix/winix-pages.jpg`,
+              width: 1600,
+              height: 1585,
+              alt: "위닉스 자사몰 메인 화면과 상품 목록 화면",
+              caption: "Main · List",
+            },
+          ],
+        },
+        {
+          title: "내 제품에 맞는 소모품 추천",
+          body: [
+            "예전에는 자기 제품에 맞는 필터를 사려면 모델명을 직접 검색해야 했습니다. 고객의 구매 이력과 보유 기기 모델을 바탕으로, 그 기기 전용 소모품을 메인과 목록 화면에 먼저 보여 주도록 했습니다.",
+            "구매한 제품의 시리얼 번호를 등록해 정품 인증을 받으면 보증 기간 연장, 맞춤 A/S 신청, 필터 교체 알림 같은 사후 관리를 받을 수 있습니다.",
+          ],
+          items: [
+            "구매 이력·보유 모델 기반 전용 소모품 우선 노출",
+            "시리얼 번호 등록과 정품 인증",
+            "보증 기간 연장·A/S 신청·필터 교체 알림",
+          ],
+          images: [
+            {
+              src: `${WORKS_BASE}/winix/winix-recommend.jpg`,
+              width: 1600,
+              height: 640,
+              alt: "구매 이력에 맞춰 필터를 추천하는 메인 영역",
+              caption: "구매 이력 기반 추천",
+            },
+            {
+              src: `${WORKS_BASE}/winix/winix-register.jpg`,
+              width: 1600,
+              height: 1558,
+              alt: "사용 중인 제품을 등록하는 제품 등록 화면",
+              caption: "제품 등록 · 정품 인증",
+            },
+          ],
+        },
+        {
+          title: "본품과 소모품, 케어 서비스를 한 번에",
+          body: [
+            "본품 상세 페이지에서 그 기기와 호환되는 소모품과 전용 케어 서비스를 바로 확인하고 함께 살 수 있도록, 상품 사이의 매핑 구조를 정리했습니다.",
+          ],
+          images: [
+            {
+              src: `${WORKS_BASE}/winix/winix-detail-care.jpg`,
+              width: 1600,
+              height: 1394,
+              alt: "상품 상세에서 케어 서비스를 함께 선택하는 화면",
+              caption: "상품 상세 · 케어 서비스 선택",
+            },
+            {
+              src: `${WORKS_BASE}/winix/winix-care-list.jpg`,
+              width: 1600,
+              height: 493,
+              alt: "제품군별 케어 서비스를 고르는 영역",
+              caption: "케어 서비스",
+            },
+          ],
+        },
+        {
+          title: "구독과 케어 멤버십 관리",
+          body: [
+            "소모품 정기 배송과 케어 멤버십처럼 결제가 반복되는 상품을 리뉴얼 사이트에서도 끊김 없이 운영해야 했습니다. 기존 시스템의 구독 데이터를 새 사이트로 옮기고, 가입부터 해지까지의 과정을 관리자가 한눈에 보고 다룰 수 있게 했습니다.",
+          ],
+          images: [
+            {
+              src: `${WORKS_BASE}/winix/winix-subscription.jpg`,
+              width: 1600,
+              height: 888,
+              alt: "마이페이지의 정기배송 신청 내역 상세 화면",
+              caption: "정기배송 신청 내역",
+            },
+          ],
+        },
+        {
+          title: "계절마다 바뀌는 주력 상품",
+          body: [
+            "봄에는 공기청정기, 여름에는 제습기, 겨울에는 가습기처럼 계절마다 주력 상품이 바뀝니다. 메인 배너와 기획전 구좌를 코드 수정 없이 관리자에서 바로 바꿀 수 있게 해, 시즌 마케팅에 빠르게 대응하도록 했습니다.",
+          ],
+          images: [
+            {
+              src: `${WORKS_BASE}/winix/winix-season.jpg`,
+              width: 1600,
+              height: 530,
+              alt: "시즌 상품과 혜택을 보여 주는 메인 배너",
+              caption: "시즌 메인 배너",
+            },
+          ],
+        },
+      ],
+      source: {
+        label: "W2R GROUP의 프로젝트 소개 보기",
+        href: "https://w2rgroup.kr/winix",
+      },
+    },
+  },
+  {
+    id: "studioc1",
+    title: "스튜디오C1 불꽃야구 OTT 플랫폼 구축",
+    summary:
+      "스튜디오C1이 만드는 '불꽃야구'를 자체 채널로 서비스하기 위한 OTT 플랫폼. VOD와 자체 라이브, 도네이션, 팬 커뮤니티, 통합 관리자를 새로 구축했고, 기획·PMO는 W2R GROUP, 개발은 웹아이가 맡았습니다.",
+    year: "[연도]",
+    role: "개발",
+    stack: ["[기술 스택]", "OTT", "라이브 스트리밍", "관리자 시스템"],
+    featured: true,
+    coverColor: "#0b5cff",
+    coverSrc: `${WORKS_BASE}/studioc1/studioc1-main.jpg`,
+    links: [{ label: "자세히 보기", href: "/works/studioc1" }],
+    caseStudy: {
+      hero: {
+        src: `${WORKS_BASE}/studioc1/studioc1-main.jpg`,
+        width: 1600,
+        height: 1464,
+        alt: "라이브 일정표와 불꽃야구 에피소드가 보이는 콘텐츠 화면",
+      },
+      credits: [
+        { label: "클라이언트", value: "스튜디오C1 (StudioC1)" },
+        { label: "PMO·기획", value: "W2R GROUP" },
+        { label: "개발", value: "웹아이 — [사용 기술], 웹·관리자 시스템 [맡은 범위]" },
+        { label: "범위", value: "Web · Admin" },
+      ],
+      sections: [
+        {
+          title: "우리 채널에서 보는 불꽃야구",
+          body: [
+            "스튜디오C1에는 직접 만든 프로그램을 내보낼 자체 유통 채널이 없었습니다. 영상 업로드와 라이브, 도네이션, 팬 커뮤니티를 하나의 플랫폼에 담아 콘텐츠 유통과 팬덤 활동이 자연스럽게 이어지도록 하는 것이 목표였습니다.",
+            "운영 중인 플랫폼 없이 처음부터 런칭해야 하는 프로젝트라, 스튜디오C1의 콘텐츠 운영 방식과 비즈니스 모델에 맞춰 서비스 화면부터 관리자 시스템까지 새로 만들었습니다. [개발 범위 한두 줄]",
+          ],
+          images: [
+            {
+              src: `${WORKS_BASE}/studioc1/studioc1-home.jpg`,
+              width: 1600,
+              height: 1958,
+              alt: "불꽃야구 키비주얼과 회차별 콘텐츠 목록이 있는 메인 화면",
+              caption: "Main",
+            },
+          ],
+        },
+        {
+          title: "플랫폼 안에서 하는 라이브",
+          body: [
+            "외부 플랫폼으로 라이브를 하면 시청자가 그쪽으로 빠져나가고 시청 데이터도 남지 않습니다. 라이브를 플랫폼 안에서 직접 만들고 송출 상태에 따라 화면 노출을 관리하도록 해, 시청과 소통, 참여가 한곳에서 끝나게 했습니다.",
+            "방송이 끝난 뒤에는 그 영상을 VOD 콘텐츠로 바로 쓸 수 있도록 라이브와 VOD의 흐름을 함께 고려했습니다.",
+          ],
+          images: [
+            {
+              src: `${WORKS_BASE}/studioc1/studioc1-live.jpg`,
+              width: 1600,
+              height: 1172,
+              alt: "영상 옆에 실시간 채팅이 열린 라이브 시청 화면",
+              caption: "라이브 · 실시간 채팅",
+            },
+          ],
+        },
+        {
+          title: "시청이 후원으로",
+          body: [
+            "영상 제공만으로는 수익을 넓히기 어려웠습니다. 시청을 방해하지 않는 도네이션 화면을 붙여 팬의 응원이 바로 수익으로 이어지게 했고, 콘텐츠마다 댓글로 반응을 나눌 수 있게 했습니다.",
+          ],
+          layout: "row",
+          images: [
+            {
+              src: `${WORKS_BASE}/studioc1/studioc1-donation.jpg`,
+              width: 1600,
+              height: 1083,
+              alt: "시청 화면 위에 열린 후원하기 창",
+              caption: "도네이션",
+            },
+            {
+              src: `${WORKS_BASE}/studioc1/studioc1-comment.jpg`,
+              width: 1600,
+              height: 895,
+              alt: "콘텐츠 아래 댓글과 답글 영역",
+              caption: "댓글",
+            },
+          ],
+        },
+        {
+          title: "팬들이 머무는 커뮤니티",
+          body: [
+            "영상을 다 본 뒤에도 팬들이 플랫폼에 머물 수 있도록, 프로그램과 콘텐츠 단위로 팬 커뮤니티를 만들었습니다. 시청 후기를 나누고 커뮤니티 활동과 라이브 참여로 이어지도록 동선을 짰습니다.",
+          ],
+          images: [
+            {
+              src: `${WORKS_BASE}/studioc1/studioc1-community.jpg`,
+              width: 1600,
+              height: 1612,
+              alt: "인기 커뮤니티와 인기글 목록이 있는 커뮤니티 화면",
+              caption: "Community",
+            },
+          ],
+        },
+        {
+          title: "하나로 모은 관리자",
+          body: [
+            "콘텐츠, 라이브, 회원, 도네이션, 커뮤니티를 관리자 시스템 하나에서 다루도록 했습니다. 회차 정보와 썸네일 같은 메타 데이터를 함께 관리하고, 새 콘텐츠를 올리면 관련 메뉴에 자동으로 반영되도록 해 적은 인원으로도 운영할 수 있게 했습니다.",
+            "회원 정보와 이용 상태, 활동 이력을 한곳에 모아 운영 정책이 바뀌어도 유연하게 대응할 수 있게 했고, 앞으로 기능을 덧붙이기 쉽도록 관리 기능을 모듈 단위로 나눴습니다.",
+          ],
+          items: [
+            "VOD 메타 데이터·공개 상태·노출 순서 관리",
+            "라이브 생성과 송출 상태 관리",
+            "회원 정보·이용 상태·활동 이력 관리",
+            "도네이션·커뮤니티 관리",
+          ],
+          images: [
+            {
+              src: `${WORKS_BASE}/studioc1/studioc1-admin-content.jpg`,
+              width: 1600,
+              height: 1710,
+              alt: "콘텐츠 정보를 입력하는 관리자 화면",
+              caption: "관리자 · 콘텐츠 등록",
+            },
+            {
+              src: `${WORKS_BASE}/studioc1/studioc1-admin-member.jpg`,
+              width: 1600,
+              height: 870,
+              alt: "회원 정보를 확인하는 관리자 화면",
+              caption: "관리자 · 회원 관리",
+            },
+          ],
+        },
+      ],
+      source: {
+        label: "W2R GROUP의 프로젝트 소개 보기",
+        href: "https://w2rgroup.kr/studioc1",
+      },
+    },
+  },
+  {
+    id: "vectorcom",
+    title: "벡터컴 글로벌 커머스 통합 관리 시스템 구축",
+    summary:
+      "국내 여러 브랜드의 일본 판매를 대행하는 벡터컴을 위한 통합 관리 시스템. 라쿠텐·큐텐 상품 등록부터 주문 수집, 재고, 3PL 물류 연동, 매출 리포트까지 한곳에서 다루며, 기획·PMO는 W2R GROUP, 개발은 웹아이가 맡았습니다.",
+    year: "[연도]",
+    role: "개발",
+    stack: ["[기술 스택]", "B2B SaaS", "API 연동", "관리자 시스템"],
+    featured: true,
+    coverColor: "#4757f5",
+    coverSrc: `${WORKS_BASE}/vectorcom/vectorcom-main.jpg`,
+    links: [{ label: "자세히 보기", href: "/works/vectorcom" }],
+    caseStudy: {
+      hero: {
+        src: `${WORKS_BASE}/vectorcom/vectorcom-main.jpg`,
+        width: 1600,
+        height: 988,
+        alt: "벡터컴 통합 관리 시스템의 상품 관리 화면들",
+      },
+      credits: [
+        { label: "클라이언트", value: "벡터컴 (VECTORCOM)" },
+        { label: "PMO·기획", value: "W2R GROUP" },
+        { label: "개발", value: "웹아이 — [사용 기술], 관리 시스템·채널 API 연동 [맡은 범위]" },
+        { label: "범위", value: "B2B SaaS · E-Commerce" },
+      ],
+      sections: [
+        {
+          title: "여러 브랜드, 여러 채널을 한곳에서",
+          body: [
+            "벡터컴은 국내 여러 브랜드의 해외 마케팅과 유통을 대신 맡는 회사입니다. 같은 상품이라도 라쿠텐, 큐텐 같은 일본 판매 채널마다 관리자에 따로 들어가 등록하고 고쳐야 했고, 채널별로 옵션명과 세트 구성이 달라 재고를 한 번에 보기 어려웠습니다.",
+            "상품 관리부터 주문 수집, 재고 관리, 3PL 물류 연동, 매출 분석까지 해외 유통에 필요한 과정을 하나의 시스템으로 묶었습니다. [개발 범위 한두 줄]",
+          ],
+        },
+        {
+          title: "한 번 등록하면 모든 채널에",
+          body: [
+            "시스템에서 상품코드, 가격, 옵션, 상세페이지를 한 번 등록하면 각 채널 API를 통해 셀러샵에 상품이 만들어집니다. 채널마다 다른 필수값 규격에 맞춰 정보를 넣을 수 있고, 가격이나 정보를 바꾸면 API로 바로 반영됩니다.",
+            "상품과 실제 재고 단위인 품목(SKU)을 나눠, 한 품목을 여러 채널의 상품 옵션에 연결했습니다. 같은 품목이 한 채널에서는 단품, 다른 채널에서는 세트로 팔려도 판매가 일어나면 마스터 품목의 재고가 함께 줄어들어 초과 판매 위험을 낮춥니다.",
+          ],
+          items: [
+            "라쿠텐·큐텐 등 판매 채널 상품 등록·수정 API 연동",
+            "채널별 연동 상태·판매 가격·재고/품절 현황 통합 조회",
+            "품목(SKU) ↔ 채널 상품 옵션 매핑과 재고 통합 차감",
+          ],
+          images: [
+            {
+              src: `${WORKS_BASE}/vectorcom/vectorcom-product.jpg`,
+              width: 1600,
+              height: 900,
+              alt: "상품 정보와 채널 연동 상태를 관리하는 화면",
+              caption: "통합 상품 관리",
+            },
+          ],
+        },
+        {
+          title: "주문 수집과 3PL 물류 연동",
+          body: [
+            "여러 채널의 주문을 주문 수집 API로 모아, 입금 대기부터 배송 완료까지 채널별 주문 상태를 한 화면에서 관리합니다. 외부 물류 업체(3PL) 시스템과 재고를 연동해 창고의 실제 재고를 일 단위 배치로 반영하고, 판매 가능한 수량을 각 채널에 업데이트합니다.",
+          ],
+          images: [
+            {
+              src: `${WORKS_BASE}/vectorcom/vectorcom-order-flow.jpg`,
+              width: 1600,
+              height: 610,
+              alt: "유통채널, 통합 재고, 3PL 사이의 주문·재고 흐름도",
+              caption: "주문 · 재고 · 3PL 연동 흐름",
+            },
+          ],
+        },
+        {
+          title: "채널을 넘나드는 매출 리포트",
+          body: [
+            "채널마다 리포트 형식이 달라 전체 매출과 재구매율을 한눈에 보기 어려웠습니다. 입점사·브랜드, 유통 채널, 카테고리, 품목별 매출과 판매 추이를 하나의 리포트로 뽑아 브랜드사별 정산을 자동화했고, 흩어진 구매 데이터에서 신규 고객과 재구매 고객 비중을 도출해 마케팅 근거로 쓸 수 있게 했습니다.",
+          ],
+          images: [
+            {
+              src: `${WORKS_BASE}/vectorcom/vectorcom-report.jpg`,
+              width: 1600,
+              height: 912,
+              alt: "기간별 매출 추이 그래프와 표가 있는 리포트 화면",
+              caption: "매출 리포트",
+            },
+          ],
+        },
+        {
+          title: "입점사마다 독립된 운영",
+          body: [
+            "관리하는 브랜드가 늘수록 운영 부담도 커졌습니다. 하나의 시스템 안에서 여러 입점사를 독립된 테넌트로 나눠, 입점사마다 셀러샵 API를 따로 연동하고 담당자에게 맞는 권한을 주도록 했습니다. 통합 관리자는 대시보드에서 전체 입점사의 운영 현황을 볼 수 있습니다.",
+          ],
+          images: [
+            {
+              src: `${WORKS_BASE}/vectorcom/vectorcom-tenant.jpg`,
+              width: 1600,
+              height: 478,
+              alt: "입점사, 브랜드, 셀러샵으로 이어지는 멀티 입점사 구조도",
+              caption: "멀티 입점사 구조",
+            },
+          ],
+        },
+      ],
+      source: {
+        label: "W2R GROUP의 프로젝트 소개 보기",
+        href: "https://w2rgroup.kr/vectorcom",
+      },
+    },
+  },
+  {
+    id: "wattup",
+    title: "와츠업 커뮤니티 기반 라이브커머스 플랫폼",
+    summary:
+      "브랜드와 고객이 콘텐츠와 피드로 소통하고, 그 취향 공유가 구매로 이어지는 커뮤니티형 라이브커머스 플랫폼. 기획·PMO는 W2R GROUP, 디자인은 리메인, 개발은 웹아이가 웹·앱·관리자를 맡았습니다.",
+    year: "[연도]",
+    role: "개발",
+    stack: ["C#", "RESTful API", "Swift", "Objective-C", "HTML5", "CSS"],
+    featured: true,
+    coverColor: "#111111",
+    coverSrc: `${WORKS_BASE}/wattup/wattup-main.jpg`,
+    links: [{ label: "자세히 보기", href: "/works/wattup" }],
+    caseStudy: {
+      hero: {
+        src: `${WORKS_BASE}/wattup/wattup-main.jpg`,
+        width: 1600,
+        height: 900,
+        alt: "와츠업 PC 메인: 라이브 방송 화면과 ON-AIR 영역",
+      },
+      credits: [
+        { label: "클라이언트", value: "WATTZ Creative" },
+        { label: "PMO·기획", value: "W2R GROUP" },
+        { label: "디자인", value: "리메인 — Creative Director Junu Kim, Project Leader Ji Lee" },
+        { label: "개발", value: "웹아이 — 웹·앱·관리자 [맡은 범위]" },
+        { label: "기술", value: "C# · RESTful API · Swift · Objective-C · HTML5 · CSS(전처리기) · 웹/앱 접근성" },
+        { label: "범위", value: "Web · App · Admin · E-Commerce" },
+      ],
+      sections: [
+        {
+          title: "취향 공유가 구매로 이어지는 구조",
+          body: [
+            "와츠업은 2030세대를 겨냥한 라이브커머스 플랫폼입니다. 가격 비교 위주로 상품을 늘어놓는 방식으로는 브랜드의 정체성을 전하기 어렵고, 일방적인 정보 제공만으로는 사용자가 오래 머물지 않는다는 점이 출발점이었습니다.",
+            "그래서 브랜드 콘텐츠와 커머스, SNS형 커뮤니티를 한 서비스 안에 묶었습니다. 사용자가 콘텐츠를 보다가 바로 관련 상품을 찾아 살 수 있고, 다른 사용자의 후기와 스타일링이 다시 구매로 이어지도록 웹·앱과 커머스 관리자를 함께 개발했습니다. [개발 범위와 구조 한두 줄]",
+          ],
+          images: [
+            {
+              src: `${WORKS_BASE}/wattup/wattup-mobile.jpg`,
+              width: 1600,
+              height: 971,
+              alt: "와츠업 앱 메인 화면들: 기획전, 추천 브랜드, 피드 미리보기, 베스트 상품",
+              caption: "App Main",
+            },
+          ],
+        },
+        {
+          title: "팔로우와 피드로 만드는 커뮤니티",
+          body: [
+            "취향이 비슷한 사용자를 팔로우하면 그 사람의 피드 소식을 받아볼 수 있습니다. 이미지와 글로 구매 후기나 스타일링을 올리고, 댓글과 좋아요로 반응을 주고받으며, 프로필에서는 내가 쓴 글과 팔로워 같은 활동 내역을 관리합니다.",
+          ],
+          items: [
+            "사용자 간 팔로우와 팔로잉 기반 타임라인",
+            "이미지·텍스트 게시물 업로드, 댓글·좋아요",
+            "개인 프로필과 활동 내역 관리",
+          ],
+          images: [
+            {
+              src: `${WORKS_BASE}/wattup/wattup-feed.jpg`,
+              width: 1600,
+              height: 887,
+              alt: "와츠업 앱의 피드, 게시물 상세, 프로필 화면",
+              caption: "피드 · 프로필",
+            },
+          ],
+        },
+        {
+          title: "브랜드 채널과 라이브 방송",
+          body: [
+            "브랜드마다 자기 톤으로 콘텐츠를 올리고 팬과 직접 소통하는 전용 채널을 두었습니다. 콘텐츠 안의 댓글과 피드백으로 브랜드와 사용자가 실시간으로 이야기를 나누고, 라이브 방송 화면에서는 방송을 보면서 소개되는 상품을 바로 확인할 수 있습니다.",
+          ],
+          images: [
+            {
+              src: `${WORKS_BASE}/wattup/wattup-brand.jpg`,
+              width: 1600,
+              height: 1084,
+              alt: "이주의 브랜드 추천과 이 달의 취향 기획 상품이 있는 PC 화면",
+              caption: "브랜드 추천 · 취향관",
+            },
+            {
+              src: `${WORKS_BASE}/wattup/wattup-live.jpg`,
+              width: 1600,
+              height: 853,
+              alt: "라이브 방송 화면, 방송 중 상품 목록, 실시간 채팅 입력 화면",
+              caption: "라이브 방송 · 상품 목록 · 채팅",
+            },
+          ],
+        },
+        {
+          title: "판매 방식을 모듈로",
+          body: [
+            "상시 판매만으로는 구매 동기를 만들기 어려워, 마케팅 목적에 맞게 골라 쓸 수 있도록 판매 방식을 모듈로 나눴습니다. 한정판은 응모부터 당첨, 구매까지 이어지는 럭키드로우로, 특정 시간에만 할인하는 상품은 타임딜로 운영합니다.",
+            "여행 상품처럼 정해진 인원이 모여야 판매가 성사되는 목표 달성형 공동구매도 지원해, 사용자들이 스스로 공유하며 모집 인원을 채우도록 했습니다.",
+          ],
+          items: ["럭키드로우 (응모 → 당첨 → 구매)", "타임딜", "예약판매", "목표 달성형 공동구매"],
+        },
+        {
+          title: "커뮤니티를 지키는 관리자",
+          body: [
+            "사용자가 올린 이미지와 글을 관리자에서 모니터링하고, 정책에 어긋나는 게시물은 신고와 블라인드로 처리합니다. 신고 내역은 목록으로 모아 관리자가 경고 같은 제재를 단계별로 빠르게 결정할 수 있게 했고, 복잡한 이벤트 판매 일정과 사용자 관계 데이터도 같은 관리자에서 다룹니다.",
+          ],
+          images: [
+            {
+              src: `${WORKS_BASE}/wattup/wattup-report.jpg`,
+              width: 1600,
+              height: 600,
+              alt: "피드 게시물 위에 뜬 팔로우 차단·게시물 신고 메뉴와 신고 사유 선택 창",
+              caption: "게시물 신고",
+            },
+          ],
+        },
+      ],
+      source: {
+        label: "W2R GROUP의 프로젝트 소개 보기",
+        href: "https://w2rgroup.kr/wattup",
+      },
+    },
+  },
+  {
+    id: "ussec",
+    title: "미국대두협회 웹사이트 통합 리뉴얼",
+    summary:
+      "여러 개의 개별 사이트로 나뉘어 있던 미국대두협회(USSEC)의 페이지를 하나의 공식 홈페이지와 통합 관리자로 합친 프로젝트. 기획·PMO는 W2R GROUP, 개발은 웹아이가 맡았습니다.",
+    year: "[연도]",
+    role: "개발",
+    stack: ["[기술 스택]", "통합 관리자", "CMS"],
+    featured: true,
+    coverColor: "#1f6b3a",
+    coverSrc: `${WORKS_BASE}/ussec/ussec-main.jpg`,
+    links: [{ label: "자세히 보기", href: "/works/ussec" }],
+    caseStudy: {
+      hero: {
+        src: `${WORKS_BASE}/ussec/ussec-main.jpg`,
+        width: 1600,
+        height: 918,
+        alt: "미국대두협회 메인, 협회 소개, 소이오일 마스터 프로그램, 인증서 및 보고 페이지",
+      },
+      credits: [
+        { label: "클라이언트", value: "미국대두협회 (U.S. Soybean Export Council)" },
+        { label: "PMO·기획", value: "W2R GROUP" },
+        { label: "개발", value: "웹아이 — [사용 기술], 웹·통합 관리자 [맡은 범위]" },
+        { label: "범위", value: "Web · Admin" },
+      ],
+      sections: [
+        {
+          title: "흩어진 사이트를 하나로",
+          body: [
+            "미국대두협회의 콘텐츠는 여러 개의 개별 사이트로 나뉘어 운영되고 있었고, 사이트마다 관리자 페이지도 따로였습니다. 공통 정보 하나를 바꾸려 해도 사이트별로 같은 작업을 반복해야 해, 누락이나 데이터 불일치가 생기기 쉬운 구조였습니다.",
+            "이번 리뉴얼에서는 이 페이지들을 하나의 도메인, 하나의 공식 홈페이지로 합쳤습니다. 사용자 중심으로 메뉴를 다시 정리해 원하는 정보까지 가는 단계를 줄이고, 사이트마다 달랐던 디자인 가이드도 하나로 맞췄습니다.",
+          ],
+          images: [
+            {
+              src: `${WORKS_BASE}/ussec/ussec-laptop.jpg`,
+              width: 1600,
+              height: 1600,
+              alt: "노트북 화면에 띄운 미국대두협회 메인 페이지",
+              maxWidth: 720,
+            },
+          ],
+        },
+        {
+          title: "PC와 모바일에서 같은 구조로",
+          body: [
+            "메인, 협회 소개, 소이오일 마스터 프로그램처럼 성격이 다른 페이지도 같은 틀 안에서 보이도록 공통 구조로 만들었습니다. [반응형 대응 범위 한 줄]",
+          ],
+          images: [
+            {
+              src: `${WORKS_BASE}/ussec/ussec-responsive.jpg`,
+              width: 1600,
+              height: 890,
+              alt: "미국대두협회 메인과 소이오일 마스터 프로그램 페이지의 PC·모바일 화면",
+              caption: "PC · Mobile",
+            },
+          ],
+        },
+        {
+          title: "한 곳에서 관리하는 통합 관리자",
+          body: [
+            "여러 페이지의 콘텐츠 업데이트와 설정을 하나의 관리자에서 처리하도록 통합했습니다. 공지사항, 자료, 리포트 같은 콘텐츠는 코드 수정 없이 템플릿 형태로 등록·수정하고, 노출과 비공개 전환도 관리자가 직접 제어합니다. 담당자가 바뀌어도 별도의 기술 교육 없이 바로 운영할 수 있는 것을 목표로 했습니다.",
+          ],
+          items: [
+            "통합 콘텐츠·페이지 관리",
+            "템플릿 기반 콘텐츠 등록·수정 (CMS)",
+            "콘텐츠 노출·비공개 전환",
+          ],
+          images: [
+            {
+              src: `${WORKS_BASE}/ussec/ussec-board.jpg`,
+              width: 1600,
+              height: 748,
+              alt: "공지사항 목록과 리포트 목록 페이지",
+              caption: "공지사항 · 리포트",
+            },
+          ],
+        },
+        {
+          title: "역할별 권한과 활동 이력",
+          body: [
+            "최고 관리자부터 실무 운영자까지 역할에 따라 접근할 수 있는 메뉴와 데이터 범위를 나눠, 내부 보안 정책을 지키면서 권한 밖의 조작으로 생기는 오류를 막았습니다. 관리자 활동 이력도 남겨 데이터 변경을 추적할 수 있습니다.",
+          ],
+          items: ["계층별 메뉴·데이터 접근 제어", "관리자 활동 이력 관리"],
+        },
+        {
+          title: "늘어날 콘텐츠를 위한 구조",
+          body: [
+            "한 번의 리뉴얼로 끝나지 않도록, 새 메뉴나 카테고리를 대대적인 구조 변경 없이 추가할 수 있게 페이지를 모듈 단위로 설계했습니다. 공통 요소를 고치면 사이트 전체에 바로 반영되는 구조라 이후 유지보수 부담도 줄였습니다.",
+          ],
+        },
+      ],
+      source: {
+        label: "W2R GROUP의 프로젝트 소개 보기",
+        href: "https://w2rgroup.kr/ussec",
+      },
+    },
+  },
+  {
+    id: "ecoyaearth",
+    title: "에코야얼스 친환경 ESG 플랫폼 구축",
+    summary:
+      "순환자원을 수거해 받은 포인트로 경품에 응모하거나 ESG 캠페인에 기부하는 친환경 플랫폼 앱. 기획·PMO는 W2R GROUP, 디자인·브랜딩은 리메인, 개발은 웹아이가 맡았습니다.",
+    year: "[연도]",
+    role: "개발",
+    stack: ["[기술 스택]", "App", "ESG 플랫폼"],
+    featured: true,
+    coverColor: "#4b2ff0",
+    coverSrc: `${WORKS_BASE}/ecoyaearth/ecoyaearth-main.jpg`,
+    links: [{ label: "자세히 보기", href: "/works/ecoyaearth" }],
+    caseStudy: {
+      hero: {
+        src: `${WORKS_BASE}/ecoyaearth/ecoyaearth-main.jpg`,
+        width: 1600,
+        height: 948,
+        alt: "보라색 배경 위 휴대폰에 띄운 에코야얼스 앱 홈 화면",
+      },
+      credits: [
+        { label: "클라이언트", value: "에코야얼스 (ECOYA Earth)" },
+        { label: "PMO·기획", value: "W2R GROUP" },
+        { label: "디자인", value: "리메인" },
+        { label: "개발", value: "웹아이 — [사용 기술], 앱 [맡은 범위]" },
+        { label: "범위", value: "App · Branding" },
+      ],
+      sections: [
+        {
+          title: "환경 실천이 혜택으로 돌아오는 구조",
+          body: [
+            "에코야얼스는 사용자가 순환자원을 수거 신청하면 포인트로 보상하고, 그 포인트를 경품 응모나 기부에 쓰게 해 개인의 환경 실천이 실제 혜택과 사회적 가치로 이어지도록 만든 플랫폼입니다. B2B 중심이던 서비스를 개인 사용자에게 넓히는 단계의 프로젝트였습니다.",
+            "자체 캐릭터를 서비스 곳곳에 녹여 자칫 딱딱할 수 있는 ESG 서비스를 친근하게 풀었고, 웹아이는 수거 신청부터 리워드, 랭킹까지 앱의 주요 흐름을 개발했습니다. [개발 범위와 구조 한두 줄]",
+          ],
+          images: [
+            {
+              src: `${WORKS_BASE}/ecoyaearth/ecoyaearth-overview.jpg`,
+              width: 1600,
+              height: 1467,
+              alt: "에코야얼스 캐릭터와 홈, 수거 완료, 탄소중립실천포인트 안내, 기부 화면",
+            },
+          ],
+        },
+        {
+          title: "단계별 순환자원 수거 신청",
+          body: [
+            "플라스틱, 종이, 금속 같은 자원의 종류와 수량, 무게를 고르고 수거지를 입력하면 신청이 끝나는 간단한 흐름으로 만들었습니다. 신청 내용을 바탕으로 탄소 감축량과 적립 예정 포인트를 바로 보여 줘, 사용자가 자기 활동의 효과를 숫자로 확인할 수 있습니다.",
+          ],
+          images: [
+            {
+              src: `${WORKS_BASE}/ecoyaearth/ecoyaearth-pickup-1.jpg`,
+              width: 492,
+              height: 876,
+              alt: "박스에 담긴 수거 품목을 고르는 화면",
+              caption: "품목 선택",
+            },
+            {
+              src: `${WORKS_BASE}/ecoyaearth/ecoyaearth-pickup-2.jpg`,
+              width: 492,
+              height: 876,
+              alt: "품목별 수량을 입력하는 화면",
+              caption: "수량 입력",
+            },
+            {
+              src: `${WORKS_BASE}/ecoyaearth/ecoyaearth-pickup-3.jpg`,
+              width: 492,
+              height: 876,
+              alt: "신청 내역과 수거지를 확인하는 화면",
+              caption: "수거지 입력",
+            },
+            {
+              src: `${WORKS_BASE}/ecoyaearth/ecoyaearth-pickup-4.jpg`,
+              width: 492,
+              height: 876,
+              alt: "탄소 감축량과 적립 예정 포인트가 보이는 수거 신청 완료 화면",
+              caption: "신청 완료",
+            },
+          ],
+          layout: "row",
+        },
+        {
+          title: "포인트로 응모하고 기부하고",
+          body: [
+            "수거 보상으로 쌓인 포인트는 경품 응모에 쓰거나 다양한 ESG 캠페인에 직접 기부할 수 있습니다. 환경을 위한 행동이 개인의 혜택과 사회적 가치 양쪽으로 돌아오도록 리워드 흐름을 구성했습니다.",
+          ],
+          images: [
+            {
+              src: `${WORKS_BASE}/ecoyaearth/ecoyaearth-reward.jpg`,
+              width: 1600,
+              height: 985,
+              alt: "지구포인트, 캠페인 상세, 응모하기, 기부 완료 화면",
+              caption: "응모 · 기부",
+            },
+          ],
+        },
+        {
+          title: "꾸준한 참여를 이끄는 랭킹",
+          body: [
+            "정기적인 활동 데이터를 모아 랭킹을 매기고, 상위 사용자에게 추가 포인트를 줍니다. 한 번 참여하고 끝나는 것이 아니라 사용자들이 서로 경쟁하며 꾸준히 자원 순환에 참여하도록 설계했습니다.",
+          ],
+          images: [
+            {
+              src: `${WORKS_BASE}/ecoyaearth/ecoyaearth-ranking.jpg`,
+              width: 1600,
+              height: 1172,
+              alt: "월별 자원순환 랭킹 화면",
+              caption: "자원순환 랭킹",
+            },
+          ],
+        },
+        {
+          title: "고래와 지구 캐릭터",
+          body: [
+            "‘바다의 탄소 저장고’로 불리는 고래와 지구를 모티브로 한 캐릭터를 앱 UI 곳곳에 배치했습니다. 홈, 가입 완료, 수거 완료처럼 사용자가 자주 마주치는 화면에 캐릭터가 등장해 서비스의 인상을 친근하게 만듭니다.",
+          ],
+          images: [
+            {
+              src: `${WORKS_BASE}/ecoyaearth/ecoyaearth-character.jpg`,
+              width: 1600,
+              height: 1708,
+              alt: "고래와 지구 캐릭터의 여러 포즈와 캐릭터가 들어간 앱 화면들",
+              caption: "Character",
+              maxWidth: 960,
+            },
+          ],
+        },
+      ],
+      source: {
+        label: "W2R GROUP의 프로젝트 소개 보기",
+        href: "https://w2rgroup.kr/ecoyaearth",
+      },
+    },
+  },
+  {
+    id: "parata-air",
+    title: "파라타항공 브랜드 랜딩 페이지 구축",
+    summary:
+      "새로 시장에 들어서는 파라타항공의 철학과 비전을 감성적으로 전하는 브랜드 랜딩 페이지. 기획·PMO는 W2R GROUP, 디자인은 리메인, 개발은 웹아이가 맡아 스크롤 인터랙션 중심의 화면을 구현했습니다.",
+    year: "[연도]",
+    role: "개발",
+    stack: ["브랜드 랜딩 페이지", "스크롤 인터랙션", "[기술 스택]"],
+    featured: true,
+    coverColor: "#1d34c4",
+    coverSrc: `${WORKS_BASE}/parata-air/parata-air-main.jpg`,
+    links: [{ label: "자세히 보기", href: "/works/parata-air" }],
+    caseStudy: {
+      hero: {
+        src: `${WORKS_BASE}/parata-air/parata-air-hero.jpg`,
+        width: 1600,
+        height: 790,
+        alt: "파라타항공 로고가 그려진 A330neo 꼬리날개와 PARATA AIR 워드마크",
+      },
+      credits: [
+        { label: "클라이언트", value: "파라타항공 (PARATA AIR)" },
+        { label: "PMO·기획", value: "W2R GROUP" },
+        {
+          label: "디자인",
+          value: "리메인 — Creative Director Junu Kim, Project Leader Ji Lee, UX/UI Designer Chaeyeon Park · Hyewon Shin",
+        },
+        { label: "개발", value: "웹아이 — [사용 기술], 스크롤 인터랙션 구현 [맡은 범위]" },
+        { label: "범위", value: "Web · Branding" },
+      ],
+      sections: [
+        {
+          title: "첫인상을 남기는 마이크로 사이트",
+          body: [
+            "파라타항공이 시장에 처음 내딛는 걸음을 알리는 홍보용 마이크로 사이트입니다. 서비스를 나열하기보다 고객에게 차별화된 가치를 전하고, 첫 만남에서부터 신뢰와 기대감을 심어 오래 이어질 관계의 시작점이 되는 것을 목표로 했습니다.",
+            "W2R GROUP이 프로젝트를 이끌고 리메인이 브랜드 경험과 화면을 디자인했으며, 웹아이는 이를 실제로 움직이는 페이지로 개발했습니다. [개발 범위·구조 한두 줄: 반응형, 퍼블리싱 방식 등]",
+          ],
+          images: [
+            {
+              src: `${WORKS_BASE}/parata-air/parata-air-main.jpg`,
+              width: 1600,
+              height: 900,
+              alt: "구름 위 하늘을 배경으로 ‘The Happier Journey’ 문구를 띄운 첫 화면",
+              caption: "Main · The Happier Journey",
+            },
+          ],
+        },
+        {
+          title: "스크롤을 따라 흐르는 여정",
+          body: [
+            "사용자가 페이지를 내려가는 흐름을 하나의 여행처럼 느끼도록, 구간마다 다른 스크롤 인터랙션을 넣어 화면에 움직임을 더했습니다. 기업 철학에서 서비스, 브랜드 가치로 이어지는 이야기가 끊기지 않고 자연스럽게 넘어가도록 구현했습니다.",
+          ],
+          images: [
+            {
+              src: `${WORKS_BASE}/parata-air/parata-air-philosophy.jpg`,
+              width: 1600,
+              height: 900,
+              alt: "비행기 창밖 구름 위로 ‘파라타항공은 고객에게 행복한 여행을 선사합니다’ 문구가 나오는 기업 철학 구간",
+              caption: "기업 철학",
+            },
+          ],
+        },
+        {
+          title: "고객 중심 서비스를 전하는 화면",
+          body: [
+            "LCC와 FSC로만 나뉘던 항공 서비스에 질문을 던지고, 종류보다 품질에 집중한다는 파라타항공의 서비스 방향을 사진과 짧은 문장으로 전합니다. 이미지와 텍스트가 반씩 나뉜 구성을 두 장면으로 이어 메시지를 차례로 보여 줍니다.",
+          ],
+          images: [
+            {
+              src: `${WORKS_BASE}/parata-air/parata-air-service-1.jpg`,
+              width: 1600,
+              height: 900,
+              alt: "창가 좌석의 승객 사진 옆에 ‘고객 맞춤 서비스를 제공합니다’ 문구가 있는 화면",
+              caption: "고객 맞춤 서비스",
+            },
+            {
+              src: `${WORKS_BASE}/parata-air/parata-air-service-2.jpg`,
+              width: 1600,
+              height: 900,
+              alt: "기내식이 놓인 좌석 사진 옆에 ‘서비스 종류보다 품질에 집중합니다’ 문구가 있는 화면",
+              caption: "서비스 품질",
+            },
+          ],
+        },
+        {
+          title: "브랜드 가치와 컬러",
+          body: [
+            "Essential, Comfort, Authentic 세 가지 핵심 가치는 스크롤에 맞춰 하나씩 강조되도록 했고, 하늘의 여러 색에서 가져온 브랜드 컬러는 Dark Night Blue부터 Mid Night Blue까지 이어지는 화면으로 보여 줍니다. 마지막은 ‘New Paradigm, Trustworthy Airline.’ 메시지로 브랜드의 방향을 정리합니다.",
+          ],
+          images: [
+            {
+              src: `${WORKS_BASE}/parata-air/parata-air-values.jpg`,
+              width: 1600,
+              height: 900,
+              alt: "Essential·Comfort·Authentic 세 가치를 나열한 브랜드 가치 구간",
+              caption: "브랜드 가치",
+            },
+            {
+              src: `${WORKS_BASE}/parata-air/parata-air-color.jpg`,
+              width: 1600,
+              height: 900,
+              alt: "‘하늘의 다채로운 색으로 여행의 설렘을 담다’ 문구와 Dark Night Blue 컬러를 보여 주는 브랜드 컬러 구간",
+              caption: "Brand Color",
+            },
+            {
+              src: `${WORKS_BASE}/parata-air/parata-air-paradigm.jpg`,
+              width: 1600,
+              height: 900,
+              alt: "‘New Paradigm Trustworthy Airline.’ 문구가 크게 놓인 마무리 화면",
+              caption: "New Paradigm",
+            },
+          ],
+        },
+      ],
+      source: {
+        label: "W2R GROUP의 프로젝트 소개 보기",
+        href: "https://w2rgroup.kr/parata_air",
+      },
+    },
+  },
+  {
+    id: "caremedi",
+    title: "케어메디 의료진 웹 구축",
+    summary:
+      "개인용 헬스케어 서비스를 의료진 영역으로 넓힌 케어메디의 의료진 전용 웹. 헬스케어 디바이스로 모은 생체 데이터를 대시보드로 보여 주는 화면을 기획·PMO W2R GROUP과 함께 웹아이가 개발했습니다.",
+    year: "[연도]",
+    role: "개발",
+    stack: ["Chart.js", "Canvas", "의료진 대시보드", "[기술 스택]"],
+    featured: true,
+    coverColor: "#4caf6a",
+    coverSrc: `${WORKS_BASE}/caremedi/caremedi-compare.jpg`,
+    links: [{ label: "자세히 보기", href: "/works/caremedi" }],
+    caseStudy: {
+      hero: {
+        src: `${WORKS_BASE}/caremedi/caremedi-summary.jpg`,
+        width: 1600,
+        height: 1462,
+        alt: "환자 한 명의 혈당·볼러스·기저 그래프와 혈당·인슐린 개요를 모은 의료진 웹 요약 화면",
+      },
+      credits: [
+        { label: "클라이언트", value: "케어메디" },
+        { label: "PMO·기획", value: "W2R GROUP" },
+        { label: "개발", value: "웹아이 — Chart.js 기반 데이터 시각화, [사용 기술·맡은 범위]" },
+        { label: "범위", value: "Web · Admin" },
+      ],
+      sections: [
+        {
+          title: "개인용 서비스에서 의료진의 도구로",
+          body: [
+            "케어메디는 개인용 헬스케어 서비스를 운영해 왔습니다. 의료진 웹은 이 서비스를 전문가 영역으로 넓혀, 자사 헬스케어 디바이스가 모은 생체 데이터를 의료진 대시보드에서 바로 보고 환자 관리와 진단에 쓸 수 있도록 만든 플랫폼입니다.",
+            "웹아이는 디바이스 데이터를 의료진 화면에 동기화해 보여 주는 대시보드와, 환자별로 데이터를 살펴보는 화면들을 개발했습니다. [데이터 연동 방식·구조 한두 줄]",
+          ],
+        },
+        {
+          title: "담당 환자만, 권한만큼만",
+          body: [
+            "의료진과 담당 환자를 1:1 또는 1:N으로 매칭하고, 승인된 의료진만 지정된 환자의 정보를 볼 수 있게 했습니다. 직군이나 권한 레벨에 따라 열람 범위도 달라져, 민감한 개인 의료 데이터가 필요 이상으로 노출되지 않습니다.",
+          ],
+          items: [
+            "의료진–환자 1:1 · 1:N 매칭",
+            "승인된 의료진만 지정 환자 정보 접근",
+            "직군·권한 레벨별 데이터 열람 범위 제한",
+          ],
+        },
+        {
+          title: "데이터를 판단 근거로",
+          body: [
+            "디바이스에서 들어온 로우 데이터를 바탕으로 환자의 건강 상태를 정량적인 지표로 정리했습니다. 기간을 나눠 두 구간을 나란히 비교하거나 한 달을 달력으로 훑어볼 수 있어, 의료진이 이상 징후와 변화 추이를 빠르게 짚을 수 있습니다.",
+          ],
+          images: [
+            {
+              src: `${WORKS_BASE}/caremedi/caremedi-compare.jpg`,
+              width: 1600,
+              height: 1393,
+              alt: "두 기간의 혈당 개요, 인슐린 개요, 혈당·볼러스·기저 그래프를 좌우로 나란히 놓은 비교 화면",
+              caption: "비교",
+            },
+            {
+              src: `${WORKS_BASE}/caremedi/caremedi-monthly.jpg`,
+              width: 1600,
+              height: 1093,
+              alt: "날짜별 요약 수치를 달력 칸에 채운 월간요약 화면",
+              caption: "월간요약",
+            },
+          ],
+        },
+        {
+          title: "Chart.js 위에 의료용 차트를 더하다",
+          body: [
+            "시계열 그래프는 앞으로 쌓일 대용량 데이터와 기능 확장을 고려해 Chart.js를 기반으로 구성했습니다. 표준 라이브러리로는 그릴 수 없는 의료 특화 뷰는 캔버스 드로잉을 직접 커스터마이징해, 의료진이 읽기 편한 화면으로 만들었습니다.",
+          ],
+          images: [
+            {
+              src: `${WORKS_BASE}/caremedi/caremedi-settings.jpg`,
+              width: 1600,
+              height: 972,
+              alt: "시간대별 설정값을 계단형 그래프와 목록으로 보여 주는 설정 화면",
+              caption: "설정",
+            },
+          ],
+        },
+        {
+          title: "기록과 사용 내역",
+          body: [
+            "그래프 외에도 이벤트 기록과 패치 사용 내역을 기간별 목록과 표로 정리해, 의료진이 필요한 원자료를 바로 찾아볼 수 있게 했습니다.",
+          ],
+          images: [
+            {
+              src: `${WORKS_BASE}/caremedi/caremedi-records.jpg`,
+              width: 1600,
+              height: 782,
+              alt: "카테고리 탭과 일시별 이벤트 목록이 있는 기록 화면",
+              caption: "기록",
+            },
+            {
+              src: `${WORKS_BASE}/caremedi/caremedi-patch.jpg`,
+              width: 1600,
+              height: 903,
+              alt: "패치 사용 수와 사용 시간, 패치별 상세 리스트를 표로 보여 주는 패치 사용 내역 화면",
+              caption: "패치 사용 내역",
+            },
+          ],
+        },
+      ],
+      source: {
+        label: "W2R GROUP의 프로젝트 소개 보기",
+        href: "https://w2rgroup.kr/caremedi",
+      },
+    },
+  },
+  {
     id: "shimadzu",
     title: "시마즈 B2B 자사몰 구축",
     summary:
@@ -27,7 +970,7 @@ export const projects: Project[] = [
       credits: [
         { label: "클라이언트", value: "시마즈코리아" },
         { label: "PMO·기획", value: "W2R GROUP" },
-        { label: "디자인", value: "[디자인 담당]" },
+        { label: "디자인", value: "W2R GROUP" },
         { label: "개발", value: "웹아이 — Java, 웹·관리자 시스템" },
         { label: "범위", value: "Web · Admin · E-Commerce" },
       ],
@@ -941,6 +1884,17 @@ export const projects: Project[] = [
     year: "2026",
     role: "개발",
     stack: ["C#", "WPF", "WebView2", "하드웨어 연동"],
+    coverColor: "#dcd8ce",
+    links: [],
+  },
+  {
+    id: "younginlab",
+    title: "영인랩플러스 쇼핑몰 유지보수·추가 개발",
+    summary:
+      "실험실 소모품·장비 쇼핑몰 ‘랩플러스’의 유지보수와 추가 개발. 영카트 기반 PHP 쇼핑몰과 ERP·CRM 사이의 주문·재고·회원 연동을 바로잡고, 하이픈·공백을 무시하는 상품 검색과 검색 속도 개선, 서버 안정화를 맡았습니다. PMO는 W2R GROUP과 함께했습니다.",
+    year: "2025",
+    role: "유지보수 · 개발",
+    stack: ["PHP", "영카트", "MySQL", "ERP·CRM 연동"],
     coverColor: "#dcd8ce",
     links: [],
   },
