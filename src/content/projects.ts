@@ -288,7 +288,7 @@ export const projects: Project[] = [
     title: "데일리픽 맞춤형 영양제 서비스",
     summary:
       "약사가 직접 설계한 영양제를 추천해 주는 맞춤형 영양제 커머스. 디자인은 리메인, 개발은 웹아이가 고도몰 샵바이로 구축했습니다.",
-    year: "[연도]",
+    year: "2021",
     role: "개발",
     stack: ["고도몰 샵바이", "커머스", "큐레이션"],
     featured: true,
