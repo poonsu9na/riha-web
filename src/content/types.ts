@@ -47,6 +47,8 @@ export type WorkImage = {
   alt: string;
   /** 이미지 아래 짧은 설명 */
   caption?: string;
+  /** 화면 하나짜리 세로 캡처처럼 너무 크게 보이면 안 되는 이미지의 최대 표시 너비(px) */
+  maxWidth?: number;
 };
 
 /** 포트폴리오 상세 페이지(/works/<id>) 내용 */
