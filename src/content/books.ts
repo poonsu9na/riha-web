@@ -8,6 +8,7 @@ const COVER_COLOR = "#dcd8ce";
 export const books: Book[] = [
   { id: "9791162540640", title: "아주 작은 습관의 힘", author: "제임스 클리어", status: "reading", coverColor: COVER_COLOR, coverSrc: `${COVER_BASE}9791162540640.jpg` },
   { id: "9788936434120", title: "소년이 온다", author: "한강", status: "reading", coverColor: COVER_COLOR, coverSrc: `${COVER_BASE}9788936434120.jpg` },
+  { id: "9791194171539", title: "에로스, 달콤씁쓸한", author: "앤 카슨", status: "reading", coverColor: COVER_COLOR, coverSrc: `${COVER_BASE}9791194171539.jpg` },
 
   // 전자도서관에서 최근에 읽은 책 (2026-10 추가). 표지는 교보문고 이미지
   { id: "9791187033882", title: "망그러진 만화", author: "유랑", status: "done", coverColor: COVER_COLOR, coverSrc: `${COVER_BASE}9791187033882.jpg` },
