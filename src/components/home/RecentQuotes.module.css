@@ -10,21 +10,37 @@
 }
 
 .item {
-  margin: 0;
+  display: block;
   padding: 28px 0;
   border-bottom: 1px solid var(--line);
 }
 
+/* 문장 길이가 달라도 출처 줄이 카드 아래쪽에 나란히 오게 한다 */
+.figure {
+  margin: 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
 .quote {
-  margin: 0 0 12px;
+  margin: 0;
   font-family: var(--font-serif);
   font-size: 21px;
   line-height: 1.8;
   word-break: keep-all;
   overflow-wrap: anywhere;
+  /* 긴 문장은 4줄에서 "…" 로 자른다 (전체는 문장 페이지에서) */
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+  line-clamp: 4;
+  overflow: hidden;
 }
 
 .source {
+  margin-top: auto;
   font-size: 14px;
   color: var(--muted);
 }
