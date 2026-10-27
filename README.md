@@ -25,8 +25,25 @@ npm run build
 |---|---|
 | `books.ts` | 읽은 책 · 읽는 중 · 읽고 싶은 책 |
 | `quotes.ts` | 밑줄 문장 (`bookId` 로 책과 연결) |
-| `photos.ts` | 사진 (`src` 에 `public/` 경로나 원격 URL) |
+| `photos.ts` | 사진 (NCP 에 올린 사진의 id·크기·제목) |
 | `projects.ts` | 포트폴리오 프로젝트와 프로필 |
 | `site.ts` | 사이트 이름, 소개, 링크, 메뉴 |
 
 배열 순서가 화면에 나오는 순서다. 최근 것을 앞에 둔다.
+
+## 사진 추가
+
+사진 파일은 저장소에 넣지 않고 NCP Object Storage(`riha` 버킷 `photos/`)에 올린다.
+Vercel 무료 플랜의 이미지 변환 한도와 전송량을 아끼려고 크기별로 미리 만들어 두고
+`next/image` 최적화 없이(`images.unoptimized`) 그대로 쓴다.
+
+1. `.env.local` 에 `NCP_ACCESS_KEY`, `NCP_SECRET_KEY`, `NCP_BUCKET=riha` 를 넣는다 (커밋되지 않음)
+2. 사진을 올린다. 파일명이 id 가 되고, 800px(목록용)·1600px(크게 보기용) 두 장이 올라간다.
+   NCP 에 같은 id 가 이미 있거나 올릴 파일끼리 id 가 겹치면 아무것도 올리지 않고 멈춘다.
+   일부러 바꿔 올릴 때만 `--overwrite` 를 붙인다.
+
+   ```bash
+   npm run upload-photos -- ~/Desktop/새사진폴더
+   ```
+
+3. 끝에 출력되는 `ncp("id", 가로, 세로, "[제목]", "[설명]"),` 줄을 `photos.ts` 맨 앞에 붙이고 제목·설명을 고친 뒤 커밋·푸시한다.

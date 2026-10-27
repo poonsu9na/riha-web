@@ -15,6 +15,7 @@ riha.kr 개인 사이트. 읽기(읽은 책 · 밑줄 문장), 사진, 개발 �
 - `src/app/` — 라우트. `/`, `/reading`(읽은 책), `/reading/quotes`(밑줄 문장), `/photos`, `/works`
 - `src/components/` — 공용 컴포넌트(SiteHeader, SiteFooter, PageIntro, SectionHeader, BookCover, PhotoTile, Stars). 섹션 전용은 `components/<섹션>/` 아래.
 - `src/content/` — 콘텐츠 데이터와 타입. 지금은 TS 파일에 직접 적는다. 배열 순서가 곧 노출 순서(최근 것이 앞).
+- 사진 파일은 저장소(`public/`)에 넣지 않는다. `npm run upload-photos` 로 NCP Object Storage 에 800px·1600px 두 크기를 올리고 `photos.ts` 에는 id·크기·제목만 적는다. Vercel 무료 플랜 한도 때문에 이미지 최적화는 꺼 두었다(`images.unoptimized`).
 
 ## 디자인 원칙
 

@@ -9,13 +9,14 @@ type Props = {
   sizes?: string;
 };
 
-/** 사진 한 장. src 가 없으면 tone 색 placeholder 로 그린다 */
+/** 사진 한 장(목록용 thumb 우선). 이미지가 없으면 tone 색 placeholder 로 그린다 */
 export default function PhotoTile({ photo, aspectRatio, sizes = "(max-width: 768px) 100vw, 33vw" }: Props) {
   const ratio = aspectRatio ?? `${photo.width} / ${photo.height}`;
+  const src = photo.thumb ?? photo.src;
 
   return (
     <span className={styles.tile} style={{ aspectRatio: ratio, backgroundColor: photo.tone }}>
-      {photo.src ? <Image src={photo.src} alt={photo.alt} fill sizes={sizes} className={styles.image} /> : null}
+      {src ? <Image src={src} alt={photo.alt} fill sizes={sizes} className={styles.image} /> : null}
     </span>
   );
 }

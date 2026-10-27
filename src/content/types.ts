@@ -25,8 +25,10 @@ export type Quote = {
 
 export type Photo = {
   id: string;
-  /** public/ 기준 경로 또는 원격 URL. 없으면 placeholder 로 그린다 */
+  /** 크게 보기용 이미지 URL. 없으면 placeholder 로 그린다 */
   src?: string;
+  /** 목록(그리드)용 작은 이미지 URL. 없으면 src 를 쓴다 */
+  thumb?: string;
   width: number;
   height: number;
   alt: string;
