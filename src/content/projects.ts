@@ -591,9 +591,8 @@ export const projects: Project[] = [
 
 export const profile = {
   skills: [
-    { label: "주력", value: "PHP · MySQL · 고도몰(이나무·샵바이)" },
-    { label: "다룰 줄 앎", value: "TypeScript · React · Next.js · 하이브리드 앱" },
-    { label: "경력", value: "웹아이 · 2018 ~ 현재" },
+    { label: "주력", value: "Java · React · Next.js" },
+    { label: "다룰 줄 앎", value: "PHP · Python · C#" },
   ],
   resumeHref: "",
 };
