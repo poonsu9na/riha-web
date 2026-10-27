@@ -30,6 +30,8 @@ export type Photo = {
   width: number;
   height: number;
   alt: string;
+  /** 마우스를 올리거나 크게 볼 때 보이는 짧은 제목 */
+  title?: string;
   /** placeholder 배경색 */
   tone: string;
 };
