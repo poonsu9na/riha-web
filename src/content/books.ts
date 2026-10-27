@@ -6,7 +6,25 @@ const COVER_BASE = "https://kr.object.ncloudstorage.com/riha/covers/";
 const COVER_COLOR = "#dcd8ce";
 
 export const books: Book[] = [
-  // 전자도서관에서 읽은 책 (2026-10 추가). 표지는 교보문고 이미지
+  // 전자도서관에서 최근에 읽은 책 (2026-10 추가). 표지는 교보문고 이미지
+  { id: "9791187033882", title: "망그러진 만화", author: "유랑", status: "done", coverColor: COVER_COLOR, coverSrc: `${COVER_BASE}9791187033882.jpg` },
+  { id: "9791138829236", title: "인텔리제이 IntelliJ IDEA 자바 프로그래밍 필수 도구", author: "박상도", status: "done", coverColor: COVER_COLOR, coverSrc: `${COVER_BASE}9791138829236.jpg` },
+  { id: "9791192959498", title: "노화는 느리게 해독은 빠르게 몸은 가볍게", author: "방성혜", status: "done", coverColor: COVER_COLOR, coverSrc: `${COVER_BASE}9791192959498.jpg` },
+  { id: "9788967821814", title: "한 달 만에 블로그 일 방문자 수 1,000명 만들기", author: "권호영", status: "done", coverColor: COVER_COLOR, coverSrc: `${COVER_BASE}9788967821814.jpg` },
+  { id: "480n230821720", title: "16년 차 블로거의 서평 노하우 15분 만에 블로그 북리뷰 쓰는 법", author: "최서연", status: "done", coverColor: COVER_COLOR, coverSrc: `${COVER_BASE}480n230821720.jpg` },
+  { id: "9791163037507", title: "오늘을 남기는 기록, 스마트폰 사진 촬영&보정", author: "민썸", status: "done", coverColor: COVER_COLOR, coverSrc: `${COVER_BASE}9791163037507.jpg` },
+  { id: "9791197563621", title: "나는 매일 블로그로 출근한다", author: "한혜진", status: "done", coverColor: COVER_COLOR, coverSrc: `${COVER_BASE}9791197563621.jpg` },
+  { id: "9791172100100", title: "블로그 글쓰기는 어떻게 삶의 무기가 되는가", author: "로미, 신은영, 윤담, 주얼송", status: "done", coverColor: COVER_COLOR, coverSrc: `${COVER_BASE}9791172100100.jpg` },
+  { id: "9791158161996", title: "좋아서 그래", author: "이병률", status: "done", coverColor: COVER_COLOR, coverSrc: `${COVER_BASE}9791158161996.jpg` },
+  { id: "9788936439743", title: "혼모노", author: "성해나", status: "done", coverColor: COVER_COLOR, coverSrc: `${COVER_BASE}9788936439743.jpg` },
+  { id: "9791157842049", title: "5초의 법칙", author: "멜 로빈스", status: "done", coverColor: COVER_COLOR, coverSrc: `${COVER_BASE}9791157842049.jpg` },
+  { id: "9791191905823", title: "세컨드 브레인은 옵시디언", author: "시안", status: "done", coverColor: COVER_COLOR, coverSrc: `${COVER_BASE}9791191905823.jpg` },
+  { id: "9791193262757", title: "프롬프트 텔링", author: "로사장(김다솔)", status: "done", coverColor: COVER_COLOR, coverSrc: `${COVER_BASE}9791193262757.jpg` },
+  { id: "9788925588735", title: "프로젝트 헤일메리", author: "앤디 위어", status: "done", coverColor: COVER_COLOR, coverSrc: `${COVER_BASE}9788925588735.jpg` },
+  { id: "9791194084099", title: "챗GPT·퍼플렉시티·클로드·코파일럿·제미나이 다 잘함", author: "이호정", status: "done", coverColor: COVER_COLOR, coverSrc: `${COVER_BASE}9791194084099.jpg` },
+  { id: "9791191587425", title: "독서의 기록", author: "안예진", status: "done", coverColor: COVER_COLOR, coverSrc: `${COVER_BASE}9791191587425.jpg` },
+  { id: "9791194383437", title: "요즘 바이브 코딩 클로드 코드 완벽 가이드", author: "최지호(코드팩토리)", status: "done", coverColor: COVER_COLOR, coverSrc: `${COVER_BASE}9791194383437.jpg` },
+
   { id: "480d240444310", title: "AI아트 수익화 미드저니 사용법", author: "트렌드파이", status: "done", coverColor: COVER_COLOR, coverSrc: `${COVER_BASE}480d240444310.jpg` },
   { id: "9791198809940", title: "탕비실", author: "이미예", status: "done", coverColor: COVER_COLOR, coverSrc: `${COVER_BASE}9791198809940.jpg` },
   { id: "9791170612759", title: "가공범", author: "히가시노 게이고", status: "done", coverColor: COVER_COLOR, coverSrc: `${COVER_BASE}9791170612759.jpg` },
