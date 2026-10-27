@@ -8,11 +8,11 @@
   gap: 32px;
 }
 
-.name {
-  margin: 0 0 8px;
-  font-family: var(--font-serif);
-  font-weight: 800;
-  font-size: 22px;
+.logo {
+  display: block;
+  height: 36px;
+  width: auto;
+  margin-bottom: 12px;
 }
 
 .description {

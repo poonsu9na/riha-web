@@ -1,3 +1,4 @@
+import Logo from "@/components/Logo";
 import { site } from "@/content/site";
 import styles from "./SiteFooter.module.css";
 
@@ -7,7 +8,7 @@ export default function SiteFooter() {
   return (
     <footer id="about" className={styles.footer}>
       <div>
-        <p className={styles.name}>{site.name}</p>
+        <Logo className={styles.logo} />
         <p className={styles.description}>
           {site.domain} · {site.description}
         </p>

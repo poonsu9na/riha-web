@@ -2,7 +2,8 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { navItems, site } from "@/content/site";
+import Logo from "@/components/Logo";
+import { navItems } from "@/content/site";
 import styles from "./SiteHeader.module.css";
 
 function isActive(pathname: string, href: string) {
@@ -16,7 +17,7 @@ export default function SiteHeader() {
   return (
     <header className={styles.header}>
       <Link href="/" className={styles.logo}>
-        {site.name}
+        <Logo className={styles.logoMark} />
       </Link>
       <nav aria-label="주 메뉴" className={styles.nav}>
         {navItems.map((item) => {
