@@ -587,6 +587,28 @@ export const projects: Project[] = [
       },
     },
   },
+  {
+    id: "giom-kiosk",
+    title: "GIOM MICE 키오스크 네이티브 앱",
+    summary:
+      "행사장 등록 키오스크의 윈도우 앱. React로 만든 키오스크 화면을 WebView2로 띄우고, 웹과 앱 사이 브릿지로 QR 리더기·컬러/흑백 라벨 프린터·영수증 프린터·카드 단말기를 제어했습니다. PMO·기획은 W2R GROUP과 함께했습니다.",
+    year: "2026",
+    role: "개발",
+    stack: ["C#", "WPF", "WebView2", "하드웨어 연동"],
+    coverColor: "#dcd8ce",
+    links: [],
+  },
+  {
+    id: "enliple-widgets",
+    title: "인라이플 윈도우 바탕화면 위젯 8종",
+    summary:
+      "윈도우 바탕화면에서 쓰는 위젯들. 폴더 정리 위젯과 마우스 커서·배경화면·로또·사자성어·드라이브 안전 제거·전자액자·직소퍼즐 위젯을 만들었습니다. PMO·기획은 W2R GROUP과 함께했습니다.",
+    year: "2024",
+    role: "개발",
+    stack: ["C#", "WPF", "윈도우 위젯"],
+    coverColor: "#dcd8ce",
+    links: [],
+  },
 ];
 
 export const profile = {
