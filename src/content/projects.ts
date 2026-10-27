@@ -6,6 +6,112 @@ const WORKS_BASE = "https://kr.object.ncloudstorage.com/riha/works";
 // 배열 순서 = 보여줄 순서 (포트폴리오 목록·홈 공통)
 export const projects: Project[] = [
   {
+    id: "s2w",
+    title: "S2W 기업 사이트 리뉴얼",
+    summary:
+      "AI·데이터 인텔리전스 기업 S2W의 한국어·영어·일본어 기업 사이트 리뉴얼. 산업과 솔루션별 40여 개 페이지와 이를 직접 고쳐 쓰는 CMS 관리자까지 PMO W2R GROUP과 함께 웹아이가 개발했습니다.",
+    year: "2026",
+    role: "개발",
+    stack: ["Next.js", "next-intl", "Spring Boot", "CMS", "다국어"],
+    featured: true,
+    coverColor: "#0b0d12",
+    coverSrc: `${WORKS_BASE}/s2w/s2w-main.jpg`,
+    links: [
+      { label: "자세히 보기", href: "/works/s2w" },
+      { label: "사이트", href: "https://s2w.inc/" },
+    ],
+    caseStudy: {
+      hero: {
+        src: `${WORKS_BASE}/s2w/s2w-main.jpg`,
+        width: 1440,
+        height: 820,
+        alt: "‘Data Intelligence Partner for Decision Certainty’ 문구가 있는 S2W 메인 화면",
+      },
+      credits: [
+        { label: "클라이언트", value: "S2W (에스투더블유)" },
+        { label: "PMO", value: "W2R GROUP" },
+        { label: "개발", value: "웹아이 — 사이트·CMS 관리자·API" },
+        { label: "기술", value: "Next.js · next-intl · Framer Motion · Spring Boot · MySQL" },
+        { label: "언어", value: "한국어 · English · 日本語" },
+      ],
+      sections: [
+        {
+          title: "안보와 비즈니스를 아우르는 인텔리전스",
+          body: [
+            "S2W는 다크웹·텔레그램 같은 위협 데이터를 AI로 분석해 정부기관과 기업의 의사결정을 돕는 데이터 인텔리전스 기업입니다. 사업이 국가 안보와 기업 보안, 전략 데이터 인텔리전스로 넓어지면서, 누가 들어와도 자기 분야의 이야기를 바로 찾을 수 있는 사이트가 필요했습니다.",
+            "산업(정부·수사기관·국방, 엔터프라이즈·금융·제조·방산·리테일)과 솔루션(CTI, 공격 표면 관리, AI 레드티밍, 온톨로지 등)으로 나눈 40여 개 페이지를 한국어·영어·일본어로 만들었습니다.",
+          ],
+          images: [
+            {
+              src: `${WORKS_BASE}/s2w/s2w-impact.jpg`,
+              width: 1440,
+              height: 520,
+              alt: "글로벌 기업·정부 기관 고객 250+, 사용자 1.9M+, 위협 인텔리전스 자산 887M+ 수치 영역",
+              caption: "Intelligence at Scale",
+            },
+          ],
+        },
+        {
+          title: "산업과 솔루션별 페이지",
+          body: [
+            "솔루션 페이지는 시장의 문제에서 S2W의 접근 방식, 활용 사례, 관련 제품으로 이어지는 같은 흐름을 쓰고, 산업 페이지는 그 산업이 겪는 이슈와 사례를 수치와 함께 카드로 보여 줍니다. 페이지마다 구성이 조금씩 달라도 같은 부품을 조합해 만들 수 있도록 섹션을 컴포넌트로 나눴습니다.",
+          ],
+          images: [
+            {
+              src: `${WORKS_BASE}/s2w/s2w-cti.jpg`,
+              width: 1440,
+              height: 820,
+              alt: "사이버 위협 인텔리전스(CTI) 솔루션 페이지 상단",
+              caption: "Solutions · CTI",
+            },
+            {
+              src: `${WORKS_BASE}/s2w/s2w-cti-usecases.jpg`,
+              width: 1440,
+              height: 920,
+              alt: "APT 그룹 분석, 랜섬웨어 생태계 모니터링, IoC 발굴 활용 사례 카드",
+              caption: "Use Cases",
+            },
+            {
+              src: `${WORKS_BASE}/s2w/s2w-defense.jpg`,
+              width: 1440,
+              height: 1320,
+              alt: "방산 산업의 이슈와 사례를 수치와 함께 보여 주는 카드 슬라이드",
+              caption: "Industries · 방산",
+            },
+          ],
+        },
+        {
+          title: "운영팀이 직접 고치는 CMS",
+          body: [
+            "제품 소개, 회사 정보, 리서치·블로그, 미디어센터, 이벤트·웨비나, IR 공시까지 사이트의 대부분을 관리자에서 언어별로 고칠 수 있게 했습니다. 제품 페이지는 실제 화면과 같은 모양의 폼에서 바로 고치는 인라인 편집 방식으로 만들고, 저장하면 사이트 캐시를 바로 지워 반영되도록 했습니다.",
+          ],
+          items: [
+            "언어별 콘텐츠 등록과 다국어 문구 관리",
+            "제품·About·Milestones 인라인 편집, 이미지 드래그 정렬",
+            "리서치·블로그·미디어센터·이벤트·웨비나 게시판과 메인 노출 설정",
+            "공시정보, 이용약관·개인정보처리방침의 언어별 시행일 관리",
+            "자료 다운로드·문의 폼 접수 메일 발송과 엑셀 다운로드",
+          ],
+        },
+        {
+          title: "오픈 준비",
+          body: [
+            "옛 사이트 주소로 들어와도 새 페이지로 이어지도록 리다이렉트를 정리하고, 페이지마다 언어별 메타 정보와 sitemap·robots를 내보냈습니다. 문의 폼의 국가 목록은 ISO 기준 249개로 넓히고 언어별 순서로 정렬했습니다.",
+          ],
+          images: [
+            {
+              src: `${WORKS_BASE}/s2w/s2w-partnership.jpg`,
+              width: 1440,
+              height: 820,
+              alt: "‘Empower the Future of Intelligence Ecosystem’ 파트너십 페이지",
+              caption: "Partnership",
+            },
+          ],
+        },
+      ],
+    },
+  },
+  {
     id: "ncrc",
     title: "NAVER CONNECT Robotics Cup 대회 포털",
     summary:
