@@ -6,12 +6,12 @@ const COVER_BASE = "https://kr.object.ncloudstorage.com/riha/covers/";
 const COVER_COLOR = "#dcd8ce";
 
 export const books: Book[] = [
-  { id: "9791189938772", title: "회복탄력성", subtitle: "15만부 기념 리커버", author: "김주환", publisher: "위즈덤하우스", status: "reading", coverColor: COVER_COLOR, coverSrc: `${COVER_BASE}9791189938772.jpg` },
-  { id: "9791198268648", title: "마법의 챗GPT 활용법", subtitle: "가장 빠르게 데이터 분석 전문가가 되는", author: "홍창수", publisher: "로드북", status: "reading", coverColor: COVER_COLOR, coverSrc: `${COVER_BASE}9791198268648.jpg` },
-  { id: "9791189217167", title: "우울한 마음도 습관입니다", subtitle: "내 감정을 책임지고 행복한 삶을 사는 법", author: "박상미", publisher: "저녁달", status: "reading", coverColor: COVER_COLOR, coverSrc: `${COVER_BASE}9791189217167.jpg` },
-  { id: "9788994797298-2", title: "스타트업 시대에 PM, 프로덕트 매니저로 사는 법", author: "최기훤", publisher: "비팬북스", status: "reading", coverColor: COVER_COLOR, coverSrc: `${COVER_BASE}9788994797298-2.jpg` },
-  { id: "9788960777330", title: "자바 ORM 표준 JPA 프로그래밍", subtitle: "스프링 데이터 예제 프로젝트로 배우는 전자정부 표준 데이터베이스 프레임워크", author: "김영한", publisher: "에이콘출판", status: "reading", coverColor: COVER_COLOR, coverSrc: `${COVER_BASE}9788960777330.jpg` },
-  { id: "9788997924899", title: "백견불여일타 스프링 부트 쇼핑몰 프로젝트 with JPA", subtitle: "이젠 프로젝트다!", author: "변구훈", publisher: "로드북", status: "reading", coverColor: COVER_COLOR, coverSrc: `${COVER_BASE}9788997924899.jpg` },
+  { id: "9791189938772", title: "회복탄력성", subtitle: "15만부 기념 리커버", author: "김주환", publisher: "위즈덤하우스", status: "done", coverColor: COVER_COLOR, coverSrc: `${COVER_BASE}9791189938772.jpg` },
+  { id: "9791198268648", title: "마법의 챗GPT 활용법", subtitle: "가장 빠르게 데이터 분석 전문가가 되는", author: "홍창수", publisher: "로드북", status: "done", coverColor: COVER_COLOR, coverSrc: `${COVER_BASE}9791198268648.jpg` },
+  { id: "9791189217167", title: "우울한 마음도 습관입니다", subtitle: "내 감정을 책임지고 행복한 삶을 사는 법", author: "박상미", publisher: "저녁달", status: "done", coverColor: COVER_COLOR, coverSrc: `${COVER_BASE}9791189217167.jpg` },
+  { id: "9788994797298-2", title: "스타트업 시대에 PM, 프로덕트 매니저로 사는 법", author: "최기훤", publisher: "비팬북스", status: "done", coverColor: COVER_COLOR, coverSrc: `${COVER_BASE}9788994797298-2.jpg` },
+  { id: "9788960777330", title: "자바 ORM 표준 JPA 프로그래밍", subtitle: "스프링 데이터 예제 프로젝트로 배우는 전자정부 표준 데이터베이스 프레임워크", author: "김영한", publisher: "에이콘출판", status: "done", coverColor: COVER_COLOR, coverSrc: `${COVER_BASE}9788960777330.jpg` },
+  { id: "9788997924899", title: "백견불여일타 스프링 부트 쇼핑몰 프로젝트 with JPA", subtitle: "이젠 프로젝트다!", author: "변구훈", publisher: "로드북", status: "done", coverColor: COVER_COLOR, coverSrc: `${COVER_BASE}9788997924899.jpg` },
   { id: "9791191056990", title: "리더를 위한 멘탈 수업", subtitle: "압도적 성과를 올리는 사람들의 7단계 성장 전략", author: "윤대현,장은지", publisher: "인플루엔셜", status: "done", rating: 4, coverColor: COVER_COLOR, coverSrc: `${COVER_BASE}9791191056990.jpg` },
   { id: "9791192991559", title: "‘좋아요’를 부르는 인스타그램 감성 사진", subtitle: "‘좋아요’를 부르는", author: "허흥무", publisher: "아티오", status: "done", coverColor: COVER_COLOR, coverSrc: `${COVER_BASE}9791192991559.jpg` },
   { id: "9791193110065", title: "고객의 행동을 유도하는 인스타그램 사진 잘 찍는 법", subtitle: "내 상품, 우리 회사 브랜드의 가치를 한 장의 사진에 담아내는 특급 노하우", author: "박찬준", publisher: "나비의활주로", status: "done", coverColor: COVER_COLOR, coverSrc: `${COVER_BASE}9791193110065.jpg` },

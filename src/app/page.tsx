@@ -25,7 +25,8 @@ export default function Home() {
     <div className={styles.home}>
       {heroQuote && <HeroQuote quote={heroQuote} />}
       <SectionIndex items={indexItems} />
-      <RecentBooks reading={readingBook} done={doneBooks.slice(0, 4)} />
+      {/* 읽는 중인 책이 없으면 그 자리만큼 다 읽은 책을 더 보여준다 */}
+      <RecentBooks reading={readingBook} done={doneBooks.slice(0, readingBook ? 4 : 6)} />
       <RecentQuotes quotes={restQuotes.slice(0, 3)} />
       <RecentPhotos photos={photos.slice(0, 5)} />
       <FeaturedWorks projects={projects.filter((project) => project.featured)} />

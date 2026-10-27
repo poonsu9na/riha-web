@@ -50,7 +50,7 @@
 .grid {
   flex: 999 1 480px;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
   gap: 20px;
   min-width: 0;
 }
@@ -96,6 +96,6 @@
 
   .grid {
     flex-basis: 100%;
-    grid-template-columns: repeat(auto-fill, minmax(96px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(96px, 1fr));
   }
 }

@@ -27,7 +27,11 @@ export default function ReadingPage() {
       <PageIntro
         eyebrow="01 — 읽기"
         title="읽은 책들"
-        description={`지금까지 ${doneCount}권을 읽었고, ${reading.length}권을 읽고 있습니다.`}
+        description={
+          reading.length > 0
+            ? `지금까지 ${doneCount}권을 읽었고, ${reading.length}권을 읽고 있습니다.`
+            : `지금까지 ${doneCount}권을 읽었습니다.`
+        }
       >
         <ReadingTabs current="books" />
       </PageIntro>
