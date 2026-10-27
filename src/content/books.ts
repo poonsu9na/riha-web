@@ -6,6 +6,14 @@ const COVER_BASE = "https://kr.object.ncloudstorage.com/riha/covers/";
 const COVER_COLOR = "#dcd8ce";
 
 export const books: Book[] = [
+  // 전자도서관에서 읽은 책 (2026-10 추가). 표지는 교보문고 이미지
+  { id: "480d240444310", title: "AI아트 수익화 미드저니 사용법", author: "트렌드파이", status: "done", coverColor: COVER_COLOR, coverSrc: `${COVER_BASE}480d240444310.jpg` },
+  { id: "9791198809940", title: "탕비실", author: "이미예", status: "done", coverColor: COVER_COLOR, coverSrc: `${COVER_BASE}9791198809940.jpg` },
+  { id: "9791170612759", title: "가공범", author: "히가시노 게이고", status: "done", coverColor: COVER_COLOR, coverSrc: `${COVER_BASE}9791170612759.jpg` },
+  { id: "9791190538749", title: "결국 잘되는 사람들의 태도", author: "앤드루 매코널", status: "done", coverColor: COVER_COLOR, coverSrc: `${COVER_BASE}9791190538749.jpg` },
+  { id: "9791141601102", title: "사랑과 결함", author: "예소연", status: "done", coverColor: COVER_COLOR, coverSrc: `${COVER_BASE}9791141601102.jpg` },
+  { id: "9791190073301", title: "에이든 다낭 여행지도 2024-2025", author: "이정기, 타블라라사 편집팀", status: "done", coverColor: COVER_COLOR, coverSrc: `${COVER_BASE}9791190073301.jpg` },
+
   { id: "9791189938772", title: "회복탄력성", subtitle: "15만부 기념 리커버", author: "김주환", publisher: "위즈덤하우스", status: "done", coverColor: COVER_COLOR, coverSrc: `${COVER_BASE}9791189938772.jpg` },
   { id: "9791198268648", title: "마법의 챗GPT 활용법", subtitle: "가장 빠르게 데이터 분석 전문가가 되는", author: "홍창수", publisher: "로드북", status: "done", coverColor: COVER_COLOR, coverSrc: `${COVER_BASE}9791198268648.jpg` },
   { id: "9791189217167", title: "우울한 마음도 습관입니다", subtitle: "내 감정을 책임지고 행복한 삶을 사는 법", author: "박상미", publisher: "저녁달", status: "done", coverColor: COVER_COLOR, coverSrc: `${COVER_BASE}9791189217167.jpg` },
@@ -67,7 +75,7 @@ export const books: Book[] = [
   { id: "9791191043761", title: "멘탈을 바꿔야 인생이 바뀐다", subtitle: "원하는 것에만 집중해, 당신의 인생을 놀랍게 변화시켜라", author: "박세니", publisher: "마인드셋", status: "done", rating: 4, coverColor: COVER_COLOR, coverSrc: `${COVER_BASE}9791191043761.jpg` },
   { id: "9788901260716", title: "역행자", subtitle: "돈.시간.운명으로부터 완전한 자유를 얻는 7단계 인생 공략집", author: "자청", publisher: "웅진지식하우스", status: "done", rating: 5, coverColor: COVER_COLOR, coverSrc: `${COVER_BASE}9788901260716.jpg` },
   { id: "9788968333767", title: "어른의 문해력", subtitle: "나도 쓱 읽고 싹 이해하면 바랄 게 없겠네", author: "김선영", publisher: "블랙피쉬", status: "done", rating: 3, coverColor: COVER_COLOR, coverSrc: `${COVER_BASE}9788968333767.jpg` },
-  { id: "9791165343729", title: "달러구트 꿈 백화점 2 2", subtitle: "단골손님을 찾습니다 | 이미예 장편소설", author: "이미예", publisher: "팩토리나인", status: "done", rating: 5, coverColor: COVER_COLOR, coverSrc: `${COVER_BASE}9791165343729.jpg` },
+  { id: "9791165343729", title: "달러구트 꿈 백화점 2", subtitle: "단골손님을 찾습니다 | 이미예 장편소설", author: "이미예", publisher: "팩토리나인", status: "done", rating: 5, coverColor: COVER_COLOR, coverSrc: `${COVER_BASE}9791165343729.jpg` },
   { id: "9791190299244", title: "기적의 1초 습관", subtitle: "원하는 삶으로 변화시키는 미라클 솔루션", author: "엄남미", publisher: "피카", status: "done", coverColor: COVER_COLOR, coverSrc: `${COVER_BASE}9791190299244.jpg` },
   { id: "9791195121687", title: "실전 구글 광고 마케팅", subtitle: "검색, 디스플레이, 유튜브를 활용한 리마케팅 광고", author: "김진, 최정아", publisher: "마소캠퍼스", status: "done", rating: 3, coverColor: COVER_COLOR, coverSrc: `${COVER_BASE}9791195121687.jpg` },
   { id: "9791158741327", title: "인생의 답은 내 안에 있다", subtitle: "길 잃은 사람들을 위한 인생 인문학", author: "김이섭", publisher: "미디어숲", status: "done", rating: 4, coverColor: COVER_COLOR, coverSrc: `${COVER_BASE}9791158741327.jpg` },
