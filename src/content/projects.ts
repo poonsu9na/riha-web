@@ -6,6 +6,97 @@ const WORKS_BASE = "https://kr.object.ncloudstorage.com/riha/works";
 // 배열 순서 = 보여줄 순서 (포트폴리오 목록·홈 공통)
 export const projects: Project[] = [
   {
+    id: "shimadzu",
+    title: "시마즈 B2B 자사몰 구축",
+    summary:
+      "시마즈코리아가 오프라인으로 팔던 분석 장비와 소모품을 온라인으로 넓히기 위한 B2B 자사몰. 기획·PMO는 W2R GROUP, 개발은 웹아이가 Java로 웹과 관리자 시스템을 함께 구축했습니다.",
+    year: "2024",
+    role: "개발",
+    stack: ["Java", "B2B 커머스", "관리자 시스템"],
+    featured: true,
+    coverColor: "#e60012",
+    coverSrc: `${WORKS_BASE}/shimadzu/shimadzu-list.jpg`,
+    links: [{ label: "자세히 보기", href: "/works/shimadzu" }],
+    caseStudy: {
+      hero: {
+        src: `${WORKS_BASE}/shimadzu/shimadzu-list.jpg`,
+        width: 1600,
+        height: 796,
+        alt: "시마즈 B2B 자사몰의 상품 목록 화면",
+      },
+      credits: [
+        { label: "클라이언트", value: "시마즈코리아" },
+        { label: "PMO·기획", value: "W2R GROUP" },
+        { label: "디자인", value: "[디자인 담당]" },
+        { label: "개발", value: "웹아이 — Java, 웹·관리자 시스템" },
+        { label: "범위", value: "Web · Admin · E-Commerce" },
+      ],
+      sections: [
+        {
+          title: "오프라인 판매를 온라인으로",
+          body: [
+            "시마즈코리아에서 오프라인으로 판매하던 제품을 온라인으로 넓혀 운영하기 위해 새로 만든 B2B 자사몰입니다. 기업 간 거래라는 특성에 맞춰 회원 인증에 따라 보이는 정보가 달라지고, 거래 조건에 따라 금액별로 구매 과정이 나뉘며, 견적 문의를 중심으로 구매가 흘러가도록 설계했습니다.",
+            "연관 상품과 카탈로그 매핑, 이벤트 관리처럼 일반 쇼핑몰 기능에 B2B 운영에 필요한 과정을 더했고, 이 모두를 웹 페이지와 관리자 시스템에서 함께 다룰 수 있도록 Java로 구축했습니다.",
+          ],
+          images: [
+            {
+              src: `${WORKS_BASE}/shimadzu/shimadzu-main.jpg`,
+              width: 1600,
+              height: 1630,
+              alt: "시마즈 B2B 자사몰 메인 화면: 키비주얼, 카테고리별 인기상품, 브랜드",
+              caption: "Main",
+            },
+          ],
+        },
+        {
+          title: "승인된 회원에게만 보이는 정보",
+          body: [
+            "B2B 거래의 보안성과 폐쇄성을 고려해, 회원가입 후 관리자 승인을 거친 기업 회원에게만 상세 가격과 상품 스펙을 보여 줍니다. 로그인하지 않은 방문자에게는 가격을 숨기거나 별도의 안내 문구를 띄워 브랜드의 가격 정책을 지킵니다.",
+          ],
+          items: [
+            "관리자 승인 기반 기업 회원 인증",
+            "회원 상태에 따른 가격·스펙 노출 제어",
+            "비로그인 방문자용 가격 미노출·안내 문구 정책 설정",
+          ],
+        },
+        {
+          title: "견적 문의 중심의 구매 흐름",
+          body: [
+            "대량 구매와 고가 장비가 많은 특성을 반영해, 장바구니에서 바로 결제하는 방식 외에 ‘견적 문의’로 소통하는 길을 넓혔습니다. 웹에서 들어온 문의는 관리자 시스템과 이어져, 담당자가 바로 확인하고 견적서를 발행할 수 있습니다.",
+          ],
+          images: [
+            {
+              src: `${WORKS_BASE}/shimadzu/shimadzu-quote.jpg`,
+              width: 1600,
+              height: 1017,
+              alt: "상품과 수량, 문의 내용을 입력하는 견적 문의 화면",
+              caption: "견적 문의",
+            },
+          ],
+        },
+        {
+          title: "운영자가 직접 바꾸는 상품 전시",
+          body: [
+            "카테고리별 베스트 상품, MD’s Pick, 신규 장비처럼 주요 상품을 메인에 배치해 고객이 원하는 장비를 빨리 찾도록 했습니다. 메인 배너와 이벤트 영역은 관리자 시스템에서 손쉽게 바꿀 수 있어, 시즌 프로모션이나 브랜드 위크 같은 마케팅에 바로 대응할 수 있습니다.",
+          ],
+          images: [
+            {
+              src: `${WORKS_BASE}/shimadzu/shimadzu-display.jpg`,
+              width: 1600,
+              height: 1418,
+              alt: "카테고리별 인기상품과 MD’s Pick 영역",
+              caption: "카테고리별 인기상품 · MD’s Pick",
+            },
+          ],
+        },
+      ],
+      source: {
+        label: "W2R GROUP의 프로젝트 소개 보기",
+        href: "https://w2rgroup.kr/shimadzu",
+      },
+    },
+  },
+  {
     id: "wemade",
     title: "위메이드 오피셜 사이트 리뉴얼",
     summary:
