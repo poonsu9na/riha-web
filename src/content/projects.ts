@@ -108,6 +108,15 @@ export const projects: Project[] = [
             "학습 외 프로세스 감지 등 학생 서버 오남용 모니터링",
             "본선 서버 복제·배포 자동화 스크립트와 CI/CD",
           ],
+          images: [
+            {
+              src: `${WORKS_BASE}/ncrc/ncrc-admin-servers.jpg`,
+              width: 1600,
+              height: 1000,
+              alt: "GPU 서버별 사용 중·유휴·점검 상태와 배정된 팀, 사용 시간을 카드로 보여 주는 서버 현황 화면",
+              caption: "운영자 콘솔 · 서버 현황",
+            },
+          ],
         },
         {
           title: "운영자 콘솔",
@@ -122,12 +131,18 @@ export const projects: Project[] = [
           ],
           images: [
             {
-              src: `${WORKS_BASE}/ncrc/ncrc-prize.jpg`,
-              width: 1440,
-              height: 1770,
-              alt: "총 2억 원 규모의 시상 및 지원 안내 영역",
-              caption: "시상 및 지원",
-              maxWidth: 720,
+              src: `${WORKS_BASE}/ncrc/ncrc-admin-dashboard.jpg`,
+              width: 1600,
+              height: 1000,
+              alt: "가동 중인 GPU 서버, 활성 사용자, 이상 행동, 최근 알림을 모은 운영자 대시보드",
+              caption: "대시보드",
+            },
+            {
+              src: `${WORKS_BASE}/ncrc/ncrc-admin-rankings.jpg`,
+              width: 1600,
+              height: 1000,
+              alt: "휴머노이드·사족 보행 점수를 합산한 예선 종합 랭킹 화면",
+              caption: "예선 랭킹",
             },
           ],
         },
