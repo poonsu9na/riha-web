@@ -1,3 +1,4 @@
+import Link from "next/link";
 import type { Project } from "@/content/types";
 import ProjectLinks from "./ProjectLinks";
 import { projectNumber } from "./projectNumber";
@@ -22,7 +23,9 @@ export default function ProjectList({ items }: Props) {
           <li key={project.id} id={project.id} className={styles.item}>
             <span className={styles.number}>{projectNumber(index)}</span>
             <div className={styles.body}>
-              <h3 className={styles.title}>{project.title}</h3>
+              <h3 className={styles.title}>
+                {project.caseStudy ? <Link href={`/works/${project.id}`}>{project.title}</Link> : project.title}
+              </h3>
               <p className={styles.summary}>{project.summary}</p>
               <p className={styles.meta}>{[project.role, ...project.stack].join(" · ")}</p>
               <ProjectLinks links={project.links} />

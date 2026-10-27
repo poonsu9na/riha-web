@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import type { Project } from "@/content/types";
 import ProjectLinks from "./ProjectLinks";
 import { projectNumber } from "./projectNumber";
@@ -42,7 +43,9 @@ export default function FeaturedProject({ project, index }: Props) {
         <p className={styles.eyebrow}>
           {projectNumber(index)} · {project.period ?? project.year}
         </p>
-        <h2 className={styles.title}>{project.title}</h2>
+        <h2 className={styles.title}>
+          {project.caseStudy ? <Link href={`/works/${project.id}`}>{project.title}</Link> : project.title}
+        </h2>
         {details.length > 0 ? (
           <dl className={styles.details}>
             {details.map((item) => (
