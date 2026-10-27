@@ -43,6 +43,8 @@ npm run build
 
 2. 출력된 `{ src, width, height, alt }` 줄을 `caseStudy` 의 `hero`·`sections[].images` 에 넣고 설명을 고친다.
    긴 전체 화면 캡처도 잘라내지 않고 원본 비율 그대로 펼쳐서 보인다.
+   폰 화면 하나짜리 캡처는 `maxWidth`(예: 320)로 크기를 제한하고,
+   여러 장을 나란히 놓으려면 섹션에 `layout: "row"` 를 준다.
 3. 목록에서 들어갈 수 있게 `links` 에 `{ label: "자세히 보기", href: "/works/<id>" }` 를 넣는다.
 
 ## 사진 추가

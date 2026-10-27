@@ -60,9 +60,15 @@ export default async function WorkDetailPage({ params }: PageProps<"/works/[id]"
               </p>
             ))}
           </div>
-          {section.images?.map((image) => (
-            <CaseImage key={image.src} image={image} />
-          ))}
+          {section.images && section.layout === "row" ? (
+            <div className={styles.imageRow}>
+              {section.images.map((image) => (
+                <CaseImage key={image.src} image={image} />
+              ))}
+            </div>
+          ) : (
+            section.images?.map((image) => <CaseImage key={image.src} image={image} />)
+          )}
         </section>
       ))}
 

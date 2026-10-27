@@ -62,6 +62,8 @@ export type CaseStudy = {
     /** 문단 단위 */
     body: string[];
     images?: WorkImage[];
+    /** "row" 면 이미지들을 가로로 나란히 놓는다(폰 화면 여러 장 등). 기본은 위아래로 쌓기 */
+    layout?: "stack" | "row";
   }[];
   /** 원문(디자인 파트너 사이트 등) 링크 */
   source?: { label: string; href: string };

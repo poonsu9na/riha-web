@@ -101,6 +101,18 @@
   word-break: keep-all;
 }
 
+/* 폰 화면 여러 장을 나란히. 좁은 화면에서는 아래로 넘어간다 */
+.imageRow {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 32px 24px;
+}
+
+.imageRow > figure {
+  flex: 1 1 260px;
+}
+
 .footer {
   margin-top: 120px;
   padding-top: 32px;

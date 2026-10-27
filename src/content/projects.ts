@@ -238,6 +238,144 @@ export const projects: Project[] = [
     },
   },
   {
+    id: "holeman",
+    title: "LG U+ 홀맨 구독형 이벤트 웹앱",
+    summary:
+      "2008년 그 홀맨이 돌아왔다는 콘셉트로 매달 새로운 이벤트를 여는 구독형 서비스. 디자인은 리메인, 개발은 웹아이가 PHP와 MySQL로 구축했습니다.",
+    year: "[연도]",
+    role: "개발",
+    stack: ["PHP", "MySQL", "이벤트 웹앱"],
+    featured: true,
+    coverColor: "#111111",
+    coverSrc: `${WORKS_BASE}/holeman/holeman-hero.jpg`,
+    links: [{ label: "자세히 보기", href: "/works/holeman" }],
+    caseStudy: {
+      hero: {
+        src: `${WORKS_BASE}/holeman/holeman-hero.jpg`,
+        width: 1600,
+        height: 640,
+        alt: "초록색 코드 화면 위에 해킹된 홀맨이 떠 있는 대표 이미지",
+      },
+      credits: [
+        { label: "클라이언트", value: "LG U+" },
+        { label: "디자인", value: "리메인 — UI 콘셉트·아이덴티티 디자인" },
+        { label: "개발", value: "웹아이 — PHP · MySQL [맡은 범위]" },
+        { label: "결과물", value: "이벤트 웹앱 · 월별 이벤트 운영 사이트" },
+      ],
+      sections: [
+        {
+          title: "홀맨의 귀환, 매달 열리는 이벤트",
+          body: [
+            "추억의 캐릭터 홀맨이 돌아왔다는 콘셉트의 구독형 서비스입니다. 7월 ‘홀섬웨어’, 8월 ‘말하는 홀맨’, 10월 ‘행운의 홀춘쿠키’처럼 달마다 새 이벤트가 열리는 구조라, 사용자가 이벤트를 막힘없이 즐길 수 있는 웹앱과 이벤트를 계속 운영할 수 있는 바탕이 함께 필요했습니다.",
+            "웹아이는 PHP와 MySQL로 이벤트 참여와 당첨 진행을 처리하는 웹앱과, 매달 이벤트를 운영하기 위한 사이트 전반을 구축했습니다. [응모·당첨 처리 방식, 운영 도구 등 한두 줄]",
+          ],
+          images: [
+            {
+              src: `${WORKS_BASE}/holeman/holeman-overview.jpg`,
+              width: 1600,
+              height: 667,
+              alt: "어두운 방에서 휴대폰으로 홀맨 이벤트에 참여하는 모습",
+            },
+          ],
+        },
+        {
+          title: "7월 · 홀섬웨어: 방탈출 같은 흐름",
+          body: [
+            "홀맨 폰이 악성 코드에 감염됐다는 설정으로, 해킹을 풀고 홀맨을 되찾는 게임형 이벤트입니다. 방탈출 게임처럼 단계가 이어지는 흐름이라, 사용자가 순서대로 막힘없이 넘어가도록 화면 전환과 진행 상태를 이어 붙이는 데 집중했습니다.",
+            "홀맨 폰 안의 잠금화면·음악·메시지·달력·설정 같은 앱 화면을 웹으로 구현해, 해킹된 버전과 정상 버전을 오가며 이야기가 진행됩니다.",
+          ],
+          layout: "row",
+          images: [
+            {
+              src: `${WORKS_BASE}/holeman/holeman-holesomware-hacked.jpg`,
+              width: 1600,
+              height: 1599,
+              alt: "해킹된 홀맨 폰 화면: 경고 아이콘이 뜬 앱들",
+              caption: "holesomware ver.",
+            },
+            {
+              src: `${WORKS_BASE}/holeman/holeman-holesomware-normal.jpg`,
+              width: 1600,
+              height: 1599,
+              alt: "정상으로 돌아온 홀맨 폰 홈 화면",
+              caption: "normal ver.",
+            },
+          ],
+        },
+        {
+          title: "홀맨 폰 안의 앱들",
+          body: ["잠금화면부터 홀맨이 보내는 메시지 팝업까지, 그 시절 폰을 쓰는 듯한 화면을 하나씩 웹으로 옮겼습니다."],
+          layout: "row",
+          images: [
+            {
+              src: `${WORKS_BASE}/holeman/holeman-lockscreen.jpg`,
+              width: 664,
+              height: 1380,
+              alt: "홀맨이 가운데 있는 잠금화면",
+              caption: "잠금화면",
+              maxWidth: 320,
+            },
+            {
+              src: `${WORKS_BASE}/holeman/holeman-popup.jpg`,
+              width: 489,
+              height: 345,
+              alt: "홀맨이 보낸 장난스러운 메시지 팝업",
+              caption: "메시지 팝업",
+              maxWidth: 420,
+            },
+          ],
+        },
+        {
+          title: "8월 · 말하는 홀맨, 10월 · 행운의 홀춘쿠키",
+          body: [
+            "해킹 이벤트 뒤에도 정기적으로 이벤트를 열 수 있도록 운영 페이지를 갖췄습니다. 8월에는 상황별로 움직이는 홀맨 애니메이션과 함께 이벤트 당첨을 진행하는 앱을, 10월에는 포춘쿠키를 깨는 애니메이션과 당첨 진행 앱을 만들었습니다.",
+          ],
+          layout: "row",
+          images: [
+            {
+              src: `${WORKS_BASE}/holeman/holeman-talking.jpg`,
+              width: 480,
+              height: 1000,
+              alt: "말하는 홀맨 이벤트 화면",
+              caption: "말하는 홀맨",
+              maxWidth: 320,
+            },
+            {
+              src: `${WORKS_BASE}/holeman/holeman-cookie.jpg`,
+              width: 640,
+              height: 1328,
+              alt: "쿠키 다섯 개 중 하나를 고르는 홀춘쿠키 이벤트 화면",
+              caption: "행운의 홀춘쿠키",
+              maxWidth: 320,
+            },
+          ],
+        },
+        {
+          title: "달마다 이어지는 운영",
+          body: ["이벤트가 바뀌어도 같은 틀 위에서 새 이벤트를 열 수 있게 해, 매달 새로운 즐길 거리를 이어 갈 수 있도록 했습니다."],
+          images: [
+            {
+              src: `${WORKS_BASE}/holeman/holeman-events.jpg`,
+              width: 1600,
+              height: 553,
+              alt: "월별 이벤트 화면들이 나란히 놓인 모습",
+            },
+            {
+              src: `${WORKS_BASE}/holeman/holeman-closing.jpg`,
+              width: 1600,
+              height: 778,
+              alt: "어둠 속에서 홀맨 폰 화면을 들고 있는 손",
+            },
+          ],
+        },
+      ],
+      source: {
+        label: "리메인의 프로젝트 소개 보기",
+        href: "https://remainlayer.com/work/2008%EB%85%84%EB%94%94%EC%9E%90%EC%9D%B8%EC%8A%A4%ED%83%80%EC%9D%BC%EB%A1%9C%EA%B5%AC%ED%98%84%ED%95%9CLG%ED%99%80%EB%A7%A8%EB%B8%8C%EB%9E%9C%EB%93%9C%EC%82%AC%EC%9D%B4%ED%8A%B8.html",
+      },
+    },
+  },
+  {
     id: "riha-web",
     title: "riha-web",
     summary: "지금 보고 있는 이 사이트. 책에서 주운 문장과 일상 사진, 만든 것들을 한곳에 모았습니다.",
