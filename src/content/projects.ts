@@ -66,12 +66,12 @@ export const projects: Project[] = [
           ],
           images: [
             {
-              src: `${WORKS_BASE}/ncrc/ncrc-status.jpg`,
-              width: 1440,
-              height: 2620,
-              alt: "본선 32강 대진표와 예선 최종 TOP 32 순위표가 있는 진행 현황 페이지",
-              caption: "진행 현황",
-              maxWidth: 960,
+              src: `${WORKS_BASE}/ncrc/ncrc-status-mockup.jpg`,
+              width: 547,
+              height: 1286,
+              alt: "본선 영상, 대진표, 예선 최종 순위표로 이어지는 진행 현황 페이지 시안",
+              caption: "진행 현황 (기획안)",
+              maxWidth: 547,
             },
           ],
         },
