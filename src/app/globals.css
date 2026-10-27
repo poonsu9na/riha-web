@@ -7,7 +7,7 @@
   --line: #c9c5bb;
   --line-soft: #e2ded4;
   --shadow: #d8d4ca;
-  --accent: #2f5d50;
+  --accent: #6667ab; /* PANTONE 17-3938 Very Peri */
 
   --font-serif: var(--font-nanum-myeongjo), "Nanum Myeongjo", serif;
   --font-sans: var(--font-noto-sans-kr), "Noto Sans KR", system-ui, sans-serif;
