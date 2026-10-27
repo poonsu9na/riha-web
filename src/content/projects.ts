@@ -10,7 +10,7 @@ export const projects: Project[] = [
     title: "위메이드 오피셜 사이트 리뉴얼",
     summary:
       "게임을 넘어 블록체인·메타버스·NFT로 사업을 넓혀 가는 위메이드의 기업 사이트 리뉴얼. 기획·PMO는 W2R GROUP, 디자인은 리메인, 개발은 웹아이가 Java로 맡았습니다.",
-    year: "[연도]",
+    year: "2024",
     role: "개발",
     stack: ["Java", "HTML5", "CSS", "웹 접근성"],
     featured: true,
@@ -422,11 +422,126 @@ export const projects: Project[] = [
     },
   },
   {
+    id: "ansung",
+    title: "농심 안성탕면체 폰트 소개 사이트",
+    summary:
+      "40여 년 지켜 온 안성탕면의 맛에 한글을 더한 전용서체 ‘안성탕면체’를 소개하고 내려받는 사이트. 디자인은 리메인, 개발은 웹아이가 맡았습니다.",
+    year: "2022",
+    role: "개발",
+    stack: ["반응형 웹", "웹폰트", "서체 미리보기"],
+    featured: true,
+    coverColor: "#fbc75c",
+    coverSrc: `${WORKS_BASE}/ansung/ansung-cover.jpg`,
+    links: [
+      { label: "자세히 보기", href: "/works/ansung" },
+      { label: "사이트", href: "https://brand.nongshim.com/ansung/fonts/index" },
+    ],
+    caseStudy: {
+      hero: {
+        src: `${WORKS_BASE}/ansung/ansung-cover.jpg`,
+        width: 1600,
+        height: 1067,
+        alt: "안성탕면체 사이트의 모바일 화면 세 장: 소개, 다운로드, 서체 특징",
+      },
+      credits: [
+        { label: "클라이언트", value: "농심" },
+        { label: "디자인", value: "리메인" },
+        { label: "개발", value: "웹아이 — [맡은 범위·사용 기술]" },
+        { label: "대응 기기", value: "PC · Mobile" },
+      ],
+      sections: [
+        {
+          title: "40여 년 지켜 온 맛에 한글을 더하다",
+          body: [
+            "농심 안성탕면의 전용서체 ‘안성탕면체’를 소개하고 누구나 내려받아 쓸 수 있게 한 브랜드 사이트입니다. 안성탕면체로 꾸민 한정판 한글 패키지 출시와 함께 열렸고, 농심 브랜드관 안에서 운영됩니다.",
+            "리메인이 디자인한 안성탕면 특유의 따뜻하고 장난스러운 그래픽을, 웹아이가 PC와 모바일 화면으로 구현했습니다. [구현 방식 한두 줄]",
+          ],
+          layout: "row",
+          images: [
+            {
+              src: `${WORKS_BASE}/ansung/ansung-intro.jpg`,
+              width: 1170,
+              height: 2450,
+              alt: "‘40여년 지켜온 맛에 한글을 더하다’ 문구와 안성탕면 패키지",
+              caption: "인트로",
+              maxWidth: 300,
+            },
+            {
+              src: `${WORKS_BASE}/ansung/ansung-package.jpg`,
+              width: 1170,
+              height: 1650,
+              alt: "안성탕면체와 한정판 한글 패키지 출시 안내",
+              caption: "한정판 한글 패키지",
+              maxWidth: 300,
+            },
+          ],
+        },
+        {
+          title: "서체 내려받기",
+          body: [
+            "맥용 OTF와 윈도우용 TTF를 바로 내려받을 수 있고, 라이선스와 이미지 글자(딩벳) 사용법도 함께 제공합니다. 다운로드 버튼마다 라면 봉지, 달걀, 면발 같은 일러스트를 붙여 안성탕면다운 화면을 만들었습니다.",
+          ],
+          images: [
+            {
+              src: `${WORKS_BASE}/ansung/ansung-download.jpg`,
+              width: 1170,
+              height: 2050,
+              alt: "맥용 OTF, 윈도우용 TTF, 라이선스, 딩벳 사용법 다운로드 버튼",
+              caption: "다운로드",
+              maxWidth: 300,
+            },
+          ],
+        },
+        {
+          title: "모든 글자를 미리 보기",
+          body: [
+            "한글, 영문, 특수문자, 이미지 글자(딩벳)를 탭으로 나눠 서체에 들어 있는 글자를 하나씩 확인할 수 있습니다. ‘봉지’, ‘컵라면’처럼 입력하면 그림으로 바뀌는 이미지 글자도 이곳에서 볼 수 있습니다.",
+          ],
+          images: [
+            {
+              src: `${WORKS_BASE}/ansung/ansung-chars.jpg`,
+              width: 1170,
+              height: 1350,
+              alt: "한글·영문·특수문자·이미지 글자 탭과 글자 표",
+              caption: "글자 미리보기",
+              maxWidth: 300,
+            },
+          ],
+        },
+        {
+          title: "서체의 특징과 직접 써 보기",
+          body: [
+            "갈필법이 살아 있는 획, 환경을 생각한 ESG 에코서체라는 안성탕면체의 특징을 슬라이드로 풀어 보여 줍니다. 마지막에는 방문자가 문장을 직접 써 보고 글자 크기를 조절하며 서체를 확인할 수 있는 영역을 두었습니다.",
+          ],
+          layout: "row",
+          images: [
+            {
+              src: `${WORKS_BASE}/ansung/ansung-features.jpg`,
+              width: 1170,
+              height: 2100,
+              alt: "‘면발의 탱탱함이 살아있는’ 설명이 있는 서체 특징 슬라이드",
+              caption: "서체 특징",
+              maxWidth: 300,
+            },
+            {
+              src: `${WORKS_BASE}/ansung/ansung-tryit.jpg`,
+              width: 1170,
+              height: 950,
+              alt: "‘어디든 안성맞춤! 직접 써보세요’와 글자 크기 조절 슬라이더",
+              caption: "직접 써 보기",
+              maxWidth: 300,
+            },
+          ],
+        },
+      ],
+    },
+  },
+  {
     id: "tmoney",
     title: "티머니 둥근바람 폰트 소개 사이트",
     summary:
       "티머니 전용서체 ‘티머니 둥근바람’이 만들어진 배경부터 브랜딩까지를 소개하는 반응형 홍보 사이트. 디자인은 리메인, 개발은 웹아이가 맡았습니다.",
-    year: "[연도]",
+    year: "2019",
     role: "개발",
     stack: ["반응형 웹", "웹폰트", "스크롤 인터랙션"],
     featured: true,
