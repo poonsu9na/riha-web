@@ -150,7 +150,7 @@ export const projects: Project[] = [
     title: "LG U+ 홀맨 구독형 이벤트 웹앱",
     summary:
       "2008년 그 홀맨이 돌아왔다는 콘셉트로 매달 새로운 이벤트를 여는 구독형 서비스. 디자인은 리메인, 개발은 웹아이가 PHP와 MySQL로 구축했습니다.",
-    year: "[연도]",
+    year: "2021",
     role: "개발",
     stack: ["PHP", "MySQL", "이벤트 웹앱"],
     featured: true,
