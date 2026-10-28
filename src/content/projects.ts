@@ -2273,8 +2273,8 @@ export const projects: Project[] = [
 
 export const profile = {
   skills: [
-    { label: "주력", value: "Java · React · Next.js" },
-    { label: "다룰 줄 앎", value: "PHP · Python · C#" },
+    { label: "주력", value: "Java · React · Next.js · PHP" },
+    { label: "다룰 줄 앎", value: "Python · C#" },
   ],
   resumeHref: "",
 };
